@@ -1,49 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen_check.c                                  :+:      :+:    :+:   */
+/*   ft_isascii_check.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 14:27:27 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/09 19:32:52 by ade-verd         ###   ########.fr       */
+/*   Created: 2017/11/09 17:58:27 by ade-verd          #+#    #+#             */
+/*   Updated: 2017/11/09 19:32:55 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <ctype.h> //isascii
 #include <stdio.h> //printf
-#include <string.h> //size_t
 #include "./../libft.h"
 #define TO_STR_(a)	#a
 #define TO_STR(a)	TO_STR_(a)
-#define	FT_OFF		strlen
-#define FT			ft_strlen
+#define	FT_OFF		isascii
+#define FT			ft_isascii
 
-int		ft_strlen_check(void)
+int		ft_isascii_check(void)
 {
-	int				i;
-	char			*tab[14];
-	unsigned long	off;
-	unsigned long	ft;
+	int			i;
+	int			tab[300 + 1];
+	int			off;
+	int			ft;
 
 	i = 0;
-
 //Tableau de tests
-	tab[0] = "Salut ";
-	tab[1] = " Salut ";
-	tab[2] = " ";
-	tab[3] = "";
-	tab[4] = "0";
-	tab[5] = "\0";
-	tab[6] = "npg9r58R";
-	tab[7] = "B6RNg2JhIa";
-	tab[8] = "y3l";
-	tab[9] = "1wpLuJjkV0td9Bs ZmykwLzadQHVqi 6dj4I2FR fjmJ9q64SAKs PS3AuGnvLYEUg8 oi5hdX0Cr CcOgePERA6tj 7cmJTVjQHyzl kdV3M14eb 1pt27";
-	tab[10] = "UXLMvD1I jWCMQJ0qYkK ZnxoJQjTa wyf6mERvrL";
-	tab[11] = "Kzox2vJVf6W XtZpG6 5v3c4uPhUBFxb Bdrykx W8lbIC0TAtY CuZVwqf6X ym8MhzEX2duK";
-	tab[12] ="4uPhUBFxb Bdrykx W8lbIC0TAtY CuZVwqf6X ym8MhzEX2duK";
-
-	tab[13] = 0; //Fin du tableau
-
+	while (i < 300)
+	{
+		tab[i] = i;
+		i++;
+	}
+	tab[i] = 0; //Fin du tableau
+	i = 0;
 	while (tab[i] || i == 0)
 	{
 		off = FT_OFF(tab[i]);
@@ -52,8 +42,8 @@ int		ft_strlen_check(void)
 		{
 			fprintf(stderr,"\nX_X KO\t");
 			fprintf(stderr,"%d\t", i);
-			fprintf(stderr,"%s:%lu\t", TO_STR(FT_OFF), off);
-			fprintf(stderr,"ft_%s:%lu\n", TO_STR(FT_OFF), ft);
+			fprintf(stderr,"%s:%d\t", TO_STR(FT_OFF), off);
+			fprintf(stderr,"ft_%s:%d\n", TO_STR(FT_OFF), ft);
 			return (0);
 		}
 //		else

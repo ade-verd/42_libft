@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 13:44:39 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/09 17:56:13 by ade-verd         ###   ########.fr       */
+/*   Created: 2017/11/09 17:42:31 by ade-verd          #+#    #+#             */
+/*   Updated: 2017/11/09 17:56:12 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <string.h>
+int		ft_isprint(int c)
+{
+	int		i;
 
-size_t	ft_strlen(const char *str);
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-
-#endif
+	i = ' ';
+	while (i <= '~')
+	{
+		if (i == c)
+			return (1);
+		i++;
+	}
+	return (0);
+}
