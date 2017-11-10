@@ -6,7 +6,7 @@
 #    By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 16:30:07 by ade-verd          #+#    #+#              #
-#    Updated: 2017/11/09 17:56:15 by ade-verd         ###   ########.fr        #
+#    Updated: 2017/11/10 12:19:49 by ade-verd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,11 +14,14 @@ NAME = libft.a
 INCL_DIR = ./
 SRC_DIR = ./
 SRC = ft_strlen.c\
-	ft_isalpha.c\
-	ft_isdigit.c\
-	ft_isalnum.c\
-	ft_isascii.c\
-	ft_isprint.c
+	  ft_atoi.c\
+	  ft_isalpha.c\
+	  ft_isdigit.c\
+	  ft_isalnum.c\
+	  ft_isascii.c\
+	  ft_isprint.c\
+	  ft_toupper.c\
+	  ft_tolower.c
 
 OBJ = $(SRC:.c=.o)
 CFLAGS = -Wall -Werror -Wextra

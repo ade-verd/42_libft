@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   main_atoi.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 13:44:39 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/10 12:18:37 by ade-verd         ###   ########.fr       */
+/*   Created: 2017/11/10 12:57:08 by ade-verd          #+#    #+#             */
+/*   Updated: 2017/11/10 13:19:13 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <string.h>
+#include <stdio.h> //printf
+#include <stdlib.h>	//atoi
+#include "./../libft.h"
 
-size_t	ft_strlen(const char *str);
-int		ft_atoi(const char *str);
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-int		ft_toupper(int c);
-int		ft_tolower(int c);
+int		main(int ac, char **av)
+{
+	if (ac != 2)
+		return(0);
+	printf("atoi:\t%d\n", atoi(av[1]));
+	printf("ft_atoi:\t%d\n", ft_atoi(av[1]));
 
-#endif
+	return (0);
+}
