@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 11:37:13 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/13 11:58:52 by ade-verd         ###   ########.fr       */
+/*   Created: 2017/08/09 10:37:13 by ade-verd          #+#    #+#             */
+/*   Updated: 2017/11/10 16:36:50 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_atoi(const char *str)
-{
-	int		i;
-	int		nb;
-	int		sign;
+#include <stdio.h>
+#include <string.h> //Necessary for strcpy
 
-	i = 0;
-	nb = 0;
-	sign = 1;
-	while (str[i] <= ' ' && str[i] != '\0')
-		i++;
-	if ((str[i] == '+' || str[i] == '-'))
+char	*ft_strcpy(char *dest, char *src);
+
+int		main(int argc, char **argv)
+{
+	char	*src;
+	char	*dest;
+
+	if (argc == 3)
 	{
-		if (str[i] == '-')
-			sign = -1;
-		i++;
+		ft_strcpy(argv[1], argv[2]);
+		printf("Fonction ADV : %s\n", argv[1]);
+		strcpy(argv[1], argv[2]);
+		printf("Fonction off : %s\n", argv[1]);
 	}
-	while ((str[i] >= '0' && str[i] <= '9') && str[i] != '\0')
-	{
-		nb = (nb * 10) + (str[i] - 48);
-		i++;
-	}
-	return (sign < 0 ? -nb : nb);
+	return (0);
 }

@@ -1,36 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 11:37:13 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/13 11:58:52 by ade-verd         ###   ########.fr       */
+/*   Created: 2017/11/10 13:24:55 by ade-verd          #+#    #+#             */
+/*   Updated: 2017/11/10 16:00:11 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_atoi(const char *str)
+char	*ft_strcpy(char *dest, const char *src)
 {
 	int		i;
-	int		nb;
-	int		sign;
 
 	i = 0;
-	nb = 0;
-	sign = 1;
-	while (str[i] <= ' ' && str[i] != '\0')
-		i++;
-	if ((str[i] == '+' || str[i] == '-'))
+	while (src[i] != '\0')
 	{
-		if (str[i] == '-')
-			sign = -1;
+		dest[i] = src[i];
 		i++;
 	}
-	while ((str[i] >= '0' && str[i] <= '9') && str[i] != '\0')
-	{
-		nb = (nb * 10) + (str[i] - 48);
-		i++;
-	}
-	return (sign < 0 ? -nb : nb);
+	dest[i] = '\0';
+	return (dest);
 }

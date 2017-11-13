@@ -1,36 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_close_file.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 11:37:13 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/13 11:58:52 by ade-verd         ###   ########.fr       */
+/*   Created: 2017/11/08 10:03:26 by ade-verd          #+#    #+#             */
+/*   Updated: 2017/11/13 11:34:50 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_atoi(const char *str)
-{
-	int		i;
-	int		nb;
-	int		sign;
+#include "ft_display_file.h"
 
-	i = 0;
-	nb = 0;
-	sign = 1;
-	while (str[i] <= ' ' && str[i] != '\0')
-		i++;
-	if ((str[i] == '+' || str[i] == '-'))
+int		ft_close_file(int fd)
+{
+	int		ret;
+
+	ret = close(fd);
+	if (ret == -1)
 	{
-		if (str[i] == '-')
-			sign = -1;
-		i++;
+		ft_putstr_in(2, "close() error\n");
+		return (-1);
 	}
-	while ((str[i] >= '0' && str[i] <= '9') && str[i] != '\0')
-	{
-		nb = (nb * 10) + (str[i] - 48);
-		i++;
-	}
-	return (sign < 0 ? -nb : nb);
+	return (0);
 }

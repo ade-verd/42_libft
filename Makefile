@@ -6,7 +6,7 @@
 #    By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 16:30:07 by ade-verd          #+#    #+#              #
-#    Updated: 2017/11/10 12:19:49 by ade-verd         ###   ########.fr        #
+#    Updated: 2017/11/13 11:58:49 by ade-verd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,7 @@ NAME = libft.a
 INCL_DIR = ./
 SRC_DIR = ./
 SRC = ft_strlen.c\
+	  ft_strcpy.c\
 	  ft_atoi.c\
 	  ft_isalpha.c\
 	  ft_isdigit.c\

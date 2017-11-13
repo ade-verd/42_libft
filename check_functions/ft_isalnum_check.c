@@ -6,7 +6,7 @@
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 17:58:24 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/09 19:32:57 by ade-verd         ###   ########.fr       */
+/*   Updated: 2017/11/13 13:48:17 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 #define	FT_OFF		isalnum
 #define FT			ft_isalnum
 
-int		ft_isalnum_check(void)
+int		ft_isalnum_check(FILE *fd)
 {
 	int			i;
 	int			tab[300 + 1];
@@ -40,17 +40,23 @@ int		ft_isalnum_check(void)
 		ft = FT(tab[i]);
 		if (off != ft)
 		{
-			fprintf(stderr,"\nX_X KO\t");
-			fprintf(stderr,"%d\t", i);
-			fprintf(stderr,"%s:%d\t", TO_STR(FT_OFF), off);
-			fprintf(stderr,"ft_%s:%d\n", TO_STR(FT_OFF), ft);
+			fprintf(stderr, "\nX_X KO\t");
+			fprintf(stderr, "%d\t", i);
+			fprintf(stderr, "%s:%d\t", TO_STR(FT_OFF), off);
+			fprintf(stderr, "ft_%s:%d\n", TO_STR(FT_OFF), ft);
+			fprintf(fd, "\nX_X KO\t");
+			fprintf(fd, "%d\t", i);
+			fprintf(fd, "%s:%d\t", TO_STR(FT_OFF), off);
+			fprintf(fd, "ft_%s:%d\n", TO_STR(FT_OFF), ft);
 			return (0);
 		}
-	//	else
-//		printf("OK ;)\t");
-	//	printf("%d, ", i);
-		//printf("%s:%d\t", TO_STR(FT_OFF), off);
-		//printf("ft_%s:%d\n", TO_STR(FT_OFF), ft);
+		else
+		{
+			fprintf(fd, "OK ;)\t");
+			fprintf(fd, "%d, ", i);
+			fprintf(fd, "%s:%d\t", TO_STR(FT_OFF), off);
+			fprintf(fd, "ft_%s:%d\n", TO_STR(FT_OFF), ft);
+		}
 		i++;
 	}
 	printf("OK\n");

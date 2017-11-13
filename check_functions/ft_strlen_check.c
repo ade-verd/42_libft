@@ -6,7 +6,7 @@
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 14:27:27 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/09 19:32:52 by ade-verd         ###   ########.fr       */
+/*   Updated: 2017/11/13 13:39:36 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 #define	FT_OFF		strlen
 #define FT			ft_strlen
 
-int		ft_strlen_check(void)
+int		ft_strlen_check(FILE *fd)
 {
 	int				i;
 	char			*tab[14];
@@ -54,13 +54,19 @@ int		ft_strlen_check(void)
 			fprintf(stderr,"%d\t", i);
 			fprintf(stderr,"%s:%lu\t", TO_STR(FT_OFF), off);
 			fprintf(stderr,"ft_%s:%lu\n", TO_STR(FT_OFF), ft);
+			fprintf(fd,"\nX_X KO\t");
+			fprintf(fd,"%d\t", i);
+			fprintf(fd,"%s:%lu\t", TO_STR(FT_OFF), off);
+			fprintf(fd,"ft_%s:%lu\n", TO_STR(FT_OFF), ft);
 			return (0);
 		}
-//		else
-//		printf("OK ;)\t");
-//		printf("%d, ", i);
-		//printf("%s:%d\t", TO_STR(FT_OFF), off);
-		//printf("ft_%s:%d\n", TO_STR(FT_OFF), ft);
+		else
+		{
+			fprintf(fd, "OK ;)\t");
+			fprintf(fd, "%d, ", i);
+			fprintf(fd, "%s:%lu\t", TO_STR(FT_OFF), off);
+			fprintf(fd, "ft_%s:%lu\n", TO_STR(FT_OFF), ft);
+		}
 		i++;
 	}
 	printf("OK\n");

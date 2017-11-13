@@ -1,36 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_print_in_logfile.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 11:37:13 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/13 11:58:52 by ade-verd         ###   ########.fr       */
+/*   Created: 2017/11/13 12:04:53 by ade-verd          #+#    #+#             */
+/*   Updated: 2017/11/13 12:59:32 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_atoi(const char *str)
-{
-	int		i;
-	int		nb;
-	int		sign;
+#include "ft_display_file.h"
 
-	i = 0;
-	nb = 0;
-	sign = 1;
-	while (str[i] <= ' ' && str[i] != '\0')
-		i++;
-	if ((str[i] == '+' || str[i] == '-'))
-	{
-		if (str[i] == '-')
-			sign = -1;
-		i++;
-	}
-	while ((str[i] >= '0' && str[i] <= '9') && str[i] != '\0')
-	{
-		nb = (nb * 10) + (str[i] - 48);
-		i++;
-	}
-	return (sign < 0 ? -nb : nb);
+int		ft_print_in_logfile(char *path, char *str)
+{
+	int		fd;
+
+	fd = ft_open_file(path, O_WRONLY | O_CREAT | O_APPEND);
+	if (fd < 0)
+		return (0);
+	ft_putstr_in(fd, str);
+	ft_close_file(fd);
+	return (fd);
 }
