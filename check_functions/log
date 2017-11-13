@@ -1,4 +1,4 @@
-====Started at 13-11-2017 14:04:05====
+====Started at 13-11-2017 19:06:20====
 
 >>>>	ft_strlen
 OK ;)	0, strlen:6	ft_strlen:6
@@ -14,6 +14,9 @@ OK ;)	9, strlen:119	ft_strlen:119
 OK ;)	10, strlen:41	ft_strlen:41
 OK ;)	11, strlen:74	ft_strlen:74
 OK ;)	12, strlen:51	ft_strlen:51
+	ft_strcpy
+
+X_X KO		strcpy:4uPhUBFxb Bdrykx W8lbIC0TAuK	ft_strcpy:
 
 >>>>	ft_atoi
 OK ;)	atoi:0	ft_atoi:0	
