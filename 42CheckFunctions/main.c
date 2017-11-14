@@ -6,7 +6,7 @@
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 12:31:10 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/14 13:37:27 by ade-verd         ###   ########.fr       */
+/*   Updated: 2017/11/14 18:20:06 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #define TO_STR(a)	TO_STR_(a)
 
 int		ft_strlen_check(FILE *fd);
+int		ft_strdup_check(FILE *fd);
 int		ft_strcpy_check(FILE *fd);
 int		ft_strncpy_check(FILE *fd);
 int		ft_atoi_check(FILE *fd);
@@ -47,6 +48,10 @@ int		main(void)
 	fprintf(fd, "\n>>>>\tft_strlen\n");
 	printf("\tft_strlen\t");
 	ft_strlen_check(fd);
+
+	fprintf(fd, "\n>>>>\tft_strdup\n");
+	printf("\tft_strdup\t");
+	ft_strdup_check(fd);
 
 	fprintf(fd, "\n>>>>\tft_strcpy\n");
 	printf("\tft_strcpy\t");
