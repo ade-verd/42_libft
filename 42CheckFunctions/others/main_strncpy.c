@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   main_strncpy.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 13:44:39 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/14 12:24:11 by ade-verd         ###   ########.fr       */
+/*   Created: 2017/11/14 12:39:47 by ade-verd          #+#    #+#             */
+/*   Updated: 2017/11/14 16:57:36 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h> //Necessary for strcpy
+#include "./../../libft.h"
 
-size_t	ft_strlen(const char *str);
-char	*ft_strcpy(char *dest, const char *src);
-char	*ft_strncpy(char *dest, const char *src, size_t len);
-int		ft_atoi(const char *str);
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-int		ft_toupper(int c);
-int		ft_tolower(int c);
+int		main(int argc, char **argv)
+{
+	char	*dest;
 
-#endif
+	if (argc == 4)
+	{
+		dest = (char*)malloc(sizeof(char) * (strlen(argv[1]) + 1));
+		strcpy(dest, argv[1]);
+		strncpy(dest, argv[2], atoi(argv[3]));
+		printf("Fonction off : %s\n", dest);
+		free(dest);
+	}
+	return (0);
+}

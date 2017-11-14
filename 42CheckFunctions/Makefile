@@ -6,7 +6,7 @@
 #    By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 16:30:07 by ade-verd          #+#    #+#              #
-#    Updated: 2017/11/14 11:41:23 by ade-verd         ###   ########.fr        #
+#    Updated: 2017/11/14 12:52:53 by ade-verd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,7 @@ INCL_DIR = ./
 SRC_DIR = ./../
 SRC_FILES = ft_strlen.c\
 			ft_strcpy.c\
+			ft_strncpy.c\
 			ft_atoi.c\
 			ft_isalpha.c\
 			ft_isdigit.c\
@@ -51,4 +52,4 @@ test_all:
 	./$(NAME)
 
 only:
-	cat log | grep "$(FT)"
+	cat log | grep  "$(FT)"

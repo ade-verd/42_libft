@@ -6,7 +6,7 @@
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 12:31:10 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/13 18:45:17 by ade-verd         ###   ########.fr       */
+/*   Updated: 2017/11/14 13:37:27 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 int		ft_strlen_check(FILE *fd);
 int		ft_strcpy_check(FILE *fd);
-int		ft_strcpy_check(FILE *fd);
+int		ft_strncpy_check(FILE *fd);
 int		ft_atoi_check(FILE *fd);
 int		ft_isalpha_check(FILE *fd);
 int		ft_isdigit_check(FILE *fd);
@@ -48,9 +48,13 @@ int		main(void)
 	printf("\tft_strlen\t");
 	ft_strlen_check(fd);
 
-	fprintf(fd, "\tft_strcpy\n");
+	fprintf(fd, "\n>>>>\tft_strcpy\n");
 	printf("\tft_strcpy\t");
 	ft_strcpy_check(fd);
+
+	fprintf(fd, "\n>>>>\tft_strncpy\n");
+	printf("\tft_strncpy\t");
+	ft_strncpy_check(fd);
 
 	fprintf(fd, "\n>>>>\tft_atoi\n");
 	printf("\tft_atoi\t\t");
