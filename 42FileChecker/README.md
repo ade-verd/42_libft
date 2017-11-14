@@ -13,7 +13,7 @@ Consulter le man pour la description des fonctions suivantes :
 - [x] ft_strlen
 - [ ] ft_strdup
 - [x] ft_strcpy
-- [x] ft_strncpy
+- [ ] ft_strncpy
 - [ ] ft_strcat
 - [ ] ft_strncat
 - [ ] ft_strlcat
