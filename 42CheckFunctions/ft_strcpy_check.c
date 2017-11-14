@@ -6,7 +6,7 @@
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 15:19:42 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/13 19:06:36 by ade-verd         ###   ########.fr       */
+/*   Updated: 2017/11/14 11:43:58 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,25 +64,21 @@ int		ft_strcpy_check(FILE *fd)
 	{
 		tmp[i] = (char*)malloc(sizeof(char) * (strlen(src[i]) + 1));
 		tmp2[i] = (char*)malloc(sizeof(char) * (strlen(src[i]) + 1));
-		strcpy(tmp[i], dest[j]);
-		strcpy(tmp2[i], dest[j]);
+		strcpy(tmp[i], dest[j]); //on copie dest vers tmp[i] dont la place necessaire a ete allouee
+		strcpy(tmp2[i], dest[j]); //idem pour refaire avec la fonction officielle en excluant les resultats du premier test
 
 		FT_OFF(tmp[i], src[i]);
-		off = dest[i];
-		printf("\ni:%d\tj:%d\n", i, j);
-	//	FT(dest[j], src[i]);
-	//	ft = dest[j];
+		off = tmp[i];
 		FT(tmp2[i], src[i]);
 		ft = tmp2[i];
-		printf("i:%d\tj:%d\n", i, j);
-		if (off != ft)
+		if (*off != *ft)
 		{
-			fprintf(stderr,"\nX_X KO\t");
-			fprintf(stderr,"%s\t", src[i]);
-			fprintf(stderr,"%s:%s\t", TO_STR(FT_OFF), off);
-			fprintf(stderr,"ft_%s:%s\n", TO_STR(FT_OFF), ft);
+			fprintf(stderr, "\nX_X KO\t");
+			fprintf(stderr, "src:%s\tdest:%s\t", src[i], dest[i]);
+			fprintf(stderr, "%s:%s\t", TO_STR(FT_OFF), off);
+			fprintf(stderr, "ft_%s:%s\n", TO_STR(FT_OFF), ft);
 			fprintf(fd, "\nX_X KO\t");
-			fprintf(fd, "%s\t", src[i]);
+			fprintf(fd, "src:%s\tdest:%s\t", src[i], dest[i]);
 			fprintf(fd, "%s:%s\t", TO_STR(FT_OFF), off);
 			fprintf(fd, "ft_%s:%s\n", TO_STR(FT_OFF), ft);
 			return (0);
@@ -90,11 +86,12 @@ int		ft_strcpy_check(FILE *fd)
 		else
 		{
 			fprintf(fd, "OK ;)\t");
-			fprintf(fd, "%s, ", src[i]);
+			fprintf(fd, "src:%s\tdest:%s\t", src[i], dest[i]);
 			fprintf(fd, "%s:%s\t", TO_STR(FT_OFF), off);
 			fprintf(fd, "ft_%s:%s\n", TO_STR(FT_OFF), ft);
 		}
-	//	free(tmp[i]);
+		free(tmp[i]);
+		free(tmp2[i]);
 		i++;
 		j--;
 	}

@@ -1,4 +1,4 @@
-====Started at 13-11-2017 19:06:20====
+====Started at 14-11-2017 11:43:45====
 
 >>>>	ft_strlen
 OK ;)	0, strlen:6	ft_strlen:6
@@ -15,8 +15,23 @@ OK ;)	10, strlen:41	ft_strlen:41
 OK ;)	11, strlen:74	ft_strlen:74
 OK ;)	12, strlen:51	ft_strlen:51
 	ft_strcpy
+OK ;)	src:	dest:4uPhUBFxb Bdrykx W8lbIC0TAuK	strcpy:	ft_strcpy:
+OK ;)	src:a	dest:123456789101112131415	strcpy:a	ft_strcpy:a
+OK ;)	src:ab	dest:1234567891011	strcpy:ab	ft_strcpy:ab
+OK ;)	src:abc	dest:abcdefgh	strcpy:abc	ft_strcpy:abc
+OK ;)	src:abcd	dest:abcdefg	strcpy:abcd	ft_strcpy:abcd
+OK ;)	src:abcd	dest:abcde
+	strcpy:abcd	ft_strcpy:abcd
+OK ;)	src:abcde	dest:abcde	strcpy:abcde	ft_strcpy:abcde
+OK ;)	src:abcde
+	dest:abcd	strcpy:abcde
+	ft_strcpy:abcde
 
-X_X KO		strcpy:4uPhUBFxb Bdrykx W8lbIC0TAuK	ft_strcpy:
+OK ;)	src:abcdefg	dest:abcd	strcpy:abcdefg	ft_strcpy:abcdefg
+OK ;)	src:abcdefgh	dest:abc	strcpy:abcdefgh	ft_strcpy:abcdefgh
+OK ;)	src:1234567891011	dest:ab	strcpy:1234567891011	ft_strcpy:1234567891011
+OK ;)	src:123456789101112131415	dest:a	strcpy:123456789101112131415	ft_strcpy:123456789101112131415
+OK ;)	src:4uPhUBFxb Bdrykx W8lbIC0TAuK	dest:	strcpy:4uPhUBFxb Bdrykx W8lbIC0TAuK	ft_strcpy:4uPhUBFxb Bdrykx W8lbIC0TAuK
 
 >>>>	ft_atoi
 OK ;)	atoi:0	ft_atoi:0	

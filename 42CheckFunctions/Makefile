@@ -6,7 +6,7 @@
 #    By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 16:30:07 by ade-verd          #+#    #+#              #
-#    Updated: 2017/11/13 12:00:58 by ade-verd         ###   ########.fr        #
+#    Updated: 2017/11/14 11:41:23 by ade-verd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,5 +47,8 @@ fclean: clean
 
 re: fclean all
 
-test_all: re
+test_all:
 	./$(NAME)
+
+only:
+	cat log | grep "$(FT)"
