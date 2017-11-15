@@ -6,7 +6,7 @@
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 12:20:27 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/13 13:48:20 by ade-verd         ###   ########.fr       */
+/*   Updated: 2017/11/15 12:24:28 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,21 +52,21 @@ int		ft_atoi_check(FILE *fd)
 		if (off != ft)
 		{
 			fprintf(stderr,"\nX_X KO\t");
-			fprintf(stderr,"%s:%d\t", TO_STR(FT_OFF), off);
-			fprintf(stderr,"ft_%s:%d\n", TO_STR(FT_OFF), ft);
-			fprintf(stderr,"%s\t", tab[i]);
+			fprintf(stderr,"%s:%-15d\t", TO_STR(FT_OFF), off);
+			fprintf(stderr,"ft_%s:%-15d\t", TO_STR(FT_OFF), ft);
+			fprintf(stderr,"%s\n", tab[i]);
 			fprintf(fd,"\nX_X KO\t");
-			fprintf(fd,"%s:%d\t", TO_STR(FT_OFF), off);
-			fprintf(fd,"ft_%s:%d\n", TO_STR(FT_OFF), ft);
-			fprintf(fd,"%s\t", tab[i]);
+			fprintf(fd,"%s:%-15d\t", TO_STR(FT_OFF), off);
+			fprintf(fd,"ft_%s:%-15d\t", TO_STR(FT_OFF), ft);
+			fprintf(fd,"%s\n", tab[i]);
 			return (0);
 		}
 		else
 		{
 			fprintf(fd, "OK ;)\t");
-			fprintf(fd, "%s:%d\t", TO_STR(FT_OFF), off);
-			fprintf(fd, "ft_%s:%d\t", TO_STR(FT_OFF), ft);
-			fprintf(fd, "%s\n", tab[i]);
+			fprintf(fd,"%s:%-15d\t", TO_STR(FT_OFF), off);
+			fprintf(fd,"ft_%s:%-15d\t", TO_STR(FT_OFF), ft);
+			fprintf(fd,"%s\n", tab[i]);
 		}
 		i++;
 	}

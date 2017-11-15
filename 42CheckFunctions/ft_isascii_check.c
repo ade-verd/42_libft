@@ -6,7 +6,7 @@
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 17:58:27 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/13 13:44:50 by ade-verd         ###   ########.fr       */
+/*   Updated: 2017/11/15 13:03:25 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,22 +40,22 @@ int		ft_isascii_check(FILE *fd)
 		ft = FT(tab[i]);
 		if (off != ft)
 		{
-			fprintf(stderr,"\nX_X KO\t");
-			fprintf(stderr,"%d\t", i);
-			fprintf(stderr,"%s:%d\t", TO_STR(FT_OFF), off);
-			fprintf(stderr,"ft_%s:%d\n", TO_STR(FT_OFF), ft);
+			fprintf(stderr, "\nX_X KO\t");
+			fprintf(stderr, "char_nb : %-10d", i);
+			fprintf(stderr, "%s : %-10d\t", TO_STR(FT_OFF), off);
+			fprintf(stderr, "ft_%s : %d\n", TO_STR(FT_OFF), ft);
 			fprintf(fd, "\nX_X KO\t");
-			fprintf(fd, "%d\t", i);
-			fprintf(fd, "%s:%d\t", TO_STR(FT_OFF), off);
-			fprintf(fd, "ft_%s:%d\n", TO_STR(FT_OFF), ft);
+			fprintf(fd, "char_nb : %-10d", i);
+			fprintf(fd, "%s : %-10d\t", TO_STR(FT_OFF), off);
+			fprintf(fd, "ft_%s : %d\n", TO_STR(FT_OFF), ft);
 			return (0);
 		}
 		else
 		{
 			fprintf(fd, "OK ;)\t");
-			fprintf(fd, "%d, ", i);
-			fprintf(fd, "%s:%d\t", TO_STR(FT_OFF), off);
-			fprintf(fd, "ft_%s:%d\n", TO_STR(FT_OFF), ft);
+			fprintf(fd, "char_nb : %-10d", i);
+			fprintf(fd, "%s : %-10d\t", TO_STR(FT_OFF), off);
+			fprintf(fd, "ft_%s : %d\n", TO_STR(FT_OFF), ft);
 		}
 		i++;
 	}

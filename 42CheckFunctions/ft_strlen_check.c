@@ -6,7 +6,7 @@
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 14:27:27 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/13 13:39:36 by ade-verd         ###   ########.fr       */
+/*   Updated: 2017/11/15 13:03:20 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,21 +51,21 @@ int		ft_strlen_check(FILE *fd)
 		if (off != ft)
 		{
 			fprintf(stderr,"\nX_X KO\t");
-			fprintf(stderr,"%d\t", i);
-			fprintf(stderr,"%s:%lu\t", TO_STR(FT_OFF), off);
-			fprintf(stderr,"ft_%s:%lu\n", TO_STR(FT_OFF), ft);
+			fprintf(stderr, "%s : %-5lu\t", TO_STR(FT_OFF), off);
+			fprintf(stderr, "ft_%s : %-5lu\t", TO_STR(FT_OFF), ft);
+			fprintf(stderr, "str : %s\n", tab[i]);
 			fprintf(fd,"\nX_X KO\t");
-			fprintf(fd,"%d\t", i);
-			fprintf(fd,"%s:%lu\t", TO_STR(FT_OFF), off);
-			fprintf(fd,"ft_%s:%lu\n", TO_STR(FT_OFF), ft);
+			fprintf(fd, "%s : %-5lu\t", TO_STR(FT_OFF), off);
+			fprintf(fd, "ft_%s : %-5lu\t", TO_STR(FT_OFF), ft);
+			fprintf(fd, "str : %s\n", tab[i]);
 			return (0);
 		}
 		else
 		{
 			fprintf(fd, "OK ;)\t");
-			fprintf(fd, "%d, ", i);
-			fprintf(fd, "%s:%lu\t", TO_STR(FT_OFF), off);
-			fprintf(fd, "ft_%s:%lu\n", TO_STR(FT_OFF), ft);
+			fprintf(fd, "%s : %-5lu\t", TO_STR(FT_OFF), off);
+			fprintf(fd, "ft_%s : %-5lu\t", TO_STR(FT_OFF), ft);
+			fprintf(fd, "str : %s\n", tab[i]);
 		}
 		i++;
 	}

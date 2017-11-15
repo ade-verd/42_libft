@@ -6,7 +6,7 @@
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 11:31:13 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/13 10:45:09 by ade-verd         ###   ########.fr       */
+/*   Updated: 2017/11/15 13:07:39 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 #define	FT_OFF		toupper
 #define FT			ft_toupper
 
-int		ft_toupper_check(void)
+int		ft_toupper_check(FILE *fd)
 {
 	int			i;
 	int			tab[300 + 1];
@@ -34,13 +34,6 @@ int		ft_toupper_check(void)
 	}
 	tab[i] = 0; //Fin du tableau
 	i = 0;
-	while (i < 300)
-	{
-		tab[i] = i;
-		i++;
-	}
-	tab[i] = 0; //Fin du tableau
-	i = 0;
 	while (tab[i] || i == 0)
 	{
 		off = FT_OFF(tab[i]);
@@ -48,16 +41,22 @@ int		ft_toupper_check(void)
 		if (off != ft)
 		{
 			fprintf(stderr,"\nX_X KO\t");
-			fprintf(stderr,"%d\t", i);
-			fprintf(stderr,"%s:%d\t", TO_STR(FT_OFF), off);
-			fprintf(stderr,"ft_%s:%d\n", TO_STR(FT_OFF), ft);
+			fprintf(stderr, "char_nb : %-10d", i);
+			fprintf(stderr, "%s : %-10d\t", TO_STR(FT_OFF), off);
+			fprintf(stderr, "ft_%s : %d\n", TO_STR(FT_OFF), ft);
+			fprintf(fd,"\nX_X KO\t");
+			fprintf(fd, "char_nb : %-10d", i);
+			fprintf(fd, "%s : %-10d\t", TO_STR(FT_OFF), off);
+			fprintf(fd, "ft_%s : %d\n", TO_STR(FT_OFF), ft);
 			return (0);
 		}
-//		else
-//		printf("OK ;)\t");
-//		printf("%d, ", i);
-		//printf("%s:%d\t", TO_STR(FT_OFF), off);
-		//printf("ft_%s:%d\n", TO_STR(FT_OFF), ft);
+		else
+		{
+			fprintf(fd, "OK ;)\t");
+			fprintf(fd, "char_nb : %-10d", i);
+			fprintf(fd, "%s : %-10d\t", TO_STR(FT_OFF), off);
+			fprintf(fd, "ft_%s : %d\n", TO_STR(FT_OFF), ft);
+		}
 		i++;
 	}
 	printf("OK\n");

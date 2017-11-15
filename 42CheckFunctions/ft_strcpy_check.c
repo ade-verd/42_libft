@@ -6,7 +6,7 @@
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 15:19:42 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/14 16:42:18 by ade-verd         ###   ########.fr       */
+/*   Updated: 2017/11/15 13:03:21 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int		ft_strcpy_check(FILE *fd)
 	src[4] = "abcd";
 	src[5] = "abcd\0";
 	src[6] = "abcde";
-	src[7] = "abcde\n";
+	src[7] = "abcdef";
 	src[8] = "abcdefg";
 	src[9] = "abcdefgh";
 	src[10] = "1234567891011";
@@ -74,21 +74,21 @@ int		ft_strcpy_check(FILE *fd)
 		if (strcmp(off, ft) != 0)
 		{
 			fprintf(stderr, "\nX_X KO\t");
-			fprintf(stderr, "src:%s\tdest:%s\t", src[i], dest[i]);
-			fprintf(stderr, "%s:%s\t", TO_STR(FT_OFF), off);
+			fprintf(stderr, "src : %-30s\tdest : %-30s\t", src[i], dest[i]);
+			fprintf(stderr, "%s : %-30s\t", TO_STR(FT_OFF), off);
 			fprintf(stderr, "ft_%s:%s\n", TO_STR(FT_OFF), ft);
 			fprintf(fd, "\nX_X KO\t");
-			fprintf(fd, "src:%s\tdest:%s\t", src[i], dest[i]);
-			fprintf(fd, "%s:%s\t", TO_STR(FT_OFF), off);
+			fprintf(fd, "src : %-30s\tdest : %-30s\t", src[i], dest[i]);
+			fprintf(fd, "%s : %-30s\t", TO_STR(FT_OFF), off);
 			fprintf(fd, "ft_%s:%s\n", TO_STR(FT_OFF), ft);
 			return (0);
 		}
 		else
 		{
 			fprintf(fd, "OK ;)\t");
-			fprintf(fd, "src:%s\tdest:%s\t", src[i], dest[i]);
-			fprintf(fd, "%s:%s\t", TO_STR(FT_OFF), off);
-			fprintf(fd, "ft_%s:%s\n", TO_STR(FT_OFF), ft);
+			fprintf(fd, "src : %-30s\tdest : %-30s\t", src[i], dest[i]);
+			fprintf(fd, "%s : %-30s\t", TO_STR(FT_OFF), off);
+			fprintf(fd, "ft_%s : %s\n", TO_STR(FT_OFF), ft);
 		}
 		free(tmp[i]);
 		free(tmp2[i]);

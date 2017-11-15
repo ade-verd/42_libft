@@ -6,7 +6,7 @@
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 12:26:45 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/14 17:14:38 by ade-verd         ###   ########.fr       */
+/*   Updated: 2017/11/15 13:03:19 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,13 +63,13 @@ int		ft_strncpy_check(FILE *fd)
 
 //Tableau de tests
 	src[0] = "";
-	src[1] = "a";
-	src[2] = "ab";
-	src[3] = "abc";
-	src[4] = "abcd";
+	src[1] = "\0";
+	src[2] = "a";
+	src[3] = "ab";
+	src[4] = "abc";
 	src[5] = "abcd\0";
 	src[6] = "abcde";
-	src[7] = "abcde\t";
+	src[7] = "abcdef";
 	src[8] = "abcdefg";
 	src[9] = "abcdefgh";
 	src[10] = "1234567891011";
@@ -118,8 +118,8 @@ int		ft_strncpy_check(FILE *fd)
 		else
 		{
 			fprintf(fd, "OK ;)\t");
-			fprintf(fd, "src:%s\tdest:%s\tlen:%d\t", src[i], dest[i], len);
-			fprintf(fd, "%s:%s\t", TO_STR(FT_OFF), off);
+			fprintf(fd, "src : %-30s\tdest : %-30s\tlen : %-10d\t", src[i], dest[i], len);
+			fprintf(fd, "%s : %-30s\t", TO_STR(FT_OFF), off);
 			fprintf(fd, "ft_%s:%s\n", TO_STR(FT_OFF), ft);
 		}
 		free(tmp);

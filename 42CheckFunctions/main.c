@@ -6,7 +6,7 @@
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 12:31:10 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/14 18:20:06 by ade-verd         ###   ########.fr       */
+/*   Updated: 2017/11/15 12:13:54 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,10 @@
 #include "ft_display_file.h"
 #define TO_STR_(a)	#a
 #define TO_STR(a)	TO_STR_(a)
+#define getName(var) #var
 
 int		ft_strlen_check(FILE *fd);
-int		ft_strdup_check(FILE *fd);
+//int		ft_strdup_check(FILE *fd);
 int		ft_strcpy_check(FILE *fd);
 int		ft_strncpy_check(FILE *fd);
 int		ft_atoi_check(FILE *fd);
@@ -26,6 +27,16 @@ int		ft_isdigit_check(FILE *fd);
 int		ft_isalnum_check(FILE *fd);
 int		ft_isascii_check(FILE *fd);
 int		ft_isprint_check(FILE *fd);
+int		ft_toupper_check(FILE *fd);
+int		ft_tolower_check(FILE *fd);
+
+void	ft_print_and_run(int (*f)(FILE*), char *function_name, FILE* fd_log)
+{
+	fprintf(fd_log, "\n>>>>\t%-20s\n", function_name);
+	printf("\t%-20s\t", function_name);
+	f(fd_log);
+}
+
 
 int		main(void)
 {
@@ -45,53 +56,18 @@ int		main(void)
 	fprintf(fd, "====Started at %s====\n", buff);
 	printf("\t~START~\n");
 //
-	fprintf(fd, "\n>>>>\tft_strlen\n");
-	printf("\tft_strlen\t");
-	ft_strlen_check(fd);
-
-	fprintf(fd, "\n>>>>\tft_strdup\n");
-	printf("\tft_strdup\t");
-	ft_strdup_check(fd);
-
-	fprintf(fd, "\n>>>>\tft_strcpy\n");
-	printf("\tft_strcpy\t");
-	ft_strcpy_check(fd);
-
-	fprintf(fd, "\n>>>>\tft_strncpy\n");
-	printf("\tft_strncpy\t");
-	ft_strncpy_check(fd);
-
-	fprintf(fd, "\n>>>>\tft_atoi\n");
-	printf("\tft_atoi\t\t");
-	ft_atoi_check(fd);
-
-	fprintf(fd, "\n>>>>\tft_isalpha\n");
-	printf("\tft_isalpha\t");
-	ft_isalpha_check(fd);
-
-	fprintf(fd, "\n>>>>\tft_isdigit\n");
-	printf("\tft_isdigit\t");
-	ft_isdigit_check(fd);
-
-	fprintf(fd, "\n>>>>\tft_isalnum\n");
-	printf("\tft_isalnum\t");
-	ft_isalnum_check(fd);
-
-	fprintf(fd, "\n>>>>\tft_isascii\n");
-	printf("\tft_isascii\t");
-	ft_isascii_check(fd);
-
-	fprintf(fd, "\n>>>>\tft_isprint\n");
-	printf("\tft_isprint\t");
-	ft_isprint_check(fd);
-
-	fprintf(fd, "\n>>>>\tft_toupper\n");
-	printf("\tft_toupper\t");
-	ft_isprint_check(fd);
-
-	fprintf(fd, "\n>>>> \tft_tolower\n");
-	printf("\tft_tolower\t");
-	ft_isprint_check(fd);
+	ft_print_and_run(&ft_strlen_check, "ft_strlen", fd);
+//	ft_print_and_run(&ft_strdup_check, "ft_strdup", fd);
+	ft_print_and_run(&ft_strcpy_check, "ft_strcpy", fd);
+	ft_print_and_run(&ft_strncpy_check, "ft_strncpy", fd);
+	ft_print_and_run(&ft_atoi_check, "ft_atoi", fd);
+	ft_print_and_run(&ft_isalpha_check, "ft_isalpha", fd);
+	ft_print_and_run(&ft_isdigit_check, "ft_isdigit", fd);
+	ft_print_and_run(&ft_isalnum_check, "ft_isalnum", fd);
+	ft_print_and_run(&ft_isascii_check, "ft_isascii", fd);
+	ft_print_and_run(&ft_isprint_check, "ft_isprint", fd);
+	ft_print_and_run(&ft_toupper_check, "ft_toupper", fd);
+	ft_print_and_run(&ft_tolower_check, "ft_tolower", fd);
 //
 	printf("\t~END~\n");
 	fprintf(fd, "====End====\n");
