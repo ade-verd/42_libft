@@ -6,7 +6,7 @@
 #    By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 16:30:07 by ade-verd          #+#    #+#              #
-#    Updated: 2017/11/14 17:32:00 by ade-verd         ###   ########.fr        #
+#    Updated: 2017/11/15 13:20:56 by ade-verd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,7 @@ NAME = libft.a
 INCL_DIR = ./
 SRC_DIR = ./
 SRC = ft_strlen.c\
+	  ft_strdup.c\
 	  ft_strcpy.c\
 	  ft_strncpy.c\
 	  ft_atoi.c\
@@ -27,7 +28,7 @@ SRC = ft_strlen.c\
 
 OBJ = $(SRC:.c=.o)
 CFLAGS = -Wall -Werror -Wextra
-TEST_DIR = ./test_42FileChecker/
+TEST_DIR = ./42FileChecker/
 OTHER_FILES = Makefile\
 			  libft.h\
 			  auteur

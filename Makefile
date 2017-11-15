@@ -6,7 +6,7 @@
 #    By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 16:30:07 by ade-verd          #+#    #+#              #
-#    Updated: 2017/11/14 18:18:38 by ade-verd         ###   ########.fr        #
+#    Updated: 2017/11/15 13:20:56 by ade-verd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ OTHER_FILES = Makefile\
 
 proper: all clean
 
-all: $(NAME) clean
+all: $(NAME)
 
 $(NAME):
 	gcc -c $(SRC) $(CGLAGS) -I $(INCL_DIR)
