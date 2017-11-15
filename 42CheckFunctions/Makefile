@@ -6,7 +6,7 @@
 #    By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 16:30:07 by ade-verd          #+#    #+#              #
-#    Updated: 2017/11/15 16:15:05 by ade-verd         ###   ########.fr        #
+#    Updated: 2017/11/15 18:54:04 by ade-verd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,8 @@ SRC_FILES = ft_strlen.c\
 			ft_strdup.c\
 			ft_strcpy.c\
 			ft_strncpy.c\
+			ft_strcat.c\
+			ft_strncat.c\
 			ft_atoi.c\
 			ft_isalpha.c\
 			ft_isdigit.c\
@@ -29,7 +31,10 @@ SRC_FILES = ft_strlen.c\
 SUPPORT_FILES = ft_open_file.c\
 			ft_close_file.c\
 			ft_print_in_logfile.c\
-			ft_putstr_in.c
+			ft_putstr_in.c\
+			ft_reverse_char.c\
+			ft_clearcontents.c\
+			ft_print_and_run.c
 
 SRC = $(addprefix $(SRC_DIR), $(SRC_FILES))
 CHECK_FILE = $(SRC_FILES:.c=_check.c)

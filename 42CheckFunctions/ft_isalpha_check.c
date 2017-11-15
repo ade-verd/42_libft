@@ -6,15 +6,11 @@
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 14:29:47 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/15 13:03:31 by ade-verd         ###   ########.fr       */
+/*   Updated: 2017/11/15 18:48:10 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h> //isaplha
-#include <stdio.h> //printf
-#include "./../libft.h"
-#define TO_STR_(a)	#a
-#define TO_STR(a)	TO_STR_(a)
+#include "ft_check_functions.h"
 #define	FT_OFF		isalpha
 #define FT			ft_isalpha
 

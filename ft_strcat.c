@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_close_file.c                                    :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 10:03:26 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/15 18:46:53 by ade-verd         ###   ########.fr       */
+/*   Created: 2017/11/15 16:46:58 by ade-verd          #+#    #+#             */
+/*   Updated: 2017/11/15 17:01:45 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_display_file.h"
-
-int		ft_close_file(int fd)
+char	*ft_strcat(char *s1, const char *s2)
 {
-	int		ret;
+	int		i;
+	int		j;
 
-	ret = close(fd);
-	if (ret == -1)
+	i = 0;
+	j = 0;
+	while (s1[i] != '\0')
+		i++;
+	while (s2[j] != '\0')
 	{
-		ft_putstr_in(2, "close() error\n");
-		return (-1);
+		s1[i + j] = s2[j];
+		j++;
 	}
-	return (0);
+	s1[i + j] = '\0';
+	return (s1);
 }

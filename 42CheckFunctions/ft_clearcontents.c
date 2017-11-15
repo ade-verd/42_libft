@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_close_file.c                                    :+:      :+:    :+:   */
+/*   ft_clearcontents.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 10:03:26 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/15 18:46:53 by ade-verd         ###   ########.fr       */
+/*   Created: 2017/11/15 18:41:21 by ade-verd          #+#    #+#             */
+/*   Updated: 2017/11/15 18:41:57 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_display_file.h"
-
-int		ft_close_file(int fd)
+void	ft_clearcontents(char *str)
 {
-	int		ret;
-
-	ret = close(fd);
-	if (ret == -1)
+	while (*str)
 	{
-		ft_putstr_in(2, "close() error\n");
-		return (-1);
+		*str = '\0';
+		str++;
 	}
-	return (0);
 }

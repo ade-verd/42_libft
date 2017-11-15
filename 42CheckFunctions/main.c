@@ -6,37 +6,11 @@
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 12:31:10 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/15 16:32:33 by ade-verd         ###   ########.fr       */
+/*   Updated: 2017/11/15 18:54:05 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <time.h>
-#include <stdio.h> //printf
-#include "ft_display_file.h"
-#define TO_STR_(a)	#a
-#define TO_STR(a)	TO_STR_(a)
-#define getName(var) #var
-
-int		ft_strlen_check(FILE *fd);
-int		ft_strdup_check(FILE *fd);
-int		ft_strcpy_check(FILE *fd);
-int		ft_strncpy_check(FILE *fd);
-int		ft_atoi_check(FILE *fd);
-int		ft_isalpha_check(FILE *fd);
-int		ft_isdigit_check(FILE *fd);
-int		ft_isalnum_check(FILE *fd);
-int		ft_isascii_check(FILE *fd);
-int		ft_isprint_check(FILE *fd);
-int		ft_toupper_check(FILE *fd);
-int		ft_tolower_check(FILE *fd);
-
-void	ft_print_and_run(int (*f)(FILE*), char *function_name, FILE* fd_log)
-{
-	fprintf(fd_log, "\n>>>>\t%-20s\n", function_name);
-	printf("\t%-20s\t", function_name);
-	f(fd_log);
-}
-
+#include "ft_check_functions.h"
 
 int		main(void)
 {
@@ -60,6 +34,8 @@ int		main(void)
 	ft_print_and_run(&ft_strdup_check, "ft_strdup", fd);
 	ft_print_and_run(&ft_strcpy_check, "ft_strcpy", fd);
 	ft_print_and_run(&ft_strncpy_check, "ft_strncpy", fd);
+	ft_print_and_run(&ft_strcat_check, "ft_strcat", fd);
+	ft_print_and_run(&ft_strncat_check, "ft_strncat", fd);
 	ft_print_and_run(&ft_atoi_check, "ft_atoi", fd);
 	ft_print_and_run(&ft_isalpha_check, "ft_isalpha", fd);
 	ft_print_and_run(&ft_isdigit_check, "ft_isdigit", fd);
@@ -74,5 +50,3 @@ int		main(void)
 	fclose(fd);
 	return (0);
 }
-
-

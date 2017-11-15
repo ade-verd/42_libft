@@ -11,7 +11,7 @@ Consulter le man pour la description des fonctions suivantes :
 - [ ] ft_memchr
 - [ ] ft_memcmp
 - [x] ft_strlen
-- [ ] ft_strdup
+- [x] ft_strdup
 - [x] ft_strcpy
 - [x] ft_strncpy
 - [ ] ft_strcat

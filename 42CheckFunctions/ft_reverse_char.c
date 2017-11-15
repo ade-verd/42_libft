@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_close_file.c                                    :+:      :+:    :+:   */
+/*   ft_reverse_char.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 10:03:26 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/15 18:46:53 by ade-verd         ###   ########.fr       */
+/*   Created: 2017/11/15 18:37:53 by ade-verd          #+#    #+#             */
+/*   Updated: 2017/11/15 18:38:40 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_display_file.h"
+#include "ft_check_functions.h"
 
-int		ft_close_file(int fd)
+char	*ft_reverse_char(char *str)
 {
-	int		ret;
+	int		len;
+	int		i;
+	char	*rev_char;
 
-	ret = close(fd);
-	if (ret == -1)
+	len = 0;
+	i = 0;
+	while (str[len] != '\0')
+		len++;
+	rev_char = (char*)malloc(sizeof(char) * len + 1);
+	while (len - 1 >= 0)
 	{
-		ft_putstr_in(2, "close() error\n");
-		return (-1);
+		rev_char[i] = str[len - 1];
+		len--;
+		i++;
 	}
-	return (0);
+	rev_char[i] = '\0';
+	return (rev_char);
 }

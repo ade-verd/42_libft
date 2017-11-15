@@ -6,15 +6,11 @@
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 17:58:26 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/15 13:03:22 by ade-verd         ###   ########.fr       */
+/*   Updated: 2017/11/15 18:49:24 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h> //isprint
-#include <stdio.h> //printf
-#include "./../libft.h"
-#define TO_STR_(a)	#a
-#define TO_STR(a)	TO_STR_(a)
+#include "ft_check_functions.h"
 #define	FT_OFF		isprint
 #define FT			ft_isprint
 

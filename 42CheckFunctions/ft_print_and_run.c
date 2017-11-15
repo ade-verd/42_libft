@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_close_file.c                                    :+:      :+:    :+:   */
+/*   ft_print_and_run.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 10:03:26 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/15 18:46:53 by ade-verd         ###   ########.fr       */
+/*   Created: 2017/11/15 18:33:57 by ade-verd          #+#    #+#             */
+/*   Updated: 2017/11/15 18:36:03 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_display_file.h"
+#include "ft_check_functions.h"
 
-int		ft_close_file(int fd)
+void	ft_print_and_run(int (*f)(FILE*), char *function_name, FILE* fd_log)
 {
-	int		ret;
-
-	ret = close(fd);
-	if (ret == -1)
-	{
-		ft_putstr_in(2, "close() error\n");
-		return (-1);
-	}
-	return (0);
+	fprintf(fd_log, "\n>>>>\t%-20s\n", function_name);
+	printf("\t%-20s\t", function_name);
+	f(fd_log);
 }

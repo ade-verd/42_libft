@@ -6,16 +6,11 @@
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 15:19:42 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/15 16:32:33 by ade-verd         ###   ########.fr       */
+/*   Updated: 2017/11/15 18:43:24 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h> //printf
-#include <stdlib.h> //malloc
-#include <string.h> //NULL
-#include "./../libft.h"
-#define TO_STR_(a)	#a
-#define TO_STR(a)	TO_STR_(a)
+#include "ft_check_functions.h"
 #define	FT_OFF		strdup
 #define FT			ft_strdup
 

@@ -1,36 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy_check.c                                  :+:      :+:    :+:   */
+/*   ft_strncat_check.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 15:19:42 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/15 18:43:42 by ade-verd         ###   ########.fr       */
+/*   Created: 2017/11/15 17:33:06 by ade-verd          #+#    #+#             */
+/*   Updated: 2017/11/15 19:02:04 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_check_functions.h"
-#define	FT_OFF		strcpy
-#define FT			ft_strcpy
+#define	FT_OFF		strncat
+#define FT			ft_strncat
 
-int		ft_strcpy_check(FILE *fd)
+int		ft_strncat_check(FILE *fd)
 {
 	int		i;
 	int		j;
+	int		len;
 	char	*src[14];
 	char	*dest[14];
-	char	*tmp[14];
-	char	*tmp2[14];
+	char	*tmp;
+	char	*tmp2;
 	char	*off;
 	char	*ft;
 
 //Tableau de tests
 	src[0] = "";
-	src[1] = "a";
-	src[2] = "ab";
-	src[3] = "abc";
-	src[4] = "abcd";
+	src[1] = "\0";
+	src[2] = "a";
+	src[3] = "ab";
+	src[4] = "abc";
 	src[5] = "abcd\0";
 	src[6] = "abcde";
 	src[7] = "abcdef";
@@ -46,34 +47,35 @@ int		ft_strcpy_check(FILE *fd)
 	j = 12;
 	while (i <= 12) //Permettra de tester les chaines ds un sens puis ds l'autre
 	{
-		dest[j] = src[i];
+		dest[j] = ft_reverse_char(src[i]);
 		j--;
 		i++;
 	}
 	dest[13] = 0;
 
-	i = 0;
-	j = 12;
-
-	while (j >= 0)
+	i = 12;
+	while (i >= 0)
 	{
-		tmp[i] = (char*)malloc(sizeof(char) * (strlen(src[i]) + 1));
-		tmp2[i] = (char*)malloc(sizeof(char) * (strlen(src[i]) + 1));
-		strcpy(tmp[i], dest[j]); //on copie dest vers tmp[i] dont la place necessaire a ete allouee
-		strcpy(tmp2[i], dest[j]); //idem pour refaire avec la fonction officielle en excluant les resultats du premier test
+		len = i;
+		if((tmp = (char*)malloc(sizeof(char) * (strlen(src[i]) + strlen(dest[i]) + 1))) == NULL)
+			return (0);
+		if((tmp2 = (char*)malloc(sizeof(char) * (strlen(src[i]) + strlen(dest[i]) + 1))) == NULL)
+			return (0);
+		strcpy(tmp, dest[i]); //on copie dest vers tmp[i] dont la place necessaire a ete allouee
+		strcpy(tmp2, dest[i]); //idem pour refaire avec la fonction officielle en excluant les resultats du premier test
 
-		FT_OFF(tmp[i], src[i]);
-		off = tmp[i];
-		FT(tmp2[i], src[i]);
-		ft = tmp2[i];
+		FT_OFF(tmp, src[i], len);
+		off = tmp;
+		FT(tmp2, src[i], len);
+		ft = tmp2;
 		if (strcmp(off, ft) != 0)
 		{
 			fprintf(stderr, "\nX_X KO\t");
-			fprintf(stderr, "src : %-30s\tdest : %-30s\t", src[i], dest[i]);
+			fprintf(stderr, "src : %-30s\tdest : %-30s\tlen : %-10d\t", src[i], dest[i], len);
 			fprintf(stderr, "%s : %-30s\t", TO_STR(FT_OFF), off);
 			fprintf(stderr, "ft_%s:%s\n", TO_STR(FT_OFF), ft);
 			fprintf(fd, "\nX_X KO\t");
-			fprintf(fd, "src : %-30s\tdest : %-30s\t", src[i], dest[i]);
+			fprintf(fd, "src : %-30s\tdest : %-30s\tlen : %-10d\t", src[i], dest[i], len);
 			fprintf(fd, "%s : %-30s\t", TO_STR(FT_OFF), off);
 			fprintf(fd, "ft_%s:%s\n", TO_STR(FT_OFF), ft);
 			return (0);
@@ -81,14 +83,13 @@ int		ft_strcpy_check(FILE *fd)
 		else
 		{
 			fprintf(fd, "OK ;)\t");
-			fprintf(fd, "src : %-30s\tdest : %-30s\t", src[i], dest[i]);
+			fprintf(fd, "src : %-30s\tdest : %-30s\tlen : %-10d\t", src[i], dest[i], len);
 			fprintf(fd, "%s : %-30s\t", TO_STR(FT_OFF), off);
-			fprintf(fd, "ft_%s : %s\n", TO_STR(FT_OFF), ft);
+			fprintf(fd, "ft_%s:%s\n", TO_STR(FT_OFF), ft);
 		}
-		free(tmp[i]);
-		free(tmp2[i]);
-		i++;
-		j--;
+		free(tmp);
+		ft_clearcontents(tmp);
+		i--;
 	}
 	printf("OK\n");
 	return (0);

@@ -6,16 +6,11 @@
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 12:20:27 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/15 15:40:14 by ade-verd         ###   ########.fr       */
+/*   Updated: 2017/11/15 18:46:39 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>	//atoi
-#include <stdio.h> //printf
-#include "./../libft.h"
-#include "ft_display_file.h" //open, close, write in files
-#define TO_STR_(a)	#a
-#define TO_STR(a)	TO_STR_(a)
+#include "ft_check_functions.h"
 #define	FT_OFF		atoi
 #define FT			ft_atoi
 

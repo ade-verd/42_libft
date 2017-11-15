@@ -6,48 +6,13 @@
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 12:26:45 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/15 13:03:19 by ade-verd         ###   ########.fr       */
+/*   Updated: 2017/11/15 18:44:05 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h> //printf
-#include <stdlib.h> //malloc
-#include <string.h> //NULL
-#include "./../libft.h"
-#define TO_STR_(a)	#a
-#define TO_STR(a)	TO_STR_(a)
+#include "ft_check_functions.h"
 #define	FT_OFF		strncpy
 #define FT			ft_strncpy
-
-char	*ft_reverse_char(char *str)
-{
-	int		len;
-	int		i;
-	char	*rev_char;
-
-	len = 0;
-	i = 0;
-	while (str[len] != '\0')
-		len++;
-	rev_char = (char*)malloc(sizeof(char) * len + 1);
-	while (len - 1 >= 0)
-	{
-		rev_char[i] = str[len - 1];
-		len--;
-		i++;
-	}
-	rev_char[i] = '\0';
-	return (rev_char);
-}
-
-void	ft_clearcontents(char *str)
-{
-	while (*str)
-	{
-		*str = '\0';
-		str++;
-	}
-}
 
 int		ft_strncpy_check(FILE *fd)
 {
@@ -106,12 +71,12 @@ int		ft_strncpy_check(FILE *fd)
 		if (strcmp(off, ft) != 0)
 		{
 			fprintf(stderr, "\nX_X KO\t");
-			fprintf(stderr, "src:%s\tdest:%s\tlen:%d\t", src[i], dest[i], len);
-			fprintf(stderr, "%s:%s\t", TO_STR(FT_OFF), off);
+			fprintf(stderr, "src : %-30s\tdest : %-30s\tlen : %-10d\t", src[i], dest[i], len);
+			fprintf(stderr, "%s : %-30s\t", TO_STR(FT_OFF), off);
 			fprintf(stderr, "ft_%s:%s\n", TO_STR(FT_OFF), ft);
 			fprintf(fd, "\nX_X KO\t");
-			fprintf(fd, "src:%s\tdest:%s\tlen:%d\t", src[i], dest[i], len);
-			fprintf(fd, "%s:%s\t", TO_STR(FT_OFF), off);
+			fprintf(fd, "src : %-30s\tdest : %-30s\tlen : %-10d\t", src[i], dest[i], len);
+			fprintf(fd, "%s : %-30s\t", TO_STR(FT_OFF), off);
 			fprintf(fd, "ft_%s:%s\n", TO_STR(FT_OFF), ft);
 			return (0);
 		}

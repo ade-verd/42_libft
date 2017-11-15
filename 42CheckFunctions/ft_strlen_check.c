@@ -6,15 +6,11 @@
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 14:27:27 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/15 13:03:20 by ade-verd         ###   ########.fr       */
+/*   Updated: 2017/11/15 18:50:04 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h> //printf
-#include <string.h> //size_t
-#include "./../libft.h"
-#define TO_STR_(a)	#a
-#define TO_STR(a)	TO_STR_(a)
+#include "ft_check_functions.h"
 #define	FT_OFF		strlen
 #define FT			ft_strlen
 
