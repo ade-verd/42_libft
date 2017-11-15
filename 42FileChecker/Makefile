@@ -6,7 +6,7 @@
 #    By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 16:30:07 by ade-verd          #+#    #+#              #
-#    Updated: 2017/11/15 13:32:10 by ade-verd         ###   ########.fr        #
+#    Updated: 2017/11/15 13:42:30 by ade-verd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ OTHER_FILES = Makefile\
 			  libft.h\
 			  auteur
 
-proper: all clean cp_to_dir
+proper: all clean
 
 all: $(NAME)
 

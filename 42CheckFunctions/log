@@ -1,4 +1,4 @@
-====Started at 15-11-2017 13:28:20====
+====Started at 15-11-2017 15:22:36====
 
 >>>>	ft_strlen           
 OK ;)	strlen : 6    	ft_strlen : 6    	str : Salut 
@@ -53,15 +53,25 @@ OK ;)	atoi:123            	ft_atoi:123            	123
 OK ;)	atoi:-123           	ft_atoi:-123           	-123
 OK ;)	atoi:1234           	ft_atoi:1234           	    1234
 OK ;)	atoi:12345          	ft_atoi:12345          	
-	    12345
+	    12345
 OK ;)	atoi:1238           	ft_atoi:1238           	 1238r54
 OK ;)	atoi:-12            	ft_atoi:-12            	 
 	  -12+45h
 OK ;)	atoi:0              	ft_atoi:0              	 --128 1
 OK ;)	atoi:0              	ft_atoi:0              	   ++87451t
 OK ;)	atoi:0              	ft_atoi:0              	as12
-OK ;)	atoi:1235489        	ft_atoi:1235489        	+1235489.15661
-OK ;)	atoi:1235489        	ft_atoi:1235489        	+1235489,15661
+OK ;)	atoi:1235489        	ft_atoi:1235489        	 +1235489.15661
+OK ;)	atoi:2147483647     	ft_atoi:2147483647     	 +2147483647
+OK ;)	atoi:-2147483648    	ft_atoi:-2147483648    	 -2147483648
+OK ;)	atoi:-2147483636    	ft_atoi:-2147483636    	 2147483660
+OK ;)	atoi:2147483636     	ft_atoi:2147483636     	 -2147483660
+OK ;)	atoi:0              	ft_atoi:0              	483660
+OK ;)	atoi:0              	ft_atoi:0              	-9223372036854775808
+OK ;)	atoi:-1             	ft_atoi:-1             	+9223372036854775807
+OK ;)	atoi:0              	ft_atoi:0              	-9223372036854775809
+OK ;)	atoi:-1             	ft_atoi:-1             	+9223372036854775808
+OK ;)	atoi:-1             	ft_atoi:-1             	99999999999999999999999999
+OK ;)	atoi:0              	ft_atoi:0              	-99999999999999999999999999
 
 >>>>	ft_isalpha          
 OK ;)	char_nb : 0         isalpha : 0         	ft_isalpha : 0
