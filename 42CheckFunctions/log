@@ -1,4 +1,4 @@
-====Started at 15-11-2017 15:52:10====
+====Started at 15-11-2017 16:32:41====
 
 >>>>	ft_strlen           
 OK ;)	strlen : 6    	ft_strlen : 6    	str : Salut 
@@ -14,6 +14,22 @@ OK ;)	strlen : 119  	ft_strlen : 119  	str : 1wpLuJjkV0td9Bs ZmykwLzadQHVqi 6dj4
 OK ;)	strlen : 41   	ft_strlen : 41   	str : UXLMvD1I jWCMQJ0qYkK ZnxoJQjTa wyf6mERvrL
 OK ;)	strlen : 74   	ft_strlen : 74   	str : Kzox2vJVf6W XtZpG6 5v3c4uPhUBFxb Bdrykx W8lbIC0TAtY CuZVwqf6X ym8MhzEX2duK
 OK ;)	strlen : 51   	ft_strlen : 51   	str : 4uPhUBFxb Bdrykx W8lbIC0TAtY CuZVwqf6X ym8MhzEX2duK
+
+>>>>	ft_strdup           
+OK ;)	src :                                (add:0x1033fcae2)	strdup :                                (add:0x7fd4684026c0)	ft_strdup :                                (add:0x7fd4684027d0)
+OK ;)	src : a                              (add:0x1033fcc5e)	strdup : a                              (add:0x7fd4684027d0)	ft_strdup : a                              (add:0x7fd4684026c0)
+OK ;)	src : ab                             (add:0x1033fcc60)	strdup : ab                             (add:0x7fd4684026c0)	ft_strdup : ab                             (add:0x7fd468402720)
+OK ;)	src : abc                            (add:0x1033fcc63)	strdup : abc                            (add:0x7fd468402720)	ft_strdup : abc                            (add:0x7fd4684026c0)
+OK ;)	src : abcd                           (add:0x1033fcc67)	strdup : abcd                           (add:0x7fd4684026c0)	ft_strdup : abcd                           (add:0x7fd468402720)
+OK ;)	src : abcd                           (add:0x1033fcf8c)	strdup : abcd                           (add:0x7fd468402720)	ft_strdup : abcd                           (add:0x7fd4684026c0)
+OK ;)	src : abcde                          (add:0x1033fcc6c)	strdup : abcde                          (add:0x7fd4684026c0)	ft_strdup : abcde                          (add:0x7fd468402720)
+OK ;)	src : abcdef                         (add:0x1033fcc72)	strdup : abcdef                         (add:0x7fd468402720)	ft_strdup : abcdef                         (add:0x7fd4684026c0)
+OK ;)	src : abcdefg                        (add:0x1033fcc79)	strdup : abcdefg                        (add:0x7fd4684026c0)	ft_strdup : abcdefg                        (add:0x7fd468402720)
+OK ;)	src : abcdefgh                       (add:0x1033fcc81)	strdup : abcdefgh                       (add:0x7fd468402720)	ft_strdup : abcdefgh                       (add:0x7fd4684026c0)
+OK ;)	src : 1234567891011                  (add:0x1033fcc8a)	strdup : 1234567891011                  (add:0x7fd4684026c0)	ft_strdup : 1234567891011                  (add:0x7fd468402720)
+OK ;)	src : 123456789101112131415          (add:0x1033fcc98)	strdup : 123456789101112131415          (add:0x7fd468402730)	ft_strdup : 123456789101112131415          (add:0x7fd468402750)
+OK ;)	src : 4uPhUBFxb Bdrykx W8lbIC0TAuK   (add:0x1033fccae)	strdup : 4uPhUBFxb Bdrykx W8lbIC0TAuK   (add:0x7fd468402750)	ft_strdup : 4uPhUBFxb Bdrykx W8lbIC0TAuK   (add:0x7fd468402720)
+OK ;)	src :                                (add:0x1033fcf92)	strdup :                                (add:0x7fd4684026c0)	ft_strdup :                                (add:0x7fd468402740)
 
 >>>>	ft_strcpy           
 OK ;)	src :                               	dest : 4uPhUBFxb Bdrykx W8lbIC0TAuK  	strcpy :                               	ft_strcpy : 

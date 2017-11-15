@@ -6,7 +6,7 @@
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 12:31:10 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/15 12:13:54 by ade-verd         ###   ########.fr       */
+/*   Updated: 2017/11/15 16:32:33 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 #define getName(var) #var
 
 int		ft_strlen_check(FILE *fd);
-//int		ft_strdup_check(FILE *fd);
+int		ft_strdup_check(FILE *fd);
 int		ft_strcpy_check(FILE *fd);
 int		ft_strncpy_check(FILE *fd);
 int		ft_atoi_check(FILE *fd);
@@ -57,7 +57,7 @@ int		main(void)
 	printf("\t~START~\n");
 //
 	ft_print_and_run(&ft_strlen_check, "ft_strlen", fd);
-//	ft_print_and_run(&ft_strdup_check, "ft_strdup", fd);
+	ft_print_and_run(&ft_strdup_check, "ft_strdup", fd);
 	ft_print_and_run(&ft_strcpy_check, "ft_strcpy", fd);
 	ft_print_and_run(&ft_strncpy_check, "ft_strncpy", fd);
 	ft_print_and_run(&ft_atoi_check, "ft_atoi", fd);
