@@ -6,7 +6,7 @@
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 15:19:42 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/15 18:43:42 by ade-verd         ###   ########.fr       */
+/*   Updated: 2017/11/16 16:09:11 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ int		ft_strcpy_check(FILE *fd)
 	int		j;
 	char	*src[14];
 	char	*dest[14];
-	char	*tmp[14];
-	char	*tmp2[14];
 	char	*off;
 	char	*ft;
 
@@ -57,15 +55,15 @@ int		ft_strcpy_check(FILE *fd)
 
 	while (j >= 0)
 	{
-		tmp[i] = (char*)malloc(sizeof(char) * (strlen(src[i]) + 1));
-		tmp2[i] = (char*)malloc(sizeof(char) * (strlen(src[i]) + 1));
-		strcpy(tmp[i], dest[j]); //on copie dest vers tmp[i] dont la place necessaire a ete allouee
-		strcpy(tmp2[i], dest[j]); //idem pour refaire avec la fonction officielle en excluant les resultats du premier test
+		if ((off = (char*)malloc(sizeof(char) * (strlen(src[i]) + 1))) == NULL)
+			return (0);
+		if ((ft = (char*)malloc(sizeof(char) * (strlen(src[i]) + 1))) == NULL)
+			return (0);
+		strcpy(off, dest[j]); //on copie dest vers tmp[i] dont la place necessaire a ete allouee
+		strcpy(ft, dest[j]); //idem pour refaire avec la fonction officielle en excluant les resultats du premier test
 
-		FT_OFF(tmp[i], src[i]);
-		off = tmp[i];
-		FT(tmp2[i], src[i]);
-		ft = tmp2[i];
+		FT_OFF(off, src[i]);
+		FT(ft, src[i]);
 		if (strcmp(off, ft) != 0)
 		{
 			fprintf(stderr, "\nX_X KO\t");
@@ -85,8 +83,10 @@ int		ft_strcpy_check(FILE *fd)
 			fprintf(fd, "%s : %-30s\t", TO_STR(FT_OFF), off);
 			fprintf(fd, "ft_%s : %s\n", TO_STR(FT_OFF), ft);
 		}
-		free(tmp[i]);
-		free(tmp2[i]);
+		free(off);
+		off = NULL;
+		free(ft);
+		ft = NULL;
 		i++;
 		j--;
 	}

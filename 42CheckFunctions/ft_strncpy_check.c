@@ -6,7 +6,7 @@
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 12:26:45 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/15 18:44:05 by ade-verd         ###   ########.fr       */
+/*   Updated: 2017/11/16 16:09:10 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ int		ft_strncpy_check(FILE *fd)
 	int		len;
 	char	*src[14];
 	char	*dest[14];
-	char	*tmp;
-	char	*tmp2;
 	char	*off;
 	char	*ft;
 
@@ -57,17 +55,16 @@ int		ft_strncpy_check(FILE *fd)
 	while (i >= 0)
 	{
 		len = i;
-		if((tmp = (char*)malloc(sizeof(char) * (strlen(src[i]) + 1))) == NULL)
+		if((off = (char*)malloc(sizeof(char) * (strlen(src[i]) + 1))) == NULL)
 			return (0);
-		if((tmp2 = (char*)malloc(sizeof(char) * (strlen(src[i]) + 1))) == NULL)
+		strcpy(off, dest[i]); //on copie dest vers off dont la place necessaire a ete allouee
+		if((ft = (char*)malloc(sizeof(char) * (strlen(src[i]) + 1))) == NULL)
 			return (0);
-		strcpy(tmp, dest[i]); //on copie dest vers tmp[i] dont la place necessaire a ete allouee
-		strcpy(tmp2, dest[i]); //idem pour refaire avec la fonction officielle en excluant les resultats du premier test
 
-		FT_OFF(tmp, src[i], len);
-		off = tmp;
-		FT(tmp2, src[i], len);
-		ft = tmp2;
+		strcpy(ft, dest[i]); //idem pour refaire avec la fonction officielle en excluant les resultats du premier test
+	//	printf("\noff: %p\tft: %p", off, ft);
+		FT_OFF(off, src[i], len);
+		FT(ft, src[i], len);
 		if (strcmp(off, ft) != 0)
 		{
 			fprintf(stderr, "\nX_X KO\t");
@@ -87,10 +84,14 @@ int		ft_strncpy_check(FILE *fd)
 			fprintf(fd, "%s : %-30s\t", TO_STR(FT_OFF), off);
 			fprintf(fd, "ft_%s:%s\n", TO_STR(FT_OFF), ft);
 		}
-		free(tmp);
-		ft_clearcontents(tmp);
+		ft_clearcontents(off);
+		free(off);
+		off = NULL;
 		i--;
 	}
+	ft_clearcontents(ft);
+	free(ft);
+	ft = NULL;
 	printf("OK\n");
 	return (0);
 }
