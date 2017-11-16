@@ -6,7 +6,7 @@
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/15 17:48:55 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/15 18:54:06 by ade-verd         ###   ########.fr       */
+/*   Updated: 2017/11/16 16:41:34 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ int		ft_strcpy_check(FILE *fd);
 int		ft_strncpy_check(FILE *fd);
 int		ft_strcat_check(FILE *fd);
 int		ft_strncat_check(FILE *fd);
+int		ft_strcmp_check(FILE *fd);
+int		ft_strncmp_check(FILE *fd);
 int		ft_atoi_check(FILE *fd);
 int		ft_isalpha_check(FILE *fd);
 int		ft_isdigit_check(FILE *fd);
