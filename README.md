@@ -21,8 +21,8 @@ Consulter le man pour la description des fonctions suivantes :
 - [ ] ft_strrchr
 - [ ] ft_strstrs
 - [ ] ft_strnstr
-- [ ] ft_strcmp
-- [ ] ft_strncmp
+- [x] ft_strcmp
+- [x] ft_strncmp
 - [x] ft_atoi
 - [x] ft_isalpha
 - [x] ft_isdigit
