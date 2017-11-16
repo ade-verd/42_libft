@@ -6,7 +6,7 @@
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/16 16:46:45 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/16 17:06:11 by ade-verd         ###   ########.fr       */
+/*   Updated: 2017/11/16 18:08:34 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,9 @@ int		ft_strcmp_check(FILE *fd)
 	s1[6] = "abcdefgh";
 	s1[7] = "aaaaaaaaaaaa";
 	s1[8] = "0123456789\\";
-	s1[9] = 0; //Fin du tableau
+	s1[9] = "\0"; /*test cast diff in unsigned char*/
+	s1[10] = "\x12\xff\x65\x12\xbd\xde\xad"; /*test non ascii chars*/
+	s1[11] = 0; //Fin du tableau
 
 	s2[0] = "";
 	s2[1] = "\0";
@@ -43,7 +45,9 @@ int		ft_strcmp_check(FILE *fd)
 	s2[6] = "abcdefgz";
 	s2[7] = "aaaaaaaaaa\ra";
 	s2[8] = "0123456789\0";
-	s2[9] = 0; //Fin du tableau
+	s2[9] = "\200"; /*test cast diff in unsigned char*/
+	s2[10] = "\x12\x02"; /*test non ascii chars*/
+	s2[11] = 0; //Fin du tableau
 
 	i = 0;
 	while (s1[i] != 0 && s2[i] != 0)
