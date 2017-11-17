@@ -6,7 +6,7 @@
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/15 17:48:55 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/16 18:35:44 by ade-verd         ###   ########.fr       */
+/*   Updated: 2017/11/17 16:42:03 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ int		ft_strncpy_check(FILE *fd);
 int		ft_strcat_check(FILE *fd);
 int		ft_strncat_check(FILE *fd);
 int		ft_strlcat_check(FILE *fd);
+int		ft_strchr_check(FILE *fd);
+int		ft_strrchr_check(FILE *fd);
 int		ft_strcmp_check(FILE *fd);
 int		ft_strncmp_check(FILE *fd);
 int		ft_atoi_check(FILE *fd);

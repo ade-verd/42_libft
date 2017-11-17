@@ -6,7 +6,7 @@
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 12:31:10 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/16 18:35:31 by ade-verd         ###   ########.fr       */
+/*   Updated: 2017/11/17 16:43:19 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ int		main(void)
 	ft_print_and_run(&ft_strcat_check, "ft_strcat", fd);
 	ft_print_and_run(&ft_strncat_check, "ft_strncat", fd);
 	ft_print_and_run(&ft_strlcat_check, "ft_strlcat", fd);
+	ft_print_and_run(&ft_strchr_check, "ft_strchr", fd);
+	ft_print_and_run(&ft_strrchr_check, "ft_strrchr", fd);
 	ft_print_and_run(&ft_strcmp_check, "ft_strcmp", fd);
 	ft_print_and_run(&ft_strncmp_check, "ft_strncmp", fd);
 	ft_print_and_run(&ft_atoi_check, "ft_atoi", fd);
