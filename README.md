@@ -16,7 +16,7 @@ Consulter le man pour la description des fonctions suivantes :
 - [x] ft_strncpy
 - [x] ft_strcat
 - [x] ft_strncat
-- [ ] ft_strlcat
+- [x] ft_strlcat
 - [ ] ft_strchr
 - [ ] ft_strrchr
 - [ ] ft_strstrs

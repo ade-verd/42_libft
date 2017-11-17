@@ -6,7 +6,7 @@
 #    By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 16:30:07 by ade-verd          #+#    #+#              #
-#    Updated: 2017/11/16 16:40:55 by ade-verd         ###   ########.fr        #
+#    Updated: 2017/11/17 10:48:59 by ade-verd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ SRC = ft_strlen.c\
 	  ft_strncpy.c\
 	  ft_strcat.c\
 	  ft_strncat.c\
+	  ft_strlcat.c\
 	  ft_strcmp.c\
 	  ft_strncmp.c\
 	  ft_atoi.c\
@@ -37,8 +38,6 @@ OTHER_FILES = Makefile\
 			  libft.h\
 			  auteur
 
-proper: all clean
-
 all: $(NAME)
 
 $(NAME):
@@ -54,6 +53,8 @@ fclean: clean
 
 re: fclean all
 
-cp_to_dir:
+cp_to_dir: clean
 	cp $(SRC) $(TEST_DIR)
 	cp $(OTHER_FILES) $(TEST_DIR)
+
+proper: re cp_to_dir

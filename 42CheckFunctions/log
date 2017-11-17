@@ -1,4 +1,4 @@
-====Started at 16-11-2017 18:56:32====
+====Started at 17-11-2017 15:09:26====
 
 >>>>	ft_strlen           
 OK ;)	strlen : 6    	ft_strlen : 6    	str : Salut 
@@ -16,20 +16,20 @@ OK ;)	strlen : 74   	ft_strlen : 74   	str : Kzox2vJVf6W XtZpG6 5v3c4uPhUBFxb Bd
 OK ;)	strlen : 51   	ft_strlen : 51   	str : 4uPhUBFxb Bdrykx W8lbIC0TAtY CuZVwqf6X ym8MhzEX2duK
 
 >>>>	ft_strdup           
-OK ;)	src :                                (add:0x105345992)	strdup :                                (add:0x7fe74ec026c0)	ft_strdup :                                (add:0x7fe74ec027d0)
-OK ;)	src : a                              (add:0x105345b0e)	strdup : a                              (add:0x7fe74ec027d0)	ft_strdup : a                              (add:0x7fe74ec026c0)
-OK ;)	src : ab                             (add:0x105345b10)	strdup : ab                             (add:0x7fe74ec026c0)	ft_strdup : ab                             (add:0x7fe74ec02720)
-OK ;)	src : abc                            (add:0x105345b13)	strdup : abc                            (add:0x7fe74ec02720)	ft_strdup : abc                            (add:0x7fe74ec026c0)
-OK ;)	src : abcd                           (add:0x105345b17)	strdup : abcd                           (add:0x7fe74ec026c0)	ft_strdup : abcd                           (add:0x7fe74ec02720)
-OK ;)	src : abcd                           (add:0x105345f42)	strdup : abcd                           (add:0x7fe74ec02720)	ft_strdup : abcd                           (add:0x7fe74ec026c0)
-OK ;)	src : abcde                          (add:0x105345b1c)	strdup : abcde                          (add:0x7fe74ec026c0)	ft_strdup : abcde                          (add:0x7fe74ec02720)
-OK ;)	src : abcdef                         (add:0x105345b22)	strdup : abcdef                         (add:0x7fe74ec02720)	ft_strdup : abcdef                         (add:0x7fe74ec026c0)
-OK ;)	src : abcdefg                        (add:0x105345b29)	strdup : abcdefg                        (add:0x7fe74ec026c0)	ft_strdup : abcdefg                        (add:0x7fe74ec02720)
-OK ;)	src : abcdefgh                       (add:0x105345b31)	strdup : abcdefgh                       (add:0x7fe74ec02720)	ft_strdup : abcdefgh                       (add:0x7fe74ec026c0)
-OK ;)	src : 1234567891011                  (add:0x105345b3a)	strdup : 1234567891011                  (add:0x7fe74ec026c0)	ft_strdup : 1234567891011                  (add:0x7fe74ec02720)
-OK ;)	src : 123456789101112131415          (add:0x105345b48)	strdup : 123456789101112131415          (add:0x7fe74ec02730)	ft_strdup : 123456789101112131415          (add:0x7fe74ec02750)
-OK ;)	src : 4uPhUBFxb Bdrykx W8lbIC0TAuK   (add:0x105345b5e)	strdup : 4uPhUBFxb Bdrykx W8lbIC0TAuK   (add:0x7fe74ec02750)	ft_strdup : 4uPhUBFxb Bdrykx W8lbIC0TAuK   (add:0x7fe74ec02720)
-OK ;)	src :                                (add:0x105345f48)	strdup :                                (add:0x7fe74ec026c0)	ft_strdup :                                (add:0x7fe74ec02740)
+OK ;)	src :                                (add:0x10a675942)	strdup :                                (add:0x7fd63fd000a0)	ft_strdup :                                (add:0x7fd63fd00530)
+OK ;)	src : a                              (add:0x10a675abe)	strdup : a                              (add:0x7fd63fd00530)	ft_strdup : a                              (add:0x7fd63fd000a0)
+OK ;)	src : ab                             (add:0x10a675ac0)	strdup : ab                             (add:0x7fd63fd000a0)	ft_strdup : ab                             (add:0x7fd63fd00530)
+OK ;)	src : abc                            (add:0x10a675ac3)	strdup : abc                            (add:0x7fd63fd00530)	ft_strdup : abc                            (add:0x7fd63fd000a0)
+OK ;)	src : abcd                           (add:0x10a675ac7)	strdup : abcd                           (add:0x7fd63fd000a0)	ft_strdup : abcd                           (add:0x7fd63fd00530)
+OK ;)	src : abcd                           (add:0x10a675f16)	strdup : abcd                           (add:0x7fd63fd00530)	ft_strdup : abcd                           (add:0x7fd63fd000a0)
+OK ;)	src : abcde                          (add:0x10a675acc)	strdup : abcde                          (add:0x7fd63fd000a0)	ft_strdup : abcde                          (add:0x7fd63fd00530)
+OK ;)	src : abcdef                         (add:0x10a675ad2)	strdup : abcdef                         (add:0x7fd63fd00530)	ft_strdup : abcdef                         (add:0x7fd63fd000a0)
+OK ;)	src : abcdefg                        (add:0x10a675ad9)	strdup : abcdefg                        (add:0x7fd63fd000a0)	ft_strdup : abcdefg                        (add:0x7fd63fd00530)
+OK ;)	src : abcdefgh                       (add:0x10a675ae1)	strdup : abcdefgh                       (add:0x7fd63fd00530)	ft_strdup : abcdefgh                       (add:0x7fd63fd000a0)
+OK ;)	src : 1234567891011                  (add:0x10a675aea)	strdup : 1234567891011                  (add:0x7fd63fd000a0)	ft_strdup : 1234567891011                  (add:0x7fd63fd00530)
+OK ;)	src : 123456789101112131415          (add:0x10a675af8)	strdup : 123456789101112131415          (add:0x7fd63fd001c0)	ft_strdup : 123456789101112131415          (add:0x7fd63fd001e0)
+OK ;)	src : 4uPhUBFxb Bdrykx W8lbIC0TAuK   (add:0x10a675b0e)	strdup : 4uPhUBFxb Bdrykx W8lbIC0TAuK   (add:0x7fd63fd001e0)	ft_strdup : 4uPhUBFxb Bdrykx W8lbIC0TAuK   (add:0x7fd63fd001c0)
+OK ;)	src :                                (add:0x10a675f1c)	strdup :                                (add:0x7fd63fd00530)	ft_strdup :                                (add:0x7fd63fd000a0)
 
 >>>>	ft_strcpy           
 OK ;)	src :                               	dest : 4uPhUBFxb Bdrykx W8lbIC0TAuK  	strcpy :                               	ft_strcpy : 
@@ -92,18 +92,21 @@ OK ;)	s1 : 123456789101112131415         	s2 :                               	le
 OK ;)	s1 : 4uPhUBFxb Bdrykx W8lbIC0TAuK  	s2 :                               	len : 12        	strncat : 4uPhUBFxb Bdrykx W8lbIC0TAuK  	ft_strncat:4uPhUBFxb Bdrykx W8lbIC0TAuK
 
 >>>>	ft_strlcat          
-OK ;)	dst :                               	src : KuAT0CIbl8W xkyrdB bxFBUhPu4  	len : 0         	strlcat : 28	ft_strlcat:28
-OK ;)	dst :                               	src : 514131211101987654321         	len : 1         	strlcat : 21	ft_strlcat:21
-OK ;)	dst : a                             	src : 1101987654321                 	len : 2         	strlcat : 14	ft_strlcat:14
-OK ;)	dst : ab                            	src : hgfedcba                      	len : 3         	strlcat : 10	ft_strlcat:10
-OK ;)	dst : abc                           	src : gfedcba                       	len : 4         	strlcat : 10	ft_strlcat:10
-OK ;)	dst : abcd                          	src : fedcba                        	len : 5         	strlcat : 10	ft_strlcat:10
-OK ;)	dst : abcde                         	src : edcba                         	len : 6         	strlcat : 10	ft_strlcat:10
-OK ;)	dst : abcdef                        	src : dcba                          	len : 7         	strlcat : 10	ft_strlcat:10
-OK ;)	dst : abcdefg                       	src : cba                           	len : 8         	strlcat : 10	ft_strlcat:10
-OK ;)	dst : abcdefgh                      	src : ba                            	len : 9         	strlcat : 10	ft_strlcat:10
-
-X_X KO	dst : 1234567891011                 	src : a                             	len : 10        	strlcat : 11	ft_strlcat:14
+OK ;)	dst(len:0) :                               	src(len:5) : ÙZg
+                         	n : 0    	strlcat(len:5) :                               	ft_strlcat(len:5) : 
+OK ;)	dst(len:0) :                               	src(len:19) : the cake is a lie !           	n : 1    	strlcat(len:19) :                               	ft_strlcat(len:19) : 
+OK ;)	dst(len:1) : a                             	src(len:28) : 4uPhUBFxb Bdrykx W8lbIC0TAuK  	n : 2    	strlcat(len:29) : a                             	ft_strlcat(len:29) : a
+OK ;)	dst(len:2) : ab                            	src(len:21) : 123456789101112131415         	n : 3    	strlcat(len:23) : ab                            	ft_strlcat(len:23) : ab
+OK ;)	dst(len:3) : abc                           	src(len:13) : 1234567891011                 	n : 4    	strlcat(len:16) : abc                           	ft_strlcat(len:16) : abc
+OK ;)	dst(len:4) : abcd                          	src(len:8) : abcdefgh                      	n : 5    	strlcat(len:12) : abcd                          	ft_strlcat(len:12) : abcd
+OK ;)	dst(len:5) : abcde                         	src(len:7) : abcdefg                       	n : 6    	strlcat(len:12) : abcde                         	ft_strlcat(len:12) : abcde
+OK ;)	dst(len:6) : abcdef                        	src(len:6) : abcdef                        	n : 7    	strlcat(len:12) : abcdef                        	ft_strlcat(len:12) : abcdef
+OK ;)	dst(len:7) : abcdefg                       	src(len:5) : abcde                         	n : 8    	strlcat(len:12) : abcdefg                       	ft_strlcat(len:12) : abcdefg
+OK ;)	dst(len:8) : abcdefgh                      	src(len:4) : abcd                          	n : 9    	strlcat(len:12) : abcdefgh                      	ft_strlcat(len:12) : abcdefgh
+OK ;)	dst(len:13) : 1234567891011                 	src(len:3) : abc                           	n : 10   	strlcat(len:13) : 1234567891011                 	ft_strlcat(len:13) : 1234567891011
+OK ;)	dst(len:21) : 123456789101112131415         	src(len:2) : ab                            	n : 11   	strlcat(len:13) : 123456789101112131415         	ft_strlcat(len:13) : 123456789101112131415
+OK ;)	dst(len:28) : 4uPhUBFxb Bdrykx W8lbIC0TAuK  	src(len:1) : a                             	n : 12   	strlcat(len:13) : 4uPhUBFxb Bdrykx W8lbIC0TAuK  	ft_strlcat(len:13) : 4uPhUBFxb Bdrykx W8lbIC0TAuK
+OK ;)	dst(len:19) : the cake is a lie !           	src(len:0) :                               	n : 13   	strlcat(len:13) : the cake is a lie !           	ft_strlcat(len:13) : the cake is a lie !
 
 >>>>	ft_strcmp           
 OK ;)	s1 :                               	s2 :                               	strcmp : 0	ft_strcmp : 0
