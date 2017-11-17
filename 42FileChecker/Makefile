@@ -6,7 +6,7 @@
 #    By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 16:30:07 by ade-verd          #+#    #+#              #
-#    Updated: 2017/11/17 10:48:59 by ade-verd         ###   ########.fr        #
+#    Updated: 2017/11/17 16:05:41 by ade-verd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,7 +53,8 @@ fclean: clean
 
 re: fclean all
 
-cp_to_dir: clean
+cp_to_dir:
+	make clean
 	cp $(SRC) $(TEST_DIR)
 	cp $(OTHER_FILES) $(TEST_DIR)
 
