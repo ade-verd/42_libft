@@ -6,7 +6,7 @@
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 16:11:41 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/17 16:55:27 by ade-verd         ###   ########.fr       */
+/*   Updated: 2017/11/18 17:32:08 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,7 @@ char	*ft_strchr(const char *s, int c)
 			return (point = (char*)&s[i]);
 		i++;
 	}
+	if (s[i] == c)
+		return (point = (char*)&s[i]);
 	return (point);
 }
