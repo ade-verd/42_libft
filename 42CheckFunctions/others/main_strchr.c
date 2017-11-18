@@ -6,7 +6,7 @@
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 16:26:41 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/17 16:40:34 by ade-verd         ###   ########.fr       */
+/*   Updated: 2017/11/18 17:54:03 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,22 @@ int		main(int argc, char **argv)
 		printf("addresse *s : %p\n", argv[1]);
 		printf("strchr off : %s\t%p\n", off, off);
 		ft = ft_strchr(argv[1], argv[2][0]);
-		printf("strchr ft : %s\t%p\n----\n", ft, ft);
+		printf("strchr ft : %s\t%p\n", ft, ft);
+		if (ft == off)
+			printf("yes, same address\n");
+		else
+			printf("no diff address\n");
+		//
+		printf("-----\n");
 		//
 		off = strrchr(argv[1], argv[2][0]);
 		printf("strrchr off : %s\t%p\n", off, off);
 		ft = ft_strrchr(argv[1], argv[2][0]);
 		printf("strrchr ft : %s\t%p\n", ft, ft);
+		if (ft == off)
+			printf("yes, same address\n");
+		else
+			printf("no diff address\n");
 	}
 	return (0);
 }

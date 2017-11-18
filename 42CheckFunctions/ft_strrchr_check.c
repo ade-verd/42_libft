@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr_check.c                                  :+:      :+:    :+:   */
+/*   ft_strrchr_check.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 16:45:07 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/18 18:01:19 by ade-verd         ###   ########.fr       */
+/*   Updated: 2017/11/18 17:17:02 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_check_functions.h"
-#define	FT_OFF		strchr
-#define FT			ft_strchr
+#define	FT_OFF		strrchr
+#define FT			ft_strrchr
 
-int		ft_strchr_check(FILE *fd)
+int		ft_strrchr_check(FILE *fd)
 {
 	int		i;
 //	int		j;
@@ -69,24 +69,24 @@ int		ft_strchr_check(FILE *fd)
 	//	strcpy(ft, dest[j]); //idem pour refaire avec la fonction officielle en excluant les resultats du premier test
 		off = FT_OFF(src[i], car[i][0]);
 		ft = FT(src[i], car[i][0]);
-		if (strcmp(off, ft) != 0 || off != ft)
+		if (&off != &ft)
 		{
 			fprintf(stderr, "\nX_X KO\t");
-			fprintf(stderr, "src : %20s (%p)\tchar : %-2s\t", src[i], src[i], car[i]);
-			fprintf(stderr, "%s : %-20s\t%p\t", TO_STR(FT_OFF), off, off);
-			fprintf(stderr, "ft_%s : %-20s\t%p\n", TO_STR(FT_OFF), ft, ft);
+			fprintf(stderr, "src : %-20s\tchar : %-2s\t", src[i], car[i]);
+			fprintf(stderr, "%s : %-20s\t%-10p\t", TO_STR(FT_OFF), off, off);
+			fprintf(stderr, "ft_%s : %-20s\t%-10p\n", TO_STR(FT_OFF), ft, ft);
 			fprintf(fd, "\nX_X KO\t");
-			fprintf(fd, "src : %-20s (%p)\tchar : %-2s\t", src[i], src[i], car[i]);
-			fprintf(fd, "%s : %-20s\t%p\t", TO_STR(FT_OFF), off, off);
-			fprintf(fd, "ft_%s : %-20s\t%p\n", TO_STR(FT_OFF), ft, ft);
+			fprintf(fd, "src : %-20s\tchar : %-2s\t", src[i], car[i]);
+			fprintf(fd, "%s : %-20s\t%-10p\t", TO_STR(FT_OFF), off, off);
+			fprintf(fd, "ft_%s : %-20s\t%-10p\n", TO_STR(FT_OFF), ft, ft);
 			return (0);
 		}
 		else
 		{
 			fprintf(fd, "OK ;)\t");
-			fprintf(fd, "src : %-20s (%p)\tchar : %-2s\t", src[i], src[i], car[i]);
-			fprintf(fd, "%s : %-20s\t%p\t", TO_STR(FT_OFF), off, off);
-			fprintf(fd, "ft_%s : %-20s\t%p\n", TO_STR(FT_OFF), ft, ft);
+			fprintf(fd, "src : %-20s\tchar : %-2s\t", src[i], car[i]);
+			fprintf(fd, "%s : %-20s\t%-10p\t", TO_STR(FT_OFF), off, off);
+			fprintf(fd, "ft_%s : %-20s\t%-10p\n", TO_STR(FT_OFF), ft, ft);
 		}
 	//	free(off);
 	//	off = NULL;
