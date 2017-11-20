@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/20 15:03:24 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/20 17:50:29 by ade-verd         ###   ########.fr       */
+/*   Created: 2017/11/20 17:47:48 by ade-verd          #+#    #+#             */
+/*   Updated: 2017/11/20 18:23:48 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void	*ft_memset(void *b, int c, size_t len)
+void	ft_bzero(void *s, size_t len)
 {
-	char			*str;
+	char	*str;
 
-	str = b;
+	str = s;
 	while (len--)
-		*str++ = (unsigned char)c;
-	return (b);
+		*str++ = 0;
 }
