@@ -6,7 +6,7 @@
 #    By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 16:30:07 by ade-verd          #+#    #+#              #
-#    Updated: 2017/11/20 18:22:42 by ade-verd         ###   ########.fr        #
+#    Updated: 2017/11/20 18:55:29 by ade-verd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,7 @@ INCL_DIR = ./
 SRC_DIR = ./
 SRC = ft_memset.c\
 	  ft_bzero.c\
+	  ft_memcpy.c\
 	  ft_strlen.c\
 	  ft_strdup.c\
 	  ft_strcpy.c\

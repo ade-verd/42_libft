@@ -5,7 +5,7 @@ Premier projet de l'ecole 42 : coder une librairie libft.a à l'identique pour l
 Consulter le man pour la description des fonctions suivantes :
 - [x] ft_memset [no checkfile]
 - [x] ft_bzero [no checkfile]
-- [ ] ft_memcpy [no checkfile]
+- [x] ft_memcpy [no checkfile]
 - [ ] ft_memccpy [no checkfile]
 - [ ] ft_memmove [no checkfile]
 - [ ] ft_memchr [no checkfile]
