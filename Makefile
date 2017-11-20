@@ -6,14 +6,15 @@
 #    By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 16:30:07 by ade-verd          #+#    #+#              #
-#    Updated: 2017/11/20 13:44:02 by ade-verd         ###   ########.fr        #
+#    Updated: 2017/11/20 15:47:54 by ade-verd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 INCL_DIR = ./
 SRC_DIR = ./
-SRC = ft_strlen.c\
+SRC = ft_memset.c\
+	  ft_strlen.c\
 	  ft_strdup.c\
 	  ft_strcpy.c\
 	  ft_strncpy.c\
