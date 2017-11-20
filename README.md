@@ -3,7 +3,7 @@ Premier projet de l'ecole 42 : coder une librairie libft.a à l'identique pour l
 
 ## Partie 1
 Consulter le man pour la description des fonctions suivantes :
-- [ ] ft_memset
+- [x] ft_memset
 - [ ] ft_bzero
 - [ ] ft_memcpy
 - [ ] ft_memccpy
