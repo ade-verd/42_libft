@@ -6,7 +6,7 @@
 #    By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 16:30:07 by ade-verd          #+#    #+#              #
-#    Updated: 2017/11/20 11:24:13 by ade-verd         ###   ########.fr        #
+#    Updated: 2017/11/20 13:44:02 by ade-verd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,8 @@ SRC = ft_strlen.c\
 	  ft_strlcat.c\
 	  ft_strchr.c\
 	  ft_strrchr.c\
+	  ft_strstr.c\
+	  ft_strnstr.c\
 	  ft_strcmp.c\
 	  ft_strncmp.c\
 	  ft_atoi.c\
