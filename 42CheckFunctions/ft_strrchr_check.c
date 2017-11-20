@@ -6,7 +6,7 @@
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 16:45:07 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/18 17:17:02 by ade-verd         ###   ########.fr       */
+/*   Updated: 2017/11/20 12:04:50 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int		ft_strrchr_check(FILE *fd)
 	src[9] = "abcdefghcaslc[pslacl";
 	src[10] = "dasdsadopkasdopksakd";
 	src[11] = "123dsfds ds fdsf sdf";
-	src[12] = "\t\t\t\t\t\r\t\0\rds";
+	src[12] = "\t\t\t\t\r\t\t\0ds";
 
 	i = 0;
 
@@ -48,7 +48,7 @@ int		ft_strrchr_check(FILE *fd)
 	car[5] = "w";
 	car[6] = "j";
 	car[7] = "k";
-	car[8] = "5";
+	car[8] = "a";
 	car[9] = "[";
 	car[10] = "o";
 	car[11] = " ";
@@ -59,24 +59,18 @@ int		ft_strrchr_check(FILE *fd)
 
 	i = 0;
 
-	while (src[i])
+	while (i < 13)
 	{
-	//	if ((off = (char*)malloc(sizeof(char) * (strlen(src[i]) + 1))) == NULL)
-	//		return (0);
-	//	if ((ft = (char*)malloc(sizeof(char) * (strlen(src[i]) + 1))) == NULL)
-	//		return (0);
-	//	strcpy(off, dest[j]); //on copie dest vers tmp[i] dont la place necessaire a ete allouee
-	//	strcpy(ft, dest[j]); //idem pour refaire avec la fonction officielle en excluant les resultats du premier test
 		off = FT_OFF(src[i], car[i][0]);
 		ft = FT(src[i], car[i][0]);
-		if (&off != &ft)
+		if (off != ft)
 		{
 			fprintf(stderr, "\nX_X KO\t");
-			fprintf(stderr, "src : %-20s\tchar : %-2s\t", src[i], car[i]);
+			fprintf(stderr, "src : %20s (%p)\tchar : %-2s\t", src[i], src[i], car[i]);
 			fprintf(stderr, "%s : %-20s\t%-10p\t", TO_STR(FT_OFF), off, off);
 			fprintf(stderr, "ft_%s : %-20s\t%-10p\n", TO_STR(FT_OFF), ft, ft);
 			fprintf(fd, "\nX_X KO\t");
-			fprintf(fd, "src : %-20s\tchar : %-2s\t", src[i], car[i]);
+			fprintf(fd, "src : %-20s (%p)\tchar : %-2s\t", src[i], src[i], car[i]);
 			fprintf(fd, "%s : %-20s\t%-10p\t", TO_STR(FT_OFF), off, off);
 			fprintf(fd, "ft_%s : %-20s\t%-10p\n", TO_STR(FT_OFF), ft, ft);
 			return (0);
@@ -84,16 +78,11 @@ int		ft_strrchr_check(FILE *fd)
 		else
 		{
 			fprintf(fd, "OK ;)\t");
-			fprintf(fd, "src : %-20s\tchar : %-2s\t", src[i], car[i]);
+			fprintf(fd, "src : %-20s (%p)\tchar : %-2s\t", src[i], src[i], car[i]);
 			fprintf(fd, "%s : %-20s\t%-10p\t", TO_STR(FT_OFF), off, off);
 			fprintf(fd, "ft_%s : %-20s\t%-10p\n", TO_STR(FT_OFF), ft, ft);
 		}
-	//	free(off);
-	//	off = NULL;
-	//	free(ft);
-	//	ft = NULL;
 		i++;
-	//	j--;
 	}
 	printf("OK\n");
 	return (0);

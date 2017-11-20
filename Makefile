@@ -6,7 +6,7 @@
 #    By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 16:30:07 by ade-verd          #+#    #+#              #
-#    Updated: 2017/11/17 16:41:00 by ade-verd         ###   ########.fr        #
+#    Updated: 2017/11/20 11:24:13 by ade-verd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,10 +42,11 @@ OTHER_FILES = Makefile\
 
 all: $(NAME)
 
-$(NAME):
-	gcc -c $(SRC) $(CGLAGS) -I $(INCL_DIR)
-	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
+$(NAME): $(OBJ)
+	@gcc -c $(SRC) $(CGLAGS) -I $(INCL_DIR)
+	@ar -rcs $(NAME) $(OBJ)
+	@ranlib $(NAME)
+	@echo "✧ ar -rcs $(NAME) object files: OK! √"
 
 clean:
 	rm -f $(OBJ)

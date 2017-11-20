@@ -17,8 +17,8 @@ Consulter le man pour la description des fonctions suivantes :
 - [x] ft_strcat
 - [x] ft_strncat
 - [x] ft_strlcat
-- [ ] ft_strchr
-- [ ] ft_strrchr
+- [x] ft_strchr
+- [x] ft_strrchr
 - [ ] ft_strstrs
 - [ ] ft_strnstr
 - [x] ft_strcmp
