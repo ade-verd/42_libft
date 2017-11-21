@@ -9,7 +9,7 @@ Consulter le man pour la description des fonctions suivantes :
 - [x] ft_memccpy [no checkfile]
 - [x] ft_memmove [no checkfile]
 - [x] ft_memchr [no checkfile]
-- [ ] ft_memcmp [no checkfile]
+- [x] ft_memcmp [no checkfile]
 - [x] ft_strlen
 - [x] ft_strdup
 - [x] ft_strcpy
