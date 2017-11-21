@@ -6,7 +6,7 @@ Consulter le man pour la description des fonctions suivantes :
 - [x] ft_memset [no checkfile]
 - [x] ft_bzero [no checkfile]
 - [x] ft_memcpy [no checkfile]
-- [ ] ft_memccpy [no checkfile]
+- [x] ft_memccpy [no checkfile]
 - [ ] ft_memmove [no checkfile]
 - [ ] ft_memchr [no checkfile]
 - [ ] ft_memcmp [no checkfile]

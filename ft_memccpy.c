@@ -6,7 +6,7 @@
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/20 18:57:47 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/20 19:44:38 by ade-verd         ###   ########.fr       */
+/*   Updated: 2017/11/21 10:26:24 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,24 @@
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	char			*_dst;
-	char			*_src;
-	char			*point;
+	int				i;
+	unsigned char	*_dst;
+	unsigned char	*_src;
+	char	*point;
 
+	i = 0;
+	_dst = (unsigned char*)dst;
+	_src = (unsigned char*)src;
 	point = NULL;
-	_dst = dst;
-	_src = (char*)src;
 	while (n--)
 	{
-		*_dst++ = *_src++;
-		if (*_src == (unsigned char)c)
+		_dst[i] = _src[i];
+		if (_src[i] == (unsigned char)c)
 		{
-			*_dst = (unsigned char)c;
-			return (point = (char*)&dst);
+			_dst[i] = (unsigned char)c;
+			return (dst + i + 1);
 		}
+		i++;
 	}
 	return (point);
 }
