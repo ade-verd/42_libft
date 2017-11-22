@@ -6,7 +6,7 @@
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/22 13:15:25 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/22 13:25:47 by ade-verd         ###   ########.fr       */
+/*   Updated: 2017/11/22 16:04:15 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char			*ft_strnew(size_t size)
 {
 	char	*s;
 
-	if ((s = ft_memalloc(sizeof(char) * (size + 1))) == NULL)
+	if ((s = (char*)ft_memalloc(sizeof(char) * (size + 1))) == NULL)
 		return (NULL);
 	s[size] = '\0';
 	return (s);

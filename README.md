@@ -54,10 +54,10 @@ Applique la fonction f a chaque caractere de la chaine de caracteres passee en p
 ### [x] ft_striteri
 Applique la fonction f a chaque caractere de la chaine de caracteres passee en parametre en precisant son index en premier argument. Chaque caractere est passe par adresse a la fonction f afin de pouvoir etre modifie si necessaire.
 
-### [ ] ft_strmap
+### [x] ft_strmap
 Applique la fonction f a chaque caractere de la chaine de caracteres passee en parametre pour creer une nouvelle chaine “fraiche” avec malloc(3) resultant des applications successives de f.
 
-### [ ] ft_strmapi
+### [x] ft_strmapi
 Applique la fonction f a chaque caractere de la chaine de caracteres passee en parametre en precisant son index pour creer une nouvelle chaine “fraiche” avec malloc(3) resultant des applications successives de f.
 
 ### [ ] ft_strequ

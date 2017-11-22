@@ -6,7 +6,7 @@
 #    By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 16:30:07 by ade-verd          #+#    #+#              #
-#    Updated: 2017/11/22 14:45:42 by ade-verd         ###   ########.fr        #
+#    Updated: 2017/11/22 16:22:44 by ade-verd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,7 @@ SRC_1 = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c\
 SRC_2 = ft_memalloc.c ft_memdel.c\
 		\
 		ft_strnew.c ft_strdel.c ft_strclr.c ft_striter.c ft_striteri.c\
+		ft_strmap.c ft_strmapi.c\
 		\
 		ft_putchar.c ft_putstr.c ft_putendl.c ft_putnbr.c\
 		ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c\
