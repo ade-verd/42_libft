@@ -1,33 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/21 18:24:40 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/22 11:59:52 by ade-verd         ###   ########.fr       */
+/*   Created: 2017/11/22 11:12:56 by ade-verd          #+#    #+#             */
+/*   Updated: 2017/11/22 11:50:43 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <string.h>
 
 static void		ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
 
-void			ft_putstr(char const *s)
+void	ft_putnbr(int n)
 {
-	int		i;
-
-	i = 0;
-	if (s == NULL)
-		return ;
-	while (s[i] != '\0')
+	if (n == -2147483648)
 	{
-		ft_putchar(s[i]);
-		i++;
+		ft_putnbr(-2);
+		ft_putnbr(147483648);
+	}
+	else
+	{
+		if (n < 0)
+		{
+			ft_putchar('-');
+			n = -n;
+		}
+		if (n > 9)
+		{
+			ft_putnbr(n / 10);
+			ft_putnbr(n % 10);
+		}
+		else
+			ft_putchar(n + 48);
 	}
 }

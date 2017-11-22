@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   main_putnbr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/21 18:24:40 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/22 11:59:52 by ade-verd         ###   ########.fr       */
+/*   Created: 2017/11/22 11:30:35 by ade-verd          #+#    #+#             */
+/*   Updated: 2017/11/22 11:35:22 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <string.h>
+#include <stdio.h> //printf
+#include <unistd.h> //write
+#include <stdlib.h> //atoi
+#include "./../../libft.h"
 
-static void		ft_putchar(char c)
+int		main(int ac, char **av)
 {
-	write(1, &c, 1);
-}
-
-void			ft_putstr(char const *s)
-{
-	int		i;
-
-	i = 0;
-	if (s == NULL)
-		return ;
-	while (s[i] != '\0')
-	{
-		ft_putchar(s[i]);
-		i++;
-	}
+	if (ac != 2)
+		return(0);
+//	printf("ft_putnbr:\t", ft_putnbr(atoi(av[1])));
+	ft_putnbr(atoi(av[1]));
+	return (0);
 }

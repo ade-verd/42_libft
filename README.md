@@ -81,16 +81,16 @@ Alloue avec malloc(3) et retourne un tableau de chaines de caracteres "fraiches"
 ### [ ] ft_itoa
 Alloue avec malloc(3) et retourne une chaine de caracteres "fraiche" terminee par un '\0' representatnt l'entier n passe en parametre. Les nombres negatifs sont geres. Si l'allocation echoue, la fonction renvoie NULL.
 
-### [ ] ft_putchar
+### [x] ft_putchar
 Affiche le caractere c sur la sortie standard.
 
-### [ ] ft_putstr
+### [x] ft_putstr
 Affiche la chaine s sur la sortir standard.
 
-### [ ] ft_putendl
+### [x] ft_putendl
 Affiche la chaine s sur la sortie standard suivi d'un '\n'.
 
-### [ ] ft_putnbr
+### [x] ft_putnbr
 Affiche l'entier n sur la sortie standard.
 
 ### [ ] t_putchar_fd
