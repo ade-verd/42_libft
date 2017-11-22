@@ -48,10 +48,10 @@ Prend en parametre l’adresse d’une chaine de caracteres qui doit etre libere
 ### [x] ft_strclr
 Assigne la valeur ’\0’ a tous les caracteres de la chaine passee en parametre.
 
-### [ ] ft_striter
+### [x] ft_striter
 Applique la fonction f a chaque caractere de la chaine de caracteres passee en parametre. Chaque caractere est passe par adresse a la fonction f afin de pouvoir être modifie si necessaire.
 
-### [ ] ft_striteri
+### [x] ft_striteri
 Applique la fonction f a chaque caractere de la chaine de caracteres passee en parametre en precisant son index en premier argument. Chaque caractere est passe par adresse a la fonction f afin de pouvoir etre modifie si necessaire.
 
 ### [ ] ft_strmap
