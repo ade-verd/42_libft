@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/22 17:14:29 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/22 17:43:20 by ade-verd         ###   ########.fr       */
+/*   Created: 2017/11/22 17:46:00 by ade-verd          #+#    #+#             */
+/*   Updated: 2017/11/22 19:18:18 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,29 +23,31 @@ static size_t	ft_strlen(const char *str)
 	return (i);
 }
 
-char			*ft_strjoin(char const *s1, char const *s2)
+char			*ft_strtrim(char const *s)
 {
-	char	*join;
+	char	*trim;
 	int		i;
-	int		j;
+	int		a;
+	int		end;
+	int		diff;
 
 	i = 0;
-	j = 0;
-	if (s1 == NULL || s2 == NULL)
+	a = 0;
+	if (s == NULL)
 		return (NULL);
-	if ((join = (char*)malloc(sizeof(char) *
-					(ft_strlen(s1) + ft_strlen(s2) + 1))) == NULL)
+	while (s[a] && (s[a] == ' ' || s[a] == '\t' || s[a] == '\n'))
+		a++;
+	end = ft_strlen(s) - 1;
+	while (s[end] && (s[end] == ' ' || s[end] == '\t' || s[end] == '\n'))
+		end--;
+	diff = (end < a ? 1 : end - a + 1);
+	if ((trim = (char*)malloc(sizeof(char) * (diff + 1))) == NULL)
 		return (NULL);
-	while (s1[i])
+	while (a <= end)
 	{
-		join[i] = s1[i];
-		i++;
+		trim[i++] = s[a];
+		a++;
 	}
-	while (s2[j])
-	{
-		join[i + j] = s2[j];
-		j++;
-	}
-	join[i + j] = '\0';
-	return (join);
+	trim[i] = '\0';
+	return (trim);
 }
