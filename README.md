@@ -42,7 +42,7 @@ Prend en parametre l’adresse d’un pointeur dont la zone pointee doit etre li
 ### [x] ft_strnew
 Alloue avec malloc(3) et retourne une chaine de caractere “fraiche” terminee par un ’\0’. Chaque caractere de la chaine est initialise a ’\0’. Si l’allocation echoue, la fonction renvoie NULL.
 
-### [ ] ft_strdel
+### [x] ft_strdel
 Prend en parametre l’adresse d’une chaine de caracteres qui doit etre liberee avec free(3) et son pointeur mis a NULL.
 
 ### [ ] ft_strclr
