@@ -1,38 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/22 10:58:37 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/22 12:32:25 by ade-verd         ###   ########.fr       */
+/*   Created: 2017/11/22 12:10:54 by ade-verd          #+#    #+#             */
+/*   Updated: 2017/11/22 12:32:29 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-static void		ft_putchar(char c)
+void	ft_putchar_fd(char c, int fd)
 {
-	write(1, &c, 1);
-}
+	int		ret;
 
-static void		ft_putstr(char const *s)
-{
-	int		i;
-
-	i = 0;
-	while (s[i] != '\0')
+	if (fd <= 0)
 	{
-		ft_putchar(s[i]);
-		i++;
-	}
-}
-
-void			ft_putendl(char const *s)
-{
-	if (s == NULL)
+		write(2, "error: bad file descriptor", 13);
 		return ;
-	ft_putstr(s);
-	ft_putchar('\n');
+	}
+	if ((ret = write(fd, &c, 1)) < 0)
+		write(2, "write() error", 13);
 }

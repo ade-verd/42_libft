@@ -93,16 +93,16 @@ Affiche la chaine s sur la sortie standard suivi d'un '\n'.
 ### [x] ft_putnbr
 Affiche l'entier n sur la sortie standard.
 
-### [ ] t_putchar_fd
+### [x] t_putchar_fd
 Ecrit le caractere c sur le descripteur de fichier fd.
 
-### [ ] ft_putstr_fd
+### [x] ft_putstr_fd
 Ecrit la chaine s sur le descripteur de fichier fd.
 
-### [ ] ft_putendl_fd
+### [x] ft_putendl_fd
 Ecrit la chaine s sur le descripteur de fichier fd suivi d'un '\n'.
 
-### [ ] ft_putnbr_fd
+### [x] ft_putnbr_fd
 Ecrit l'entier n sur le descripteur de fichier fd.
 
 ## Partie bonus
@@ -123,37 +123,3 @@ Parcourt la liste lst en appliquant a chaque maillon la fonction f.
 
 ### [ ] ft_lstmap
 Parcourt la liste lst en appliquant à chaque maillon la fonction f et cree une nouvelle liste “fraiche” avec malloc(3) resultant des applications successives. Si une allocation echoue, la fonction renvoie NULL.
-
-## Fonctions bonus perso
-### [ ] ft_isupper
-Retourne vrai si le caractere c passe est en majuscule. Ne fonctionne qu'avec les caracteres ASCII.
-
-### [ ] ft_islower
-Retourne vrai si le caractere c passe est en minuscule. Ne fonctionne qu'avec les caracteres ASCII.
-
-### [ ] ft_strlwr
-Passe toute la chaine de caractere en minuscule.
-
-### [ ] ft_strupr
-Passe toute la chaine de caractere en majuscule.
-
-### [ ] ft_strset
-Initialise toute la chaine de caractere, terminee par un '\0', avec le caractere passe en parametre.
-
-### [ ] ft_strsetnew
-Cree une nouvelle chaine de caractere initialisee avec le caractere passe en parametre et ajoute un '\0' a la fin.
-
-### [ ] get_next_line
-int get_next_line(int const fd, char **line)
-
-### [ ] ft_count_words
-int ft_count_words(char *s, char c)
-
-### [ ] ft_strtol
-long int ft_strtol(char *line)
-
-### [ ] ft_power
-Utilise la recursivite pour le calcul. float ft_power(int nb, int exp)
-
-### [ ] ft_lstappend
-Ajoute un nouvel element new en fin de liste list. void ft_lstappend(t_list *list, t_list *new)

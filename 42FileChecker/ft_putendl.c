@@ -6,7 +6,7 @@
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/22 10:58:37 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/22 12:01:18 by ade-verd         ###   ########.fr       */
+/*   Updated: 2017/11/22 12:32:25 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static void		ft_putstr(char const *s)
 	}
 }
 
-void		ft_putendl(char const *s)
+void			ft_putendl(char const *s)
 {
 	if (s == NULL)
 		return ;
