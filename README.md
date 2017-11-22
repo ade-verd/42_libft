@@ -66,7 +66,7 @@ Compare lexicographiquement s1 et s2. Si les deux chaines sont egales, la foncti
 ### [x] ft_strnequ
 Compare lexicographiquement s1 et s2 jusqu’a n caracteres maximum ou bien qu’un ’\0’ ait ete rencontre. Si les deux chaines sont egales, la fonction retourne 1, ou 0 sinon.
 
-### [ ] ft_strsub
+### [x] ft_strsub
 Alloue avec malloc(3) et retourne la copie "fraiche" d'un troncon de la chaine de caracteres passee en parametre. Le troncon commence a l'index start et a pour longueur len. Si start et len ne designent pas un troncon de chaine valide, le comportement est indetermine. Si l'allocation echoue, la fonction renvoie NULL.
 
 ### [ ] ft_strjoin
