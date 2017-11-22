@@ -60,10 +60,10 @@ Applique la fonction f a chaque caractere de la chaine de caracteres passee en p
 ### [x] ft_strmapi
 Applique la fonction f a chaque caractere de la chaine de caracteres passee en parametre en precisant son index pour creer une nouvelle chaine “fraiche” avec malloc(3) resultant des applications successives de f.
 
-### [ ] ft_strequ
+### [x] ft_strequ
 Compare lexicographiquement s1 et s2. Si les deux chaines sont egales, la fonction retourne 1, ou 0 sinon.
 
-### [ ] ft_strnequ
+### [x] ft_strnequ
 Compare lexicographiquement s1 et s2 jusqu’a n caracteres maximum ou bien qu’un ’\0’ ait ete rencontre. Si les deux chaines sont egales, la fonction retourne 1, ou 0 sinon.
 
 ### [ ] ft_strsub

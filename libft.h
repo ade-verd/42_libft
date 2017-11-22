@@ -6,7 +6,7 @@
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 13:44:39 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/22 14:45:44 by ade-verd         ###   ########.fr       */
+/*   Updated: 2017/11/22 16:30:36 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,10 +57,10 @@ void	ft_strdel(char **as);
 void	ft_strclr(char *s);
 void	ft_striter(char *s, void (*f)(char *));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
-//char	*ft_strmap(char const *s, char (*f)(char));
-//char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-//int	ft_strequ(char const *s1, char const *s2);
-//int	ft_strnequ(char const *s1, char const *s2, size_t n);
+char	*ft_strmap(char const *s, char (*f)(char));
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+int		ft_strequ(char const *s1, char const *s2);
+int		ft_strnequ(char const *s1, char const *s2, size_t n);
 //char	*ft_strsub(char const *s, unsigned int start, size_t len);
 //char	*ft_strjoin(char const *s1, char const *s2);
 //char	*ft_strtrim(char const *s);
