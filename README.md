@@ -45,7 +45,7 @@ Alloue avec malloc(3) et retourne une chaine de caractere “fraiche” terminee
 ### [x] ft_strdel
 Prend en parametre l’adresse d’une chaine de caracteres qui doit etre liberee avec free(3) et son pointeur mis a NULL.
 
-### [ ] ft_strclr
+### [x] ft_strclr
 Assigne la valeur ’\0’ a tous les caracteres de la chaine passee en parametre.
 
 ### [ ] ft_striter
