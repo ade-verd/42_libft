@@ -36,7 +36,7 @@ Consulter le man pour la description des fonctions suivantes :
 ### [x] ft_memalloc
 Alloue avec malloc(3) et retourne une zone de memoire "fraiche". La memoire allouee est intialisee a 0. Si l'allocation echoue, la fonction renvoie NULL.
 
-### [ ] ft_memdel
+### [x] ft_memdel
 Prend en parametre l’adresse d’un pointeur dont la zone pointee doit etre liberee avec free(3), puis le pointeur est mis a NULL.
 
 ### [ ] ft_strnew

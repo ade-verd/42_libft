@@ -6,7 +6,7 @@
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 13:44:39 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/22 11:31:52 by ade-verd         ###   ########.fr       */
+/*   Updated: 2017/11/22 12:54:21 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,8 @@ int		ft_tolower(int c);
 
 /* PART 2*/
 /*Memory*/
-//void	*ft_memalloc(size_t size);
-//void	ft_memdel(void **ap);
+void	*ft_memalloc(size_t size);
+void	ft_memdel(void **ap);
 /*Strings*/
 //char	*ft_strnew(size_t size);
 //void	ft_strdel(char **as);
@@ -59,8 +59,8 @@ int		ft_tolower(int c);
 //void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 //char	*ft_strmap(char const *s, char (*f)(char));
 //char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-//int		ft_strequ(char const *s1, char const *s2);
-//int		ft_strnequ(char const *s1, char const *s2, size_t n);
+//int	ft_strequ(char const *s1, char const *s2);
+//int	ft_strnequ(char const *s1, char const *s2, size_t n);
 //char	*ft_strsub(char const *s, unsigned int start, size_t len);
 //char	*ft_strjoin(char const *s1, char const *s2);
 //char	*ft_strtrim(char const *s);
@@ -71,9 +71,9 @@ void	ft_putchar(char c);
 void	ft_putstr(char const *s);
 void	ft_putendl(char const *s);
 void	ft_putnbr(int n);
-//void	ft_putchar_fd(char c, int fd);
-//void	ft_putstr_fd(char const *s, int fd);
-//void	ft_putendl_fd(char const *s, int fd);
-//void	ft_putnbr_fd(int n, int fd);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char const *s, int fd);
+void	ft_putendl_fd(char const *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 
 #endif
