@@ -39,7 +39,7 @@ Alloue avec malloc(3) et retourne une zone de memoire "fraiche". La memoire allo
 ### [x] ft_memdel
 Prend en parametre l’adresse d’un pointeur dont la zone pointee doit etre liberee avec free(3), puis le pointeur est mis a NULL.
 
-### [ ] ft_strnew
+### [x] ft_strnew
 Alloue avec malloc(3) et retourne une chaine de caractere “fraiche” terminee par un ’\0’. Chaque caractere de la chaine est initialise a ’\0’. Si l’allocation echoue, la fonction renvoie NULL.
 
 ### [ ] ft_strdel

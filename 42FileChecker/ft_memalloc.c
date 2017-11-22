@@ -6,11 +6,10 @@
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/22 12:44:57 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/22 12:52:35 by ade-verd         ###   ########.fr       */
+/*   Updated: 2017/11/22 13:25:48 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include <stdlib.h>
 
 void	*ft_memalloc(size_t size)
