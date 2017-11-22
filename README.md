@@ -33,7 +33,7 @@ Consulter le man pour la description des fonctions suivantes :
 - [x] ft_tolower
 
 ## Partie 2
-### [ ] ft_memalloc
+### [x] ft_memalloc
 Alloue avec malloc(3) et retourne une zone de memoire "fraiche". La memoire allouee est intialisee a 0. Si l'allocation echoue, la fonction renvoie NULL.
 
 ### [ ] ft_memdel
