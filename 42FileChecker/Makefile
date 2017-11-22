@@ -6,7 +6,7 @@
 #    By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 16:30:07 by ade-verd          #+#    #+#              #
-#    Updated: 2017/11/22 16:57:54 by ade-verd         ###   ########.fr        #
+#    Updated: 2017/11/22 17:13:38 by ade-verd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,7 @@ SRC_2 = ft_memalloc.c ft_memdel.c\
 		\
 		ft_strnew.c ft_strdel.c ft_strclr.c ft_striter.c ft_striteri.c\
 		ft_strmap.c ft_strmapi.c ft_strequ.c ft_strnequ.c ft_strsub.c\
+		ft_strjoin.c\
 		\
 		ft_putchar.c ft_putstr.c ft_putendl.c ft_putnbr.c\
 		ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c\

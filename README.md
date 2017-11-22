@@ -69,7 +69,7 @@ Compare lexicographiquement s1 et s2 jusquâ€™a n caracteres maximum ou bien quâ€
 ### [x] ft_strsub
 Alloue avec malloc(3) et retourne la copie "fraiche" d'un troncon de la chaine de caracteres passee en parametre. Le troncon commence a l'index start et a pour longueur len. Si start et len ne designent pas un troncon de chaine valide, le comportement est indetermine. Si l'allocation echoue, la fonction renvoie NULL.
 
-### [ ] ft_strjoin
+### [x] ft_strjoin
 Alloue avec malloc(3) et retourne une chaine de caracteres "fraiche" terminee pas un '\0' resultant de la concatenation de s1 et s2. Si l'allocation echoue, la fonction renvoie NULL.
 
 ### [ ] ft_strtrim
