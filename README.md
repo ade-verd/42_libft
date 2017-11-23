@@ -75,7 +75,7 @@ Alloue avec malloc(3) et retourne une chaine de caracteres "fraiche" terminee pa
 ### [x] ft_strtrim
 Alloue avec malloc(3) et retourne une copie de la chaine passee en parametre sans les espaces blancs au debut et a la fin de cette chaine. On considere comme des espaces blancs les caracteres ' ', '\n' et '\t'. Si s ne contient pas d'espaces blancs au debut ou a la fin, la fonction renvoie une copie de s. Si l'allocation echoue, la fonction renvoie NULL.
 
-### [ ] ft_strsplit
+### [x] ft_strsplit
 Alloue avec malloc(3) et retourne un tableau de chaines de caracteres "fraiches" (toutes terminees par un '\0', le tableau egalement donc) resultant de la decoupe de s selon le caractere c. Si l'allocation echoue, la fonction retourne NULL.
 
 ### [ ] ft_itoa
