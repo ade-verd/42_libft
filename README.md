@@ -78,7 +78,7 @@ Alloue avec malloc(3) et retourne une copie de la chaine passee en parametre san
 ### [x] ft_strsplit
 Alloue avec malloc(3) et retourne un tableau de chaines de caracteres "fraiches" (toutes terminees par un '\0', le tableau egalement donc) resultant de la decoupe de s selon le caractere c. Si l'allocation echoue, la fonction retourne NULL.
 
-### [ ] ft_itoa
+### [x] ft_itoa
 Alloue avec malloc(3) et retourne une chaine de caracteres "fraiche" terminee par un '\0' representatnt l'entier n passe en parametre. Les nombres negatifs sont geres. Si l'allocation echoue, la fonction renvoie NULL.
 
 ### [x] ft_putchar
