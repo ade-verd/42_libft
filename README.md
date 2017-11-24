@@ -106,7 +106,7 @@ Ecrit la chaine s sur le descripteur de fichier fd suivi d'un '\n'.
 Ecrit l'entier n sur le descripteur de fichier fd.
 
 ## Partie bonus
-### [ ] ft_lstnew
+### [x] ft_lstnew
 Alloue avec malloc(3) et retourne un maillon “frais”. Les champs content et content_size du nouveau maillon sont initialises par copie des parametres de la fonction. Si le parametre content est nul, le champs content est initialise a NULL et le champs content_size est initialise a 0 quelque soit la valeur du parametre content_size. Le champ next est initialise a NULL. Si l’allocation echoue, la fonction renvoie NULL.
 
 ### [ ] ft_lstdelone
