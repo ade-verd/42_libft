@@ -6,7 +6,7 @@
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 11:49:52 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/24 13:26:51 by ade-verd         ###   ########.fr       */
+/*   Updated: 2017/11/24 16:20:53 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static void		*ft_memocpy(void *dst, const void *src, size_t n)
 	return (dst);
 }
 
-static t_list	*add_link(t_list *list, void *content, size_t size)
+static t_list	*ft_add_link(t_list *list, void *content, size_t size)
 {
 	t_list	*tmp;
 
@@ -46,13 +46,13 @@ t_list			*ft_lstnew(void const *content, size_t content_size)
 
 	newlist = NULL;
 	if (content == NULL)
-		newlist = add_link(newlist, NULL, 0);
+		newlist = ft_add_link(newlist, NULL, 0);
 	else
 	{
 		if ((content_cpy = (void*)malloc(content_size)) == NULL)
 			return (NULL);
 		content_cpy = ft_memocpy(content_cpy, content, content_size);
-		newlist = add_link(newlist, content_cpy, content_size);
+		newlist = ft_add_link(newlist, content_cpy, content_size);
 	}
 	return (newlist);
 }

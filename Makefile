@@ -6,7 +6,7 @@
 #    By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 16:30:07 by ade-verd          #+#    #+#              #
-#    Updated: 2017/11/24 15:57:44 by ade-verd         ###   ########.fr        #
+#    Updated: 2017/11/24 16:50:51 by ade-verd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ SRC_2 = ft_memalloc.c ft_memdel.c\
 		ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c\
 
 SRC_3 = ft_lstnew.c\
-		ft_lstadd.c
+		ft_lstadd.c ft_lstiter.c
 
 SRC = $(SRC_1) $(SRC_2) $(SRC_3)
 OBJ = $(SRC:.c=.o)

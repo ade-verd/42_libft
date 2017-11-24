@@ -118,7 +118,7 @@ Prend en parametre l’adresse d’un pointeur sur un maillon et libere la memoi
 ### [X] ft_lstadd
 Ajoute l'element new en tete de la liste.
 
-### [ ] ft_lstiter
+### [x] ft_lstiter
 Parcourt la liste lst en appliquant a chaque maillon la fonction f.
 
 ### [ ] ft_lstmap
