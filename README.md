@@ -115,7 +115,7 @@ Prend en parametre l’adresse d’un pointeur sur un maillon et libere la memoi
 ### [ ] ft_lstdel
 Prend en parametre l’adresse d’un pointeur sur un maillon et libere la memoire de ce maillon et celle de tous ses successeurs l’un apres l’autre avec del et free(3). Pour terminer, le pointeur sur le premier maillon maintenant libere doit etre mis à NULL (de maniere similaire à la fonction ft_memdel).
 
-### [ ] ft_lstadd
+### [X] ft_lstadd
 Ajoute l'element new en tete de la liste.
 
 ### [ ] ft_lstiter
