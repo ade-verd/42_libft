@@ -6,7 +6,7 @@
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 10:34:11 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/21 15:50:20 by ade-verd         ###   ########.fr       */
+/*   Updated: 2017/11/26 22:30:52 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,9 @@
 
 void			*ft_memmove(void *dst, const void *src, size_t n)
 {
-	int		i;
 	char	*dst_2;
 	char	*src_2;
 
-	i = 0;
 	dst_2 = (char*)dst;
 	src_2 = (char*)src;
 	while (n--)
