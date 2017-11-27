@@ -123,3 +123,27 @@ Parcourt la liste lst en appliquant a chaque maillon la fonction f.
 
 ### [x] ft_lstmap
 Parcourt la liste lst en appliquant à chaque maillon la fonction f et cree une nouvelle liste “fraiche” avec malloc(3) resultant des applications successives. Si une allocation echoue, la fonction renvoie NULL.
+
+## Fonctions personnelles supplémentaires
+### [x] ft_abs
+Prend en paramètre un int et renvoie sa valeur absolue.
+
+### [x] ft_intlen
+Prend en paramètre un int et renvoie le nombre de caractères qui composent le nombre. En cas de valeur négative, le signe '-' est compté comme un caractère.
+
+### [x] ft_power
+> int		ft_power(int nb, int power);
+Fonction puissance.
+
+### [x] ft_sqrt
+> int		ft_sqrt(int nb);
+Fonction racine carrée (square root).
+
+### [x] ft_countwords
+> int		ft_countwords(char const *s, char c);
+Prend en paramètre une chaîne de caractères "s" et un caractère 'c'. La fonction retourne le nombre de mots issus de la découpe de la chaîne "s" par le séparateur 'c'.
+Exemple : ft_countwords("*salut*les***etudiants*",’*’) renvoie 3 pour "salut", "les", et "etudiants".
+
+### [x] ft_swap
+> void	ft_swap(int *a, int *b);
+Echange le contenu de deux entiers dont les adresses sont données en paramètres.
