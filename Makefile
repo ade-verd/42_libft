@@ -6,7 +6,7 @@
 #    By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 16:30:07 by ade-verd          #+#    #+#              #
-#    Updated: 2017/11/26 23:06:08 by ade-verd         ###   ########.fr        #
+#    Updated: 2017/11/27 15:16:57 by ade-verd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,13 +32,15 @@ SRC_2 = ft_memalloc.c ft_memdel.c\
 		ft_putchar.c ft_putstr.c ft_putendl.c ft_putnbr.c\
 		ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
-SRC_3 = ft_lstnew.c ft_lstadd.c\
-		ft_lstdelone.c ft_lstdel.c\
-		ft_lstiter.c ft_lstmap.c
+SRC_BONUS = ft_lstnew.c ft_lstadd.c\
+			ft_lstdelone.c ft_lstdel.c\
+			ft_lstiter.c ft_lstmap.c
 
-SRC = $(SRC_1) $(SRC_2) $(SRC_3)
+SRC_EXTRA = ft_abs.c ft_intlen.c ft_power.c ft_sqrt.c\
+			ft_countwords.c ft_swap.c
+
+SRC = $(SRC_1) $(SRC_2) $(SRC_BONUS) $(SRC_EXTRA)
 OBJ = $(SRC:.c=.o)
-
 
 ifeq ($(USER), aureliendv)
 	CFLAGS := -Wno-unused-result
@@ -75,6 +77,3 @@ cp_to_dir:
 	cp $(OTHER_FILES) $(TEST_DIR)
 
 proper: re cp_to_dir
-
-which_USER:
-	echo $(USER)
