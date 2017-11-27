@@ -121,5 +121,5 @@ Ajoute l'element new en tete de la liste.
 ### [x] ft_lstiter
 Parcourt la liste lst en appliquant a chaque maillon la fonction f.
 
-### [ ] ft_lstmap
+### [x] ft_lstmap
 Parcourt la liste lst en appliquant à chaque maillon la fonction f et cree une nouvelle liste “fraiche” avec malloc(3) resultant des applications successives. Si une allocation echoue, la fonction renvoie NULL.

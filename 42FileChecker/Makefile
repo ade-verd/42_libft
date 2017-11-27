@@ -6,7 +6,7 @@
 #    By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 16:30:07 by ade-verd          #+#    #+#              #
-#    Updated: 2017/11/24 18:27:00 by ade-verd         ###   ########.fr        #
+#    Updated: 2017/11/26 23:06:08 by ade-verd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,15 +30,22 @@ SRC_2 = ft_memalloc.c ft_memdel.c\
 		ft_strjoin.c ft_strtrim.c ft_strsplit.c ft_itoa.c\
 		\
 		ft_putchar.c ft_putstr.c ft_putendl.c ft_putnbr.c\
-		ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c\
+		ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
 SRC_3 = ft_lstnew.c ft_lstadd.c\
 		ft_lstdelone.c ft_lstdel.c\
-		ft_lstiter.c
+		ft_lstiter.c ft_lstmap.c
 
 SRC = $(SRC_1) $(SRC_2) $(SRC_3)
 OBJ = $(SRC:.c=.o)
-CFLAGS = -Wall -Werror -Wextra
+
+
+ifeq ($(USER), aureliendv)
+	CFLAGS := -Wno-unused-result
+else
+	CFLAGS := -Wall -Werror -Wextra
+endif
+
 TEST_DIR = ./42FileChecker/
 OTHER_FILES = Makefile\
 			  libft.h\
@@ -49,7 +56,7 @@ OTHER_FILES = Makefile\
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@gcc -c $(SRC) $(CGLAGS) -I $(INCL_DIR)
+	gcc -c $(SRC) $(CGLAGS) -I $(INCL_DIR)
 	@ar -rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
 	@echo "✧ ar -rcs $(NAME) object files: OK! √"
@@ -68,3 +75,6 @@ cp_to_dir:
 	cp $(OTHER_FILES) $(TEST_DIR)
 
 proper: re cp_to_dir
+
+which_USER:
+	echo $(USER)
