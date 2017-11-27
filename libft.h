@@ -6,7 +6,7 @@
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 13:44:39 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/27 13:25:41 by ade-verd         ###   ########.fr       */
+/*   Updated: 2017/11/27 15:11:59 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,9 +57,15 @@ char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s);
 char				**ft_strsplit(char const *s, char c);
+int					ft_countwords(char const *s, char c);
 
 int					ft_atoi(const char *str);
 char				*ft_itoa(int n);
+int					ft_abs(int n);
+int					ft_intlen(int n);
+void				ft_swap(int *a, int *b);
+int					ft_power(int nb, int power);
+int					ft_sqrt(int nb);
 
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);
