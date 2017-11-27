@@ -6,7 +6,7 @@
 #    By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 16:30:07 by ade-verd          #+#    #+#              #
-#    Updated: 2017/11/27 15:16:57 by ade-verd         ###   ########.fr        #
+#    Updated: 2017/11/27 15:30:06 by ade-verd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,11 +48,6 @@ else
 	CFLAGS := -Wall -Werror -Wextra
 endif
 
-TEST_DIR = ./42FileChecker/
-OTHER_FILES = Makefile\
-			  libft.h\
-			  auteur
-
 .PHONY: re all fclean clean
 
 all: $(NAME)
@@ -70,10 +65,3 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
-
-cp_to_dir:
-	make clean
-	cp $(SRC) $(TEST_DIR)
-	cp $(OTHER_FILES) $(TEST_DIR)
-
-proper: re cp_to_dir
