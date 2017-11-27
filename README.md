@@ -139,9 +139,9 @@ Fonction puissance.
 > int		ft_sqrt(int nb);
 Fonction racine carrée (square root).
 
-### [x] ft_countwords
+> ### [x] ft_countwords
 > int		ft_countwords(char const *s, char c);
-Prend en paramètre une chaîne de caractères "s" et un caractère 'c'. La fonction retourne le nombre de mots issus de la découpe de la chaîne "s" par le séparateur 'c'.
+> Prend en paramètre une chaîne de caractères "s" et un caractère 'c'. La fonction retourne le nombre de mots issus de la découpe de la chaîne "s" par le séparateur 'c'.
 Exemple : ft_countwords("*salut*les***etudiants*",’*’) renvoie 3 pour "salut", "les", et "etudiants".
 
 ### [x] ft_swap
