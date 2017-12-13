@@ -6,17 +6,17 @@
 #    By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 16:30:07 by ade-verd          #+#    #+#              #
-#    Updated: 2017/12/07 16:38:11 by ade-verd         ###   ########.fr        #
+#    Updated: 2017/12/13 12:02:06 by ade-verd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 .PHONY: all clean fclean re
 
 NAME = libft.a
-FLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 CC = gcc
 
-INC_DIR = ./
+INC_DIR = includes
 SRC_DIR = ./
 SRC_1 = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c\
 		ft_memchr.c ft_memcmp.c\
@@ -37,7 +37,7 @@ SRC_2 = ft_memalloc.c ft_memdel.c\
 		ft_putchar.c ft_putstr.c ft_putendl.c ft_putnbr.c\
 		ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
-SRC_BONUS = ft_lstnew.c ft_lstadd.c\
+SRC_BONUS = ft_lstnew.c ft_lstadd.c ft_lstappend.c\
 			ft_lstdelone.c ft_lstdel.c\
 			ft_lstiter.c ft_lstmap.c
 
@@ -45,7 +45,10 @@ SRC_EXTRA = ft_abs.c ft_intlen.c ft_power.c ft_sqrt.c ft_int_sqrt.c\
 			ft_countwords.c ft_swap.c ft_memccpy_src.c
 
 SRC = $(SRC_1) $(SRC_2) $(SRC_BONUS) $(SRC_EXTRA)
-OBJ = $(SRC:.c=.o)
+
+OBJ_PATH = obj/
+OBJ_NAME = $(SRC:.c=.o)
+OBJ = $(addprefix $(OBJ_PATH), $(OBJ_NAME))
 
 C_NO = "\033[00m"
 C_DONE = "\033[35m"
@@ -59,22 +62,29 @@ ERROR = $(C_ERROR)ERROR$(C_NO)
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	@$(CC) $(CFLAGS) -c $(SRC) -I $(INC_DIR)
+$(NAME): obj $(OBJ)
 	@ar -rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
 	@echo "Compiling & Indexing -> " $(NAME) $(SUCCESS)
 
+$(OBJ_PATH)%.o: $(SRC_PATH)%.c
+	@$(CC) $(CFLAGS) -I$(INC_DIR) -c $< -o $@
+	@echo "Linking -> " $< $(DONE)
+
+obj:
+	@mkdir -p $(OBJ_PATH)
+
 clean:
-	rm -f $(OBJ)
+	@rm -f $(OBJ)
+	@rm -Rf $(OBJ_PATH)
 	@echo "Deleting object files -> " $(SUCCESS)
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 	@echo "Deleting library -> " $(NAME) $(SUCCESS)
 
 clean_only_lib:
-	rm -f $(NAME)
+	@rm -f $(NAME)
 	@echo "Deleting library -> " $(NAME) $(SUCCESS)
 
 re: fclean all
