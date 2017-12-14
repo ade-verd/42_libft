@@ -7,13 +7,13 @@ Avec le temps, quelques fonctions additionnelles personnelles sont venues se gre
 ## Fonctions Mémoire
 Fonctions | Prototype | Description
 --- | ---- | ---------------------
-ft_memset | `void	*ft_memset(void *b, int c, size_t len);` | Remplit les n premiers octets de la zone mémoire pointée par s avec l'octet c. Renvoie un pointeur sur la zone mémoire s.
-ft_bzero  | `void	ft_bzero(void *s, size_t len);` | Met à 0 (octets contenant « \0 ») les n premiers octets du bloc pointé par s.
-ft_memcpy | `void	*ft_memcpy(void *dst, const void *src, size_t n);` | Copie n octets depuis la zone mémoire src vers la zone mémoire dest. Les deux zones ne doivent pas se chevaucher (overlap). Si c'est le cas, utiliser plutôt ft_memmove. Renvoie un pointeur sur dest.
-ft_memccpy | `void	*ft_memccpy(void *dst, const void *src, int c, size_t n);` | Copie au plus n octets de la zone mémoire src vers la zone mémoire dest, s'arrêtant dès qu'elle rencontre le caractère c. Renvoie un pointeur sur le caractère immédiatement après c dans la zone dest, ou NULL si c n'a pas été trouvé. 
-ft_memmove | `void	*ft_memmove(void *dst, const void *src, size_t n);` | Copie n octets depuis la zone mémoire src vers la zone mémoire dest. Les deux zones peuvent se chevaucher (overlap).  
-ft_memchr | `void	*ft_memchr(const void *s, int c, size_t n);` | Cherche c parmi les n premiers octets de la zone mémoire pointée par s. Renvoie un pointeur sur le premier octet correspondant, ou NULL si le caractère n'est pas présent.
-ft_memcmp | `int		ft_memcmp(const void *s1, const void *s2, size_t n);` | Compare les n premiers octets des zones mémoire s1 et s2. Renvoie un entier négatif, nul ou positif si les n premiers octets de s1 sont respectivement inférieurs, égaux ou supérieurs aux n premiers octets de s2.
+ft_memset | `void	*ft_memset(void *b, int c, size_t len);` | (cf. man) Remplit les n premiers octets de la zone mémoire pointée par s avec l'octet c. Renvoie un pointeur sur la zone mémoire s.
+ft_bzero  | `void	ft_bzero(void *s, size_t len);` | (cf. man) Met à 0 (octets contenant « \0 ») les n premiers octets du bloc pointé par s.
+ft_memcpy | `void	*ft_memcpy(void *dst, const void *src, size_t n);` | (cf. man) Copie n octets depuis la zone mémoire src vers la zone mémoire dest. Les deux zones ne doivent pas se chevaucher (overlap). Si c'est le cas, utiliser plutôt ft_memmove. Renvoie un pointeur sur dest.
+ft_memccpy | `void	*ft_memccpy(void *dst, const void *src, int c, size_t n);` | (cf. man) Copie au plus n octets de la zone mémoire src vers la zone mémoire dest, s'arrêtant dès qu'elle rencontre le caractère c. Renvoie un pointeur sur le caractère immédiatement après c dans la zone dest, ou NULL si c n'a pas été trouvé. 
+ft_memmove | `void	*ft_memmove(void *dst, const void *src, size_t n);` | (cf. man) Copie n octets depuis la zone mémoire src vers la zone mémoire dest. Les deux zones peuvent se chevaucher (overlap).  
+ft_memchr | `void	*ft_memchr(const void *s, int c, size_t n);` | (cf. man) Cherche c parmi les n premiers octets de la zone mémoire pointée par s. Renvoie un pointeur sur le premier octet correspondant, ou NULL si le caractère n'est pas présent.
+ft_memcmp | `int		ft_memcmp(const void *s1, const void *s2, size_t n);` | (cf. man) Compare les n premiers octets des zones mémoire s1 et s2. Renvoie un entier négatif, nul ou positif si les n premiers octets de s1 sont respectivement inférieurs, égaux ou supérieurs aux n premiers octets de s2.
 ft_memalloc | `void	ft_memalloc(size_t size);` | Alloue avec malloc(3) et retourne une zone de memoire "fraiche". La memoire allouee est intialisee a 0. Si l'allocation echoue, la fonction renvoie NULL.
 ft_memdel | `void	ft_memdel(void **ap);` | Prend en parametre l’adresse d’un pointeur dont la zone pointee doit etre liberee avec free(3), puis le pointeur est mis a NULL.
 ft_swap | `void	ft_swap(int *a, int *b);` | Echange le contenu de deux entiers dont les adresses sont données en paramètres.
@@ -25,19 +25,19 @@ ft_memccpy | `void		*ft_memccpy_src(void *dst, void *src, int c, size_t n);` | L
 ## Fonctions Chaînes de caractères
 Fonctions | Prototype | Description
 --- | ---- | ---------------------
-ft_strlen | `size_t	ft_strlen(const char *str);` | Calcule la longueur de la chaîne de caractères s, sans compter l'octet nul « \0 » final.
-ft_strdup | `char	*ft_strdup(const char *s1);` | Renvoie un pointeur sur une nouvelle chaîne de caractères qui est dupliquée depuis s.
-ft_strcpy | `char	*ft_strcpy(char *dest, const char *src);` | Copie src (y compris le '\0') dans dest. Les deux chaînes ne doivent pas se chevaucher. dest doit être assez grande pour accueillir la copie.
-ft_strncpy | `char	*ft_strncpy(char *dest, const char *src, size_t len);` | Identique à strcpy sauf que seuls les n premiers octets de src sont copiés. Avertissement : s'il n'y a pas de '/0' dans les n premiers octets de src, dest n'en aura pas non plus.
-ft_strcat | `char	*ft_strcat(char *s1, const char *s2);` | Ajoute src à la fin de dest en écrasant le '\0' à la fin de dest, puis en ajoutant un nouveau caractère nul final. Les chaînes ne doivent pas se chevaucher, et dest doit être assez grande pour accueillir le résultat.
-ft_strncat | `char	*ft_strncat(char *s1, const char *s2, size_t n);` | Identique à ft_strcat en copiant les n premiers caractères de src à la suite des dest.
-ft_strlcat | `size_t	ft_strlcat(char *dst, const char *src, size_t size);` |
-ft_strchr | `char	*ft_strchr(const char *s, int c);` | Renvoie un pointeur sur la première occurrence du caractère c dans la chaîne s (ou NULL si non trouvé).
-ft_strrchr | `char	*ft_strrchr(const crar *s, int c);` | Renvoie un pointeur sur la dernière occurrence du caractère c dans la chaîne s (ou NULL si non trouvé).
-ft_strstr | `char	*ft_strstr(const char *haystack, const char *needle)` | Cherche la première occurrence de la sous-chaîne needle au sein de la chaîne haystack.
-ft_strnstr | `char	*ft_strnstr(const char *hstack, const char *ndle, size_t n);` |  Cherche la première occurrence de la sous-chaîne needle au sein des n premiers caractères de la chaîne haystack.
-ft_strcmp | `int	ft_strcmp(const char *s1, const char *s2); ` | Compare les deux chaînes s1 et s2. Renvoie un entier négatif, nul, ou positif, si s1 est respectivement inférieure, égale ou supérieure à s2.
-ft_strncmp | `int	ft_strncmp(const char *s1, const char *s2, size_t n);`| Identique à strcmp en ne comparant que les n (au plus) premiers caractères de s1 et s2.
+ft_strlen | `size_t	ft_strlen(const char *str);` | (cf. man) Calcule la longueur de la chaîne de caractères s, sans compter l'octet nul « \0 » final.
+ft_strdup | `char	*ft_strdup(const char *s1);` | (cf. man) Renvoie un pointeur sur une nouvelle chaîne de caractères qui est dupliquée depuis s.
+ft_strcpy | `char	*ft_strcpy(char *dest, const char *src);` | (cf. man) Copie src (y compris le '\0') dans dest. Les deux chaînes ne doivent pas se chevaucher. dest doit être assez grande pour accueillir la copie.
+ft_strncpy | `char	*ft_strncpy(char *dest, const char *src, size_t len);` | (cf. man) Identique à strcpy sauf que seuls les n premiers octets de src sont copiés. Avertissement : s'il n'y a pas de '/0' dans les n premiers octets de src, dest n'en aura pas non plus.
+ft_strcat | `char	*ft_strcat(char *s1, const char *s2);` | (cf. man) Ajoute src à la fin de dest en écrasant le '\0' à la fin de dest, puis en ajoutant un nouveau caractère nul final. Les chaînes ne doivent pas se chevaucher, et dest doit être assez grande pour accueillir le résultat.
+ft_strncat | `char	*ft_strncat(char *s1, const char *s2, size_t n);` | (cf. man) Identique à ft_strcat en copiant les n premiers caractères de src à la suite des dest.
+ft_strlcat | `size_t	ft_strlcat(char *dst, const char *src, size_t size);` | (cf. man) 
+ft_strchr | `char	*ft_strchr(const char *s, int c);` | (cf. man) Renvoie un pointeur sur la première occurrence du caractère c dans la chaîne s (ou NULL si non trouvé).
+ft_strrchr | `char	*ft_strrchr(const crar *s, int c);` | (cf. man) Renvoie un pointeur sur la dernière occurrence du caractère c dans la chaîne s (ou NULL si non trouvé).
+ft_strstr | `char	*ft_strstr(const char *haystack, const char *needle)` | (cf. man) Cherche la première occurrence de la sous-chaîne needle au sein de la chaîne haystack.
+ft_strnstr | `char	*ft_strnstr(const char *hstack, const char *ndle, size_t n);` | (cf. man) Cherche la première occurrence de la sous-chaîne needle au sein des n premiers caractères de la chaîne haystack.
+ft_strcmp | `int	ft_strcmp(const char *s1, const char *s2); ` | (cf. man) Compare les deux chaînes s1 et s2. Renvoie un entier négatif, nul, ou positif, si s1 est respectivement inférieure, égale ou supérieure à s2.
+ft_strncmp | `int	ft_strncmp(const char *s1, const char *s2, size_t n);`| (cf. man) Identique à strcmp en ne comparant que les n (au plus) premiers caractères de s1 et s2.
 ft_strnew | `char	*ft_strnew(size_t size);` | Alloue avec malloc(3) et retourne une chaine de caractere “fraiche” terminee par un ’\0’. Chaque caractere de la chaine est initialise a ’\0’. Si l’allocation echoue, la fonction renvoie NULL.
 ft_strdel | `void	ft_strdel(char **as);` | Prend en parametre l’adresse d’une chaine de caracteres qui doit etre liberee avec free(3) et son pointeur mis a NULL.
 ft_strclr | `void	ft_strclr(char *s);` | Assigne la valeur ’\0’ a tous les caracteres de la chaine passee en parametre.
@@ -72,7 +72,7 @@ ft_tolower | `int	ft_tolower(int c);` | (cf. man) Prend un char en paramètre et
 ## Fonctions Nombres et Calculs
 Fonctions | Prototype | Description
 --- | -------- | ------------------
-ft_atoi | `int	ft_atoi(const char *str)` |
+ft_atoi | `int	ft_atoi(const char *str)` | (cf. man) Convertit une chaîne en entier.
 ft_itoa | `char	*ft_itoa(int n);` | Alloue avec malloc(3) et retourne une chaine de caracteres "fraiche" terminee par un '\0' representatnt l'entier n passe en parametre. Les nombres negatifs sont geres. Si l'allocation echoue, la fonction renvoie NULL.
 ft_abs |  `int	ft_abs(int n);` | Prend en paramètre un int et renvoie sa valeur absolue.
 ft_intlen | `int	ft_intlen(int n);` | Prend en paramètre un int et renvoie le nombre de caractères qui composent le nombre. En cas de valeur négative, le signe '-' est compté comme un caractère.
