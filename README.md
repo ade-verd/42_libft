@@ -4,38 +4,21 @@ Lors du projet de nombreuses fonctions présentes dans la libc ont été recodé
 Avec le temps, quelques fonctions additionnelles personnelles sont venues se greffer.
 
 ## Fonctions Mémoire
-- [x] ft_memset
-- [x] ft_bzero
-- [x] ft_memcpy
-- [x] ft_memccpy
-- [x] ft_memmove
-- [x] ft_memchr
-- [x] ft_memcmp
-
-### [x] ft_memalloc
-> void	*ft_memalloc(size_t size);
-
-Alloue avec malloc(3) et retourne une zone de memoire "fraiche". La memoire allouee est intialisee a 0. Si l'allocation echoue, la fonction renvoie NULL.
-
-### [x] ft_memdel
-> void	ft_memdel(void **ap);
-
-Prend en parametre l’adresse d’un pointeur dont la zone pointee doit etre liberee avec free(3), puis le pointeur est mis a NULL.
-
-### [x] ft_swap
-> void	ft_swap(int *a, int *b);
-
-Echange le contenu de deux entiers dont les adresses sont données en paramètres.
-
-### [x] ft_memccpy
-> void		*ft_memccpy_src(void *dst, void *src, int c, size_t n);
-
-La fonction ft_memccpy_src() copie au plus n octets de la zone mémoire src vers la zone mémoire dest, s'arrêtant dès qu'elle rencontre le caractère c.
-
+Fonctions | Prototype | Description
+--------- | --------- | -----------
+ft_memset | | 
+ft_bzero  | | 
+ft_memcpy | | 
+ft_memccpy | |
+ft_memmove | | 
+ft_memchr | | 
+ft_memcmp | |
+ft_memalloc | *void	*ft_memalloc(size_t size);* | Alloue avec malloc(3) et retourne une zone de memoire "fraiche". La memoire allouee est intialisee a 0. Si l'allocation echoue, la fonction renvoie NULL.
+ft_memdel | *void	ft_memdel(void **ap);* | Prend en parametre l’adresse d’un pointeur dont la zone pointee doit etre liberee avec free(3), puis le pointeur est mis a NULL.
+ft_swap | *void	ft_swap(int *a, int *b);* | Echange le contenu de deux entiers dont les adresses sont données en paramètres.
+ft_memccpy | *void		*ft_memccpy_src(void *dst, void *src, int c, size_t n);* | La fonction ft_memccpy_src() copie au plus n octets de la zone mémoire src vers la zone mémoire dest, s'arrêtant dès qu'elle rencontre le caractère c.
 La fonction ft_memccpy_src() renvoie un pointeur sur le caractère immédiatement après c dans la zone SRC, ou NULL si c n'a pas été trouvé dans les n premiers caractères de src.
-
 Elle a un comportement similaire à ft_memccpy(), qui elle, renvoie un pointeur sur la caractère immédiatement après c dans la zone DEST ou NULL si c n'a pas été trouvé.
-
 
 ## Fonctions Chaînes de caractères
 - [x] ft_strlen
