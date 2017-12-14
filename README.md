@@ -6,7 +6,7 @@ Avec le temps, quelques fonctions additionnelles personnelles sont venues se gre
 
 ## Fonctions Mémoire
 Fonctions | Prototype | Description
---- | --- | ---
+--- | ---- | ---------------------
 ft_memset | | 
 ft_bzero  | | 
 ft_memcpy | | 
@@ -24,7 +24,7 @@ ft_memccpy | `void		*ft_memccpy_src(void *dst, void *src, int c, size_t n);` | L
 
 ## Fonctions Chaînes de caractères
 Fonctions | Prototype | Description
---- | --- | ---
+--- | ---- | ---------------------
 ft_strlen | |
 ft_strdup | |
 ft_strcpy | |
@@ -59,19 +59,19 @@ get_next_line | `int		get_next_line(int fd, char **line);` | La fonction GNL lit
 
 ## Fonctions Caractères
 Fonctions | Prototype | Description
---- | --- | ---
-ft_isdigii | |
-ft_isalnum | |
-ft_isascii | |
-ft_isprint | |
-ft_toupper | |
-ft_tolower | |
-ft_isalpha | |
+--- | ---- | ---------------------
+ft_isalpha | `int	ft_isalpha(int c);` | (cf. man) Prend un char en paramètre et renvoie 1 s'il s'agit d'un caractère alphabétique. Sinon 0.
+ft_isdigit | `int	ft_isdigit(int c);`| (cf. man) Prend un char en paramètre et renvoie 1 s'il s'agit un chiffre. Sinon 0.
+ft_isalnum | `int	ft_isalnum(int c);` | (cf. man) Prend un char en paramètre et renvoie 1 s'il s'agit d'un caractère alpha numérique (lettre ou chiffre). Sinon 0.
+ft_isascii | `int	ft_isascii(int c);` | (cf. man) Prend un char en paramètre et renvoie 1 s'il s'agit d'un caractère ASCII. Sinon 0.
+ft_isprint | `int	ft_isprint(int c);` | (cf. man) Prend un char en paramètre et renvoie 1 s'il s'agit d'un caractère imprimable. Sinon 0.
+ft_toupper | `int	ft_toupper(int c);` | (cf. man) Prend un char en paramètre et s'il s'agit d'une lettre minuscule, renvoie le char en majuscule. Sinon la fonction renvoie le char passé en paramètre.
+ft_tolower | `int	ft_tolower(int c);` | (cf. man) Prend un char en paramètre et s'il s'agit d'une lettre majuscule, renvoie le char en minuscule. Sinon la fonction renvoie le char passé en paramètre.
 
 
 ## Fonctions Nombres et Calculs
 Fonctions | Prototype | Description
---- | --- | ---
+--- | ---- | ---------------------
 ft_atoi | |
 ft_itoa | `char	*ft_itoa(int n);` | Alloue avec malloc(3) et retourne une chaine de caracteres "fraiche" terminee par un '\0' representatnt l'entier n passe en parametre. Les nombres negatifs sont geres. Si l'allocation echoue, la fonction renvoie NULL.
 ft_abs |  `int	ft_abs(int n);` | Prend en paramètre un int et renvoie sa valeur absolue.
@@ -83,7 +83,7 @@ ft_int_sqrt | `int	ft_int_sqrt(int nb);` | Fonction racine carrée (square root)
 
 ## Fonctions listes chaînées
 Fonctions | Prototype | Description
---- | --- | ---
+--- | ---- | ---------------------
 ft_lstnew | `t_list	*ft_lstnew(void const *content, size_t content_size);` | Alloue avec malloc(3) et retourne un maillon “frais”. Les champs content et content_size du nouveau maillon sont initialises par copie des parametres de la fonction. Si le parametre content est nul, le champs content est initialise a NULL et le champs content_size est initialise a 0 quelque soit la valeur du parametre content_size. Le champ next est initialise a NULL. Si l’allocation echoue, la fonction renvoie NULL.
 ft_lstdelone | `void	ft_lstdelone(t_list **alst, void (*del)(void*, size_t));` | Prend en parametre l’adresse d’un pointeur sur un maillon et libere la memoire du contenu de ce maillon avec la fonction del passee en parametre puis libere la memoire du maillon en lui meme avec free(3). La memoire du champ next ne doit en aucun cas être liberee. Pour terminer, le pointeur sur le maillon maintenant libere doit etre mis a NULL (de maniere similaire à la fonction ft_memdel).
 ft_lstdel | `void	ft_lstdel(t_list **alst, void (*del)(void*, size_t));` | Prend en parametre l’adresse d’un pointeur sur un maillon et libere la memoire de ce maillon et celle de tous ses successeurs l’un apres l’autre avec del et free(3). Pour terminer, le pointeur sur le premier maillon maintenant libere doit etre mis à NULL (de maniere similaire à la fonction ft_memdel).
@@ -95,7 +95,7 @@ ft_lstmap | `t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));` | Parc
 
 ## Fonctions d'affichage, lecture, écriture
 Fonctions | Prototype | Description
---- | ----- | ---------------------
+--- | ---- | ---------------------
 ft_putchar | `void	ft_putchar(char c);` | Affiche le caractere c sur la sortie standard.
 ft_putchar_fd | `void	ft_putchar_fd(char c, int fd);` | Ecrit le caractere c sur le descripteur de fichier fd.
 ft_putstr | `void	ft_putstr(char const *s);` | Affiche la chaine s sur la sortir standard.
