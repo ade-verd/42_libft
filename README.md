@@ -5,7 +5,7 @@ Avec le temps, quelques fonctions additionnelles personnelles sont venues se gre
 
 ## Fonctions Mémoire
 Fonctions | Prototype | Description
-- | :-: | -
+-- | :------: | -----------
 ft_memset | | 
 ft_bzero  | | 
 ft_memcpy | | 
