@@ -7,13 +7,13 @@ Avec le temps, quelques fonctions additionnelles personnelles sont venues se gre
 ## Fonctions Mémoire
 Fonctions | Prototype | Description
 --- | ---- | ---------------------
-ft_memset | | 
-ft_bzero  | | 
-ft_memcpy | | 
-ft_memccpy | |
-ft_memmove | | 
-ft_memchr | | 
-ft_memcmp | |
+ft_memset | `void	*ft_memset(void *b, int c, size_t len);` |
+ft_bzero  | `void	ft_bzero(void *s, size_t len);` |
+ft_memcpy | `void	*ft_memcpy(void *dst, const void *src, size_t n);` | 
+ft_memccpy | `void	*ft_memccpy(void *dst, const void *src, int c, size_t n);` | 
+ft_memmove | `void	*ft_memmove(void *dst, const void *src, size_t n);` | 
+ft_memchr | `void	*ft_memchr(const void *s, int c, size_t n);` |
+ft_memcmp | `int		ft_memcmp(const void *s1, const void *s2, size_t n);` |
 ft_memalloc | `void	ft_memalloc(size_t size);` | Alloue avec malloc(3) et retourne une zone de memoire "fraiche". La memoire allouee est intialisee a 0. Si l'allocation echoue, la fonction renvoie NULL.
 ft_memdel | `void	ft_memdel(void **ap);` | Prend en parametre l’adresse d’un pointeur dont la zone pointee doit etre liberee avec free(3), puis le pointeur est mis a NULL.
 ft_swap | `void	ft_swap(int *a, int *b);` | Echange le contenu de deux entiers dont les adresses sont données en paramètres.
@@ -25,19 +25,18 @@ ft_memccpy | `void		*ft_memccpy_src(void *dst, void *src, int c, size_t n);` | L
 ## Fonctions Chaînes de caractères
 Fonctions | Prototype | Description
 --- | ---- | ---------------------
-ft_strlen | |
-ft_strdup | |
-ft_strcpy | |
-ft_strncpy | |
-ft_strcat | |
-ft_strncat | |
-ft_strlcat | |
-ft_strchr | |
-ft_strrchr | |
-ft_strstrs | |
-ft_strnstr | |
-ft_strcmp | |
-ft_strncmp | |
+ft_strlen | `size_t	ft_strlen(const char *str);` |
+ft_strdup | `char	*ft_strdup(const char *s1);` |
+ft_strcpy | `char	*ft_strcpy(char *dest, const char *src);` |
+ft_strncpy | `char	*ft_strncpy(char *dest, const char *src, size_t len);` |
+ft_strcat | `char	*ft_strcat(char *s1, const char *s2);` |
+ft_strncat | `char	*ft_strncat(char *s1, const char *s2, size_t n);` |
+ft_strlcat | `size_t	ft_strlcat(char *dst, const char *src, size_t size);` |
+ft_strchr | `char	*ft_strchr(const char *s, int c);` |
+ft_strrchr | `char	*ft_strrchr(const crar *s, int c);` |
+ft_strnstr | `char	*ft_strnstr(const char *hstack, const char *ndle, size_t n);` |
+ft_strcmp | `int	ft_strcmp(const char *s1, const char *s2); ` |
+ft_strncmp | `int	ft_strncmp(const char *s1, const char *s2, size_t n);`|
 ft_strnew | `char	*ft_strnew(size_t size);` | Alloue avec malloc(3) et retourne une chaine de caractere “fraiche” terminee par un ’\0’. Chaque caractere de la chaine est initialise a ’\0’. Si l’allocation echoue, la fonction renvoie NULL.
 ft_strdel | `void	ft_strdel(char **as);` | Prend en parametre l’adresse d’une chaine de caracteres qui doit etre liberee avec free(3) et son pointeur mis a NULL.
 ft_strclr | `void	ft_strclr(char *s);` | Assigne la valeur ’\0’ a tous les caracteres de la chaine passee en parametre.
@@ -71,8 +70,8 @@ ft_tolower | `int	ft_tolower(int c);` | (cf. man) Prend un char en paramètre et
 
 ## Fonctions Nombres et Calculs
 Fonctions | Prototype | Description
---- | -------- | ---------------------
-ft_atoi | |
+--- | -------- | ------------------
+ft_atoi | `int	ft_atoi(const char *str)` |
 ft_itoa | `char	*ft_itoa(int n);` | Alloue avec malloc(3) et retourne une chaine de caracteres "fraiche" terminee par un '\0' representatnt l'entier n passe en parametre. Les nombres negatifs sont geres. Si l'allocation echoue, la fonction renvoie NULL.
 ft_abs |  `int	ft_abs(int n);` | Prend en paramètre un int et renvoie sa valeur absolue.
 ft_intlen | `int	ft_intlen(int n);` | Prend en paramètre un int et renvoie le nombre de caractères qui composent le nombre. En cas de valeur négative, le signe '-' est compté comme un caractère.
