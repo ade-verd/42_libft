@@ -31,7 +31,7 @@ ft_strcpy | `char	*ft_strcpy(char *dest, const char *src);` | (cf. man) Copie sr
 ft_strncpy | `char	*ft_strncpy(char *dest, const char *src, size_t len);` | (cf. man) Identique à strcpy sauf que seuls les n premiers octets de src sont copiés. Avertissement : s'il n'y a pas de '/0' dans les n premiers octets de src, dest n'en aura pas non plus.
 ft_strcat | `char	*ft_strcat(char *s1, const char *s2);` | (cf. man) Ajoute src à la fin de dest en écrasant le '\0' à la fin de dest, puis en ajoutant un nouveau caractère nul final. Les chaînes ne doivent pas se chevaucher, et dest doit être assez grande pour accueillir le résultat.
 ft_strncat | `char	*ft_strncat(char *s1, const char *s2, size_t n);` | (cf. man) Identique à ft_strcat en copiant les n premiers caractères de src à la suite des dest.
-ft_strlcat | `size_t	ft_strlcat(char *dst, const char *src, size_t size);` | (cf. man) 
+ft_strlcat | `size_t	ft_strlcat(char *dst, const char *src, size_t size);` | (cf. man) Concatène les deux chaînes et retourne la longueur totale de la chaîne qu'elle essaye de créer. Cela signifie la taille initiale de dst plus la longueur de src.
 ft_strchr | `char	*ft_strchr(const char *s, int c);` | (cf. man) Renvoie un pointeur sur la première occurrence du caractère c dans la chaîne s (ou NULL si non trouvé).
 ft_strrchr | `char	*ft_strrchr(const crar *s, int c);` | (cf. man) Renvoie un pointeur sur la dernière occurrence du caractère c dans la chaîne s (ou NULL si non trouvé).
 ft_strstr | `char	*ft_strstr(const char *haystack, const char *needle)` | (cf. man) Cherche la première occurrence de la sous-chaîne needle au sein de la chaîne haystack.
