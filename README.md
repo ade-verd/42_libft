@@ -95,7 +95,7 @@ ft_lstmap | `t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));` | Parc
 
 ## Fonctions d'affichage, lecture, écriture
 Fonctions | Prototype | Description
---- | --- | ---
+--- | ----- | ---------------------
 ft_putchar | `void	ft_putchar(char c);` | Affiche le caractere c sur la sortie standard.
 ft_putchar_fd | `void	ft_putchar_fd(char c, int fd);` | Ecrit le caractere c sur le descripteur de fichier fd.
 ft_putstr | `void	ft_putstr(char const *s);` | Affiche la chaine s sur la sortir standard.
