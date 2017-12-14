@@ -59,7 +59,7 @@ get_next_line | `int		get_next_line(int fd, char **line);` | La fonction GNL lit
 
 ## Fonctions Caractères
 Fonctions | Prototype | Description
---- | ---- | ---------------------
+--- | ------ | ---------------------
 ft_isalpha | `int	ft_isalpha(int c);` | (cf. man) Prend un char en paramètre et renvoie 1 s'il s'agit d'un caractère alphabétique. Sinon 0.
 ft_isdigit | `int	ft_isdigit(int c);`| (cf. man) Prend un char en paramètre et renvoie 1 s'il s'agit un chiffre. Sinon 0.
 ft_isalnum | `int	ft_isalnum(int c);` | (cf. man) Prend un char en paramètre et renvoie 1 s'il s'agit d'un caractère alpha numérique (lettre ou chiffre). Sinon 0.
@@ -71,7 +71,7 @@ ft_tolower | `int	ft_tolower(int c);` | (cf. man) Prend un char en paramètre et
 
 ## Fonctions Nombres et Calculs
 Fonctions | Prototype | Description
---- | ---- | ---------------------
+--- | ------ | ---------------------
 ft_atoi | |
 ft_itoa | `char	*ft_itoa(int n);` | Alloue avec malloc(3) et retourne une chaine de caracteres "fraiche" terminee par un '\0' representatnt l'entier n passe en parametre. Les nombres negatifs sont geres. Si l'allocation echoue, la fonction renvoie NULL.
 ft_abs |  `int	ft_abs(int n);` | Prend en paramètre un int et renvoie sa valeur absolue.
