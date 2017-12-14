@@ -1,10 +1,9 @@
 # libft
 Premier projet de l'ecole 42 : coder une librairie libft.a.
-Les fonctions de la partie 1 sont codées de manière similaire à celles présentes dans la libC.
-Les fonctions des parties suivantes sont des fonctions utiles additionnelles.
+Lors du projet de nombreuses fonctions présentes dans la libc ont été recodées.
+Avec le temps, quelques fonctions additionnelles personnelles sont venues se greffer.
 
-## Partie 1
-Consulter le man pour la description des fonctions suivantes :
+## Fonctions Mémoire
 - [x] ft_memset
 - [x] ft_bzero
 - [x] ft_memcpy
@@ -12,6 +11,33 @@ Consulter le man pour la description des fonctions suivantes :
 - [x] ft_memmove
 - [x] ft_memchr
 - [x] ft_memcmp
+
+### [x] ft_memalloc
+> void	*ft_memalloc(size_t size);
+
+Alloue avec malloc(3) et retourne une zone de memoire "fraiche". La memoire allouee est intialisee a 0. Si l'allocation echoue, la fonction renvoie NULL.
+
+### [x] ft_memdel
+> void	ft_memdel(void **ap);
+
+Prend en parametre l’adresse d’un pointeur dont la zone pointee doit etre liberee avec free(3), puis le pointeur est mis a NULL.
+
+### [x] ft_swap
+> void	ft_swap(int *a, int *b);
+
+Echange le contenu de deux entiers dont les adresses sont données en paramètres.
+
+### [x] ft_memccpy
+> void		*ft_memccpy_src(void *dst, void *src, int c, size_t n);
+
+La fonction ft_memccpy_src() copie au plus n octets de la zone mémoire src vers la zone mémoire dest, s'arrêtant dès qu'elle rencontre le caractère c.
+
+La fonction ft_memccpy_src() renvoie un pointeur sur le caractère immédiatement après c dans la zone SRC, ou NULL si c n'a pas été trouvé dans les n premiers caractères de src.
+
+Elle a un comportement similaire à ft_memccpy(), qui elle, renvoie un pointeur sur la caractère immédiatement après c dans la zone DEST ou NULL si c n'a pas été trouvé.
+
+
+## Fonctions Chaînes de caractères
 - [x] ft_strlen
 - [x] ft_strdup
 - [x] ft_strcpy
@@ -25,25 +51,6 @@ Consulter le man pour la description des fonctions suivantes :
 - [x] ft_strnstr
 - [x] ft_strcmp
 - [x] ft_strncmp
-- [x] ft_atoi
-- [x] ft_isalpha
-- [x] ft_isdigit
-- [x] ft_isalnum
-- [x] ft_isascii
-- [x] ft_isprint
-- [x] ft_toupper
-- [x] ft_tolower
-
-## Partie 2
-### [x] ft_memalloc
-> void	*ft_memalloc(size_t size);
-
-Alloue avec malloc(3) et retourne une zone de memoire "fraiche". La memoire allouee est intialisee a 0. Si l'allocation echoue, la fonction renvoie NULL.
-
-### [x] ft_memdel
-> void	ft_memdel(void **ap);
-
-Prend en parametre l’adresse d’un pointeur dont la zone pointee doit etre liberee avec free(3), puis le pointeur est mis a NULL.
 
 ### [x] ft_strnew
 > char	*ft_strnew(size_t size);
@@ -110,52 +117,66 @@ Alloue avec malloc(3) et retourne une copie de la chaine passee en parametre san
 
 Alloue avec malloc(3) et retourne un tableau de chaines de caracteres "fraiches" (toutes terminees par un '\0', le tableau egalement donc) resultant de la decoupe de s selon le caractere c. Si l'allocation echoue, la fonction retourne NULL.
 
+### [x] ft_countwords
+> int	ft_countwords(char const *s, char c);
+
+Prend en paramètre une chaîne de caractères "s" et un caractère 'c'. La fonction retourne le nombre de mots issus de la découpe de la chaîne "s" par le séparateur 'c'.
+Exemple : ft_countwords("*salut*les***etudiants*",’*’) renvoie 3 pour "salut", "les", et "etudiants".
+
+### [x] get_next_line
+> int		get_next_line(int fd, char **line);
+
+La fonction GNL lit une ligne dans le file descriptor fd et complète la chaîne de caractères *line avec le résultat de la lecture (sans '\n' le cas échéant).
+
+Une fin de lecture est définie par un '\n' ou un EOF (End Of File).
+
+La fonction retourne 1 lorsqu'une ligne est lue ; 0 lorsque la lecture est terminée ; et -1 en cas d'erreur.
+
+
+## Fonctions Caractères
+- [x] ft_isdigit
+- [x] ft_isalnum
+- [x] ft_isascii
+- [x] ft_isprint
+- [x] ft_toupper
+- [x] ft_tolower
+- [x] ft_isalpha
+
+
+## Fonctions Nombres et Calculs
+- [x] ft_atoi
 ### [x] ft_itoa
 > char	*ft_itoa(int n);
 
 Alloue avec malloc(3) et retourne une chaine de caracteres "fraiche" terminee par un '\0' representatnt l'entier n passe en parametre. Les nombres negatifs sont geres. Si l'allocation echoue, la fonction renvoie NULL.
 
-### [x] ft_putchar
-> void	ft_putchar(char c);
+### [x] ft_abs
+> int	ft_abs(int n);
 
-Affiche le caractere c sur la sortie standard.
+Prend en paramètre un int et renvoie sa valeur absolue.
 
-### [x] ft_putstr
-> void	ft_putstr(char const *s);
+### [x] ft_intlen
+> int	ft_intlen(int n);
 
-Affiche la chaine s sur la sortir standard.
+Prend en paramètre un int et renvoie le nombre de caractères qui composent le nombre. En cas de valeur négative, le signe '-' est compté comme un caractère.
 
-### [x] ft_putendl
-> void	ft_putendl(char const *s);
+### [x] ft_power
+> int	ft_power(int nb, int power);
 
-Affiche la chaine s sur la sortie standard suivi d'un '\n'.
+Fonction puissance.
 
-### [x] ft_putnbr
-> void	ft_putnbr(int n);
+### [x] ft_sqrt
+> int	ft_sqrt(int nb);
 
-Affiche l'entier n sur la sortie standard.
+Fonction racine carrée (square root). Si la racine carrée n'est pas entière, la fonction renvoie 0.
 
-### [x] t_putchar_fd
-> void	ft_putchar_fd(char c, int fd);
+### [x] ft_int_sqrt
+> int	ft_int_sqrt(int nb);
 
-Ecrit le caractere c sur le descripteur de fichier fd.
+Fonction racine carrée (square root). Renvoie l'entier inférieur de la racine carrée.
 
-### [x] ft_putstr_fd
-> void	ft_putstr_fd(char const *s, int fd);
 
-Ecrit la chaine s sur le descripteur de fichier fd.
-
-### [x] ft_putendl_fd
-> void	ft_putendl_fd(char const *s, int fd);
-
-Ecrit la chaine s sur le descripteur de fichier fd suivi d'un '\n'.
-
-### [x] ft_putnbr_fd
-> void	ft_putnbr_fd(int n, int fd);
-
-Ecrit l'entier n sur le descripteur de fichier fd.
-
-## Partie bonus
+## Fonctions listes chaînées
 ### [x] ft_lstnew
 > t_list	*ft_lstnew(void const *content, size_t content_size);
 
@@ -191,48 +212,44 @@ Parcourt la liste lst en appliquant a chaque maillon la fonction f.
 
 Parcourt la liste lst en appliquant à chaque maillon la fonction f et cree une nouvelle liste “fraiche” avec malloc(3) resultant des applications successives. Si une allocation echoue, la fonction renvoie NULL.
 
-## Fonctions personnelles supplémentaires
-### [x] ft_abs
-> int	ft_abs(int n);
 
-Prend en paramètre un int et renvoie sa valeur absolue.
+## Fonctions d'affichage, lecture, écriture
+### [x] ft_putchar
+> void	ft_putchar(char c);
 
-### [x] ft_intlen
-> int	ft_intlen(int n);
+Affiche le caractere c sur la sortie standard.
 
-Prend en paramètre un int et renvoie le nombre de caractères qui composent le nombre. En cas de valeur négative, le signe '-' est compté comme un caractère.
+### [x] t_putchar_fd
+> void	ft_putchar_fd(char c, int fd);
 
-### [x] ft_power
-> int	ft_power(int nb, int power);
+Ecrit le caractere c sur le descripteur de fichier fd.
 
-Fonction puissance.
+### [x] ft_putstr
+> void	ft_putstr(char const *s);
 
-### [x] ft_sqrt
-> int	ft_sqrt(int nb);
+Affiche la chaine s sur la sortir standard.
 
-Fonction racine carrée (square root). Si la racine carrée n'est pas entière, la fonction renvoie 0.
+### [x] ft_putstr_fd
+> void	ft_putstr_fd(char const *s, int fd);
 
-### [x] ft_int_sqrt
-> int	ft_int_sqrt(int nb);
+Ecrit la chaine s sur le descripteur de fichier fd.
 
-Fonction racine carrée (square root). Renvoie l'entier inférieur de la racine carrée.
+### [x] ft_putendl
+> void	ft_putendl(char const *s);
 
-### [x] ft_countwords
-> int	ft_countwords(char const *s, char c);
+Affiche la chaine s sur la sortie standard suivi d'un '\n'.
 
-Prend en paramètre une chaîne de caractères "s" et un caractère 'c'. La fonction retourne le nombre de mots issus de la découpe de la chaîne "s" par le séparateur 'c'.
-Exemple : ft_countwords("*salut*les***etudiants*",’*’) renvoie 3 pour "salut", "les", et "etudiants".
+### [x] ft_putendl_fd
+> void	ft_putendl_fd(char const *s, int fd);
 
-### [x] ft_swap
-> void	ft_swap(int *a, int *b);
+Ecrit la chaine s sur le descripteur de fichier fd suivi d'un '\n'.
 
-Echange le contenu de deux entiers dont les adresses sont données en paramètres.
+### [x] ft_putnbr
+> void	ft_putnbr(int n);
 
-### [x] ft_memccpy
-> void		*ft_memccpy_src(void *dst, void *src, int c, size_t n);
+Affiche l'entier n sur la sortie standard.
 
-La fonction ft_memccpy_src() copie au plus n octets de la zone mémoire src vers la zone mémoire dest, s'arrêtant dès qu'elle rencontre le caractère c.
+### [x] ft_putnbr_fd
+> void	ft_putnbr_fd(int n, int fd);
 
-La fonction ft_memccpy_src() renvoie un pointeur sur le caractère immédiatement après c dans la zone SRC, ou NULL si c n'a pas été trouvé dans les n premiers caractères de src.
-
-Elle a un comportement similaire à ft_memccpy(), qui elle, renvoie un pointeur sur la caractère immédiatement après c dans la zone DEST ou NULL si c n'a pas été trouvé.
+Ecrit l'entier n sur le descripteur de fichier fd.
