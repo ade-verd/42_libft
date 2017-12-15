@@ -27,11 +27,11 @@ then
 
 	# Git commit changes
 	confirm "Do you want to commit and push this change(s) ?" \
-		&& cd $PATH_LIB && pwd\
-		&& git add $@ \
-		&& git commit -m "update or create $@"\
-		&& git push \
-		&& cd $PATH_CUR && pwd
+		&& cd $PATH_LIB \
+		&& echo git add $* && git add $* \
+		&& echo git commit -m "update or create $*" && git commit -m "update or create $*"\
+		&& echo git push && git push \
+		&& cd $PATH_CUR
 else
 	echo usage: $0 file1 [file2] [file3] ...
 fi
