@@ -6,14 +6,14 @@
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/23 09:13:43 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/28 13:40:58 by ade-verd         ###   ########.fr       */
+/*   Updated: 2018/01/09 13:43:20 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-static int		ft_strchr_pos(const char *s, int start, char c)
+static int		ft_strchr_pos_with_start(const char *s, int start, char c)
 {
 	int		i;
 
@@ -53,7 +53,7 @@ static char		*ft_extract_wds(char const *s, int start, char c)
 	char	*wd;
 
 	i = 0;
-	end = ft_strchr_pos(s, start, c) - 1;
+	end = ft_strchr_pos_with_start(s, start, c) - 1;
 	if ((wd = (char*)malloc(sizeof(char) * (end - start + 1))) == NULL)
 		return (NULL);
 	while (s[i] != '\0' && start <= end)
@@ -88,7 +88,7 @@ char			**ft_strsplit(char const *s, char c)
 			return (NULL);
 		tab[i] = ft_extract_wds(s, j, c);
 		tab[i][len] = '\0';
-		j = ft_strchr_pos(s, j, c);
+		j = ft_strchr_pos_with_start(s, j, c);
 		i++;
 	}
 	tab[i] = 0;
