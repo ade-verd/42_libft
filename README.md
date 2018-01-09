@@ -34,6 +34,8 @@ ft_strncat | `char	*ft_strncat(char *s1, const char *s2, size_t n);` | (cf. man)
 ft_strlcat | `size_t	ft_strlcat(char *dst, const char *src, size_t size);` | (cf. man) Concatène les deux chaînes et retourne la longueur totale de la chaîne qu'elle essaye de créer. Cela signifie la taille initiale de dst plus la longueur de src.
 ft_strchr | `char	*ft_strchr(const char *s, int c);` | (cf. man) Renvoie un pointeur sur la première occurrence du caractère c dans la chaîne s (ou NULL si non trouvé).
 ft_strrchr | `char	*ft_strrchr(const crar *s, int c);` | (cf. man) Renvoie un pointeur sur la dernière occurrence du caractère c dans la chaîne s (ou NULL si non trouvé).
+ft_strchr_pos | `int	ft_strchr(const char *s, int c);` | Renvoie la position de la première occurrence du caractère c dans la chaîne s (ou -1 si non trouvé).
+ft_strrchr_pos | `int	ft_strrchr(const crar *s, int c);` | Renvoie la position de la dernière occurrence du caractère c dans la chaîne s (ou -1 si non trouvé).
 ft_strstr | `char	*ft_strstr(const char *haystack, const char *needle)` | (cf. man) Cherche la première occurrence de la sous-chaîne needle au sein de la chaîne haystack.
 ft_strnstr | `char	*ft_strnstr(const char *hstack, const char *ndle, size_t n);` | (cf. man) Cherche la première occurrence de la sous-chaîne needle au sein des n premiers caractères de la chaîne haystack.
 ft_strcmp | `int	ft_strcmp(const char *s1, const char *s2); ` | (cf. man) Compare les deux chaînes s1 et s2. Renvoie un entier négatif, nul, ou positif, si s1 est respectivement inférieure, égale ou supérieure à s2.

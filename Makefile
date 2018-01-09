@@ -6,14 +6,15 @@
 #    By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 16:30:07 by ade-verd          #+#    #+#              #
-#    Updated: 2017/12/15 16:32:09 by ade-verd         ###   ########.fr        #
+#    Updated: 2018/01/09 11:55:17 by ade-verd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 .PHONY: all clean fclean re
 
 NAME = libft.a
-CFLAGS = -Wall -Wextra -Werror
+
+# Compiler
 CC = gcc
 
 INC_DIR = includes
@@ -42,13 +43,33 @@ SRC_BONUS = ft_lstnew.c ft_lstadd.c ft_lstappend.c\
 			ft_lstiter.c ft_lstmap.c
 
 SRC_EXTRA = ft_abs.c ft_intlen.c ft_power.c ft_sqrt.c ft_int_sqrt.c\
-			ft_countwords.c ft_swap.c ft_memccpy_src.c
+			ft_countwords.c ft_swap.c ft_memccpy_src.c\
+			ft_strchr_pos.c ft_strrchr_pos.c
 
 SRC = $(SRC_1) $(SRC_2) $(SRC_BONUS) $(SRC_EXTRA)
 
 OBJ_PATH = obj/
 OBJ_NAME = $(SRC:.c=.o)
 OBJ = $(addprefix $(OBJ_PATH), $(OBJ_NAME))
+
+# Flags with OS Compatibiliy
+OS = $(shell uname)
+ifeq ($(OS), Darwin)
+	FLAGS_DEFAULT = -Werror -Wall -Wextra
+endif
+ifeq ($(OS), Linux)
+	FLAGS_DEFAULT = -Wno-unused-result
+endif
+ifdef FLAGS
+	ifeq ($(FLAGS), no)
+		CFLAGS := $(ADDFLAGS)
+	endif
+#	ifeq ($(FLAGS), debug)
+#		CFLAGS := $(FLAGS_DEFAULT) -ansi -pedantic -g $(ADDFLAGS)
+#	endif
+else
+	CFLAGS := $(FLAGS_DEFAULT) $(ADDFLAGS)
+endif
 
 # **************************************************************************** #
 # SPECIALS CHARS                                                               #
