@@ -6,7 +6,7 @@
 #    By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 16:30:07 by ade-verd          #+#    #+#              #
-#    Updated: 2018/01/09 11:55:17 by ade-verd         ###   ########.fr        #
+#    Updated: 2018/01/19 16:21:33 by ade-verd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,8 @@ SRC_BONUS = ft_lstnew.c ft_lstadd.c ft_lstappend.c\
 
 SRC_EXTRA = ft_abs.c ft_intlen.c ft_power.c ft_sqrt.c ft_int_sqrt.c\
 			ft_countwords.c ft_swap.c ft_memccpy_src.c\
-			ft_strchr_pos.c ft_strrchr_pos.c
+			ft_strchr_pos.c ft_strrchr_pos.c\
+			ft_atoi_base.c ft_itoa_base.c\
 
 SRC = $(SRC_1) $(SRC_2) $(SRC_BONUS) $(SRC_EXTRA)
 
