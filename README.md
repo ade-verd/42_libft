@@ -77,7 +77,8 @@ Fonctions | Prototype | Description
 ft_atoi | `int	ft_atoi(const char *str)` | (cf. man) Convertit une chaîne en entier.
 ft_atoi_base | `int	ft_atoi_base(const char *str, int str_base)` | Convertit une chaîne de la base définie en entier de base 10.
 ft_itoa | `char	*ft_itoa(int n);` | Alloue avec malloc(3) et retourne une chaine de caracteres "fraiche" terminee par un '\0' representatnt l'entier n passe en parametre. Les nombres negatifs sont geres. Si l'allocation echoue, la fonction renvoie NULL.
-ft_itoa_base | `char	*ft_itoa(int n, int base);` | Alloue avec malloc(3) et retourne une chaine de caracteres "fraiche" terminee par un '\0' representatnt l'entier n passe en parametre converti selon la base donnée. Les nombres negatifs sont geres. Si l'allocation echoue, la fonction renvoie NULL.
+ft_itoa_base | `char	*ft_itoa(intmax_t n, int base);` | Alloue avec malloc(3) et retourne une chaine de caracteres "fraiche" terminee par un '\0' representatnt l'entier n passe en parametre converti selon la base donnée. Les nombres negatifs sont geres. Si l'allocation echoue, la fonction renvoie NULL.
+ft_uitoa_base | `char	*ft_itoa(uintmax_t n, int base);` | Alloue avec malloc(3) et retourne une chaine de caracteres "fraiche" terminee par un '\0' representatnt l'entier n passe en parametre converti selon la base donnée. Les nombres negatifs sont geres. Si l'allocation echoue, la fonction renvoie NULL.
 ft_abs |  `int	ft_abs(int n);` | Prend en paramètre un int et renvoie sa valeur absolue.
 ft_intlen | `int	ft_intlen(int n);` | Prend en paramètre un int et renvoie le nombre de caractères qui composent le nombre. En cas de valeur négative, le signe '-' est compté comme un caractère.
 ft_power | `int	ft_power(int nb, int power);` | Fonction puissance.
