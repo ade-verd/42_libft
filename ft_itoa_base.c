@@ -6,7 +6,7 @@
 /*   By: ade-verd <ade-verd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/19 16:11:16 by ade-verd          #+#    #+#             */
-/*   Updated: 2018/01/25 11:49:11 by ade-verd         ###   ########.fr       */
+/*   Updated: 2018/01/26 13:27:21 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_itoa_base(intmax_t value, int base)
 {
 	char		*s;
-	intmax_t	n;
+	uintmax_t	n;
 	int			sign;
 	int			i;
 
