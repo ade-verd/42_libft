@@ -22,7 +22,7 @@ then
 	echo Copying :
 	for param in "$@"
 	do
-		cp -v $param $PATH_LIB
+		cp -R -v $param $PATH_LIB
 	done
 
 	# Git commit changes

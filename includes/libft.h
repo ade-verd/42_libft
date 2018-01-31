@@ -6,12 +6,13 @@
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 13:44:39 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/12/14 18:03:35 by ade-verd         ###   ########.fr       */
+/*   Updated: 2018/01/31 14:45:56 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# include <inttypes.h> /*intmax_t uintmax_t*/
 # include <string.h>
 
 typedef struct		s_list
@@ -40,7 +41,9 @@ char				*ft_strcat(char *s1, const char *s2);
 char				*ft_strncat(char *s1, const char *s2, size_t n);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
 char				*ft_strchr(const char *s, int c);
-char				*ft_strrchr(const crar *s, int c);
+int					ft_strchr_pos(const char *s, int c);
+char				*ft_strrchr(const char *s, int c);
+int					ft_strrchr_pos(const char *s, int c);
 char				*ft_strstr(const char *haystack, const char *needle);
 char				*ft_strnstr(const char *hstack, const char *ndle, size_t n);
 int					ft_strcmp(const char *s1, const char *s2);
@@ -61,7 +64,10 @@ char				**ft_strsplit(char const *s, char c);
 int					ft_countwords(char const *s, char c);
 
 int					ft_atoi(const char *str);
+intmax_t			ft_atointmax(const char *str);
 char				*ft_itoa(int n);
+char				*ft_itoa_base(intmax_t value, int base);
+char				*ft_uitoa_base(uintmax_t value, int base);
 int					ft_abs(int n);
 int					ft_intlen(int n);
 void				ft_swap(int *a, int *b);
