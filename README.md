@@ -68,7 +68,9 @@ ft_isalnum | `int	ft_isalnum(int c);` | (cf. man) Prend un char en paramètre et
 ft_isascii | `int	ft_isascii(int c);` | (cf. man) Prend un char en paramètre et renvoie 1 s'il s'agit d'un caractère ASCII. Sinon 0.
 ft_isprint | `int	ft_isprint(int c);` | (cf. man) Prend un char en paramètre et renvoie 1 s'il s'agit d'un caractère imprimable. Sinon 0.
 ft_toupper | `int	ft_toupper(int c);` | (cf. man) Prend un char en paramètre et s'il s'agit d'une lettre minuscule, renvoie le char en majuscule. Sinon la fonction renvoie le char passé en paramètre.
+ft_strupper | `char	*ft_strupper(char *str);` | Passe une chaîne de caractères en majuscules en utilisant la fonction ft_toupper.
 ft_tolower | `int	ft_tolower(int c);` | (cf. man) Prend un char en paramètre et s'il s'agit d'une lettre majuscule, renvoie le char en minuscule. Sinon la fonction renvoie le char passé en paramètre.
+ft_strlower | `char	*ft_strlower(char *str);` | Passe une chaîne de caractères en minuscules en utilisant la fonction ft_tolower.
 
 
 ## Fonctions Nombres et Calculs

@@ -6,7 +6,7 @@
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 13:44:39 by ade-verd          #+#    #+#             */
-/*   Updated: 2018/01/31 14:45:56 by ade-verd         ###   ########.fr       */
+/*   Updated: 2018/01/31 16:20:15 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,9 @@ int					ft_isalnum(int c);
 int					ft_isascii(int c);
 int					ft_isprint(int c);
 int					ft_toupper(int c);
+char				*ft_strupper(char *str);
 int					ft_tolower(int c);
+char				*ft_strlower(char *str);
 
 void				ft_putchar(char c);
 void				ft_putstr(char const *s);
