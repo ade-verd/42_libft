@@ -6,7 +6,7 @@
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 11:37:13 by ade-verd          #+#    #+#             */
-/*   Updated: 2018/02/02 13:17:43 by ade-verd         ###   ########.fr       */
+/*   Updated: 2018/02/02 16:48:20 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int		ft_atoi(const char *str)
 intmax_t	ft_atointmax(const char *str)
 {
 	int				i;
-	intmax_t		nb;
+	uintmax_t		nb;
 	int				sign;
 
 	i = 0;
