@@ -6,21 +6,14 @@
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 11:24:26 by ade-verd          #+#    #+#             */
-/*   Updated: 2018/01/31 16:17:39 by ade-verd         ###   ########.fr       */
+/*   Updated: 2018/02/02 11:31:33 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_tolower(int c)
 {
-	int		i;
-
-	i = 'A';
-	while (i <= 'Z')
-	{
-		if (i == c)
-			return (c + 32);
-		i++;
-	}
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
 	return (c);
 }
 

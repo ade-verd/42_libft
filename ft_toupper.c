@@ -6,21 +6,14 @@
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 11:24:30 by ade-verd          #+#    #+#             */
-/*   Updated: 2018/01/31 16:17:32 by ade-verd         ###   ########.fr       */
+/*   Updated: 2018/02/02 11:31:35 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_toupper(int c)
 {
-	int		i;
-
-	i = 'a';
-	while (i <= 'z')
-	{
-		if (i == c)
-			return (c - 32);
-		i++;
-	}
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
 	return (c);
 }
 

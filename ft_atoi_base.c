@@ -6,21 +6,23 @@
 /*   By: ade-verd <ade-verd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/19 15:26:31 by ade-verd          #+#    #+#             */
-/*   Updated: 2018/01/31 14:45:57 by ade-verd         ###   ########.fr       */
+/*   Updated: 2018/02/02 13:22:15 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static int	ft_isblank(char c)
+#include "libft.h"
+
+static int		ft_isblank(char c)
 {
 	if (c <= 32)
 		return (1);
 	return (0);
 }
 
-static int	ft_isvalid(char c, int base)
+static int		ft_isvalid(char c, int base)
 {
-	char *digits;
-	char *digits2;
+	char		*digits;
+	char		*digits2;
 
 	digits = "0123456789abcdef";
 	digits2 = "0123456789ABCDEF";
@@ -30,7 +32,7 @@ static int	ft_isvalid(char c, int base)
 	return (0);
 }
 
-static int	ft_value_of(char c)
+static int		ft_value_of(char c)
 {
 	if (c >= '0' && c <= '9')
 		return (c - '0');
@@ -41,10 +43,25 @@ static int	ft_value_of(char c)
 	return (0);
 }
 
-int			ft_atoi_base(const char *str, int str_base)
+intmax_t		ft_atoi_base(const char *str, int str_base)
 {
-	int result;
-	int sign;
+	intmax_t	result;
+	int			sign;
+
+	result = 0;
+	while (ft_isblank(*str))
+		str++;
+	sign = (str[0] == '-') ? -1 : 1;
+	(*str == '-' || *str == '+') ? ++str : 0;
+	while (ft_isvalid(*str, str_base))
+		result = result * str_base + ft_value_of(*str++);
+	return (result * sign);
+}
+
+uintmax_t		ft_uatoi_base(const char *str, int str_base)
+{
+	uintmax_t	result;
+	int			sign;
 
 	result = 0;
 	while (ft_isblank(*str))

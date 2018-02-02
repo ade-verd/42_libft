@@ -6,7 +6,7 @@
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 13:44:39 by ade-verd          #+#    #+#             */
-/*   Updated: 2018/01/31 16:20:15 by ade-verd         ###   ########.fr       */
+/*   Updated: 2018/02/02 13:22:16 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,8 @@ int					ft_countwords(char const *s, char c);
 
 int					ft_atoi(const char *str);
 intmax_t			ft_atointmax(const char *str);
+intmax_t			ft_atoi_base(const char *str, int str_base);
+uintmax_t			ft_uatoi_base(const char *str, int str_base);
 char				*ft_itoa(int n);
 char				*ft_itoa_base(intmax_t value, int base);
 char				*ft_uitoa_base(uintmax_t value, int base);
