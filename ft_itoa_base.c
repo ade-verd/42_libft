@@ -6,11 +6,11 @@
 /*   By: ade-verd <ade-verd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/19 16:11:16 by ade-verd          #+#    #+#             */
-/*   Updated: 2018/01/31 14:45:56 by ade-verd         ###   ########.fr       */
+/*   Updated: 2018/02/08 12:10:04 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_itoa_base(intmax_t value, int base)
 {

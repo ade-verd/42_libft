@@ -6,14 +6,15 @@
 /*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 13:44:39 by ade-verd          #+#    #+#             */
-/*   Updated: 2018/02/02 13:22:16 by ade-verd         ###   ########.fr       */
+/*   Updated: 2018/02/08 12:10:42 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <inttypes.h> /*intmax_t uintmax_t*/
+# include <stdint.h>
 # include <string.h>
+# include <stdlib.h>
 
 typedef struct		s_list
 {
