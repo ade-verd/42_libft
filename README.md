@@ -86,6 +86,7 @@ ft_intlen | `int	ft_intlen(int n);` | Prend en paramètre un int et renvoie le n
 ft_power | `int	ft_power(int nb, int power);` | Fonction puissance.
 ft_sqrt | `int	ft_sqrt(int nb);` | Fonction racine carrée (square root). Si la racine carrée n'est pas entière, la fonction renvoie 0.
 ft_int_sqrt | `int	ft_int_sqrt(int nb);` | Fonction racine carrée (square root). Renvoie l'entier inférieur de la racine carrée.
+ft_bitlen | `int	ft_bitlen(unsigned int n);` | Compte le nombre de bits d'un nombre entier.
 
 
 ## Fonctions listes chaînées

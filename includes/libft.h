@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ade-verd <ade-verd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 13:44:39 by ade-verd          #+#    #+#             */
-/*   Updated: 2018/02/08 12:10:42 by ade-verd         ###   ########.fr       */
+/*   Updated: 2018/02/12 13:53:44 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,7 @@ void				ft_swap(int *a, int *b);
 int					ft_power(int nb, int power);
 int					ft_sqrt(int nb);
 int					ft_int_sqrt(int nb);
+int					ft_bitlen(unsigned int n);
 
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);

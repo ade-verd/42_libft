@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: ade-verd <ade-verd@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 16:30:07 by ade-verd          #+#    #+#              #
-#    Updated: 2018/01/31 15:19:01 by ade-verd         ###   ########.fr        #
+#    Updated: 2018/02/12 13:42:06 by ade-verd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,8 @@ FT_CHAR = \
 
 FT_NUM = \
 		 ft_abs.c ft_intlen.c ft_power.c ft_sqrt.c ft_int_sqrt.c\
-		 ft_atoi.c ft_atoi_base.c ft_itoa.c ft_itoa_base.c
+		 ft_atoi.c ft_atoi_base.c ft_itoa.c ft_itoa_base.c\
+		 ft_bitlen.c
 
 FT_LST = \
 		 ft_lstnew.c ft_lstadd.c ft_lstappend.c\
