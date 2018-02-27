@@ -6,7 +6,7 @@
 /*   By: ade-verd <ade-verd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/22 12:43:04 by ade-verd          #+#    #+#             */
-/*   Updated: 2018/02/22 12:56:49 by ade-verd         ###   ########.fr       */
+/*   Updated: 2018/02/27 15:07:17 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_stroffset(char *str, unsigned int offset)
 {
-	int 	i;
+	int		i;
 
 	i = 0;
 	if (!str || (offset > ft_strlen(str)))
