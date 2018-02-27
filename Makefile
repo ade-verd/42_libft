@@ -6,7 +6,7 @@
 #    By: ade-verd <ade-verd@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 16:30:07 by ade-verd          #+#    #+#              #
-#    Updated: 2018/02/22 13:03:31 by ade-verd         ###   ########.fr        #
+#    Updated: 2018/02/27 18:43:05 by ade-verd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -129,15 +129,21 @@ obj:
 	@mkdir -p $(OBJ_PATH)
 
 clean:
-	@echo -e "$(TITLE)clean $(NAME)$(END_TITLE)"
+	@echo -e "$(TITLE)clean libft $(END_TITLE)"
 	@echo -e $(OBJECTS_DEL)
 	@rm -Rf $(OBJ_PATH)
 
 fclean:
-	@echo -e "$(TITLE)fclean $(NAME)$(END_TITLE)"
+	@echo -e "$(TITLE)fclean libft $(END_TITLE)"
 	@echo -e $(OBJECTS_DEL)
 	@rm -Rf $(OBJ_PATH)
 	@echo -e $(BIN_DEL)
+	@rm -f $(NAME)
+
+clean_quiet:
+	@rm -Rf $(OBJ_PATH)
+
+fclean_quiet: clean_quiet
 	@rm -f $(NAME)
 
 re: fclean all
