@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ade-verd <ade-verd@student.42.fr>          +#+  +:+       +#+         #
+#    By: aurelien <aurelien@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 16:30:07 by ade-verd          #+#    #+#              #
-#    Updated: 2018/03/15 12:16:55 by ade-verd         ###   ########.fr        #
+#    Updated: 2018/03/30 17:38:19 by aurelien         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -121,9 +121,11 @@ BIN_DEL = "--$(LOG_CLEAR)$(LOG_YELLOW)Binary$(LOG_NOCOLOR) deletion " \
 all: $(NAME)
 
 $(NAME): obj $(OBJ)
-	@echo -e $(EMPTY_LINE)"$(LOG_UP)$(LOG_NOCOLOR) $(COUNTER) file(s) linked"
-	@ar -rc $(NAME) $(OBJ) && echo -e $(ASSEMBLING)
-	@ranlib $(NAME) && echo -e $(INDEXING)
+	@if [ $(COUNTER) -ne 0 ]; then \
+		echo -e $(EMPTY_LINE)"$(LOG_UP)$(LOG_NOCOLOR) $(COUNTER) file(s) linked"; \
+		ar -rc $(NAME) $(OBJ) && echo -e $(ASSEMBLING); \
+		ranlib $(NAME) && echo -e $(INDEXING); \
+	fi;
 
 $(OBJ_PATH)%.o: $(SRC_PATH)%.c
 	@$(CC) $(CFLAGS) $(BUILD_NUMBER_LDFLAGS) -I$(INC_DIR) -c $< -o $@
