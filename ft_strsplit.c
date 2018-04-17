@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ade-verd <ade-verd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/23 09:13:43 by ade-verd          #+#    #+#             */
-/*   Updated: 2018/01/09 13:43:20 by ade-verd         ###   ########.fr       */
+/*   Updated: 2018/04/17 15:38:14 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ static char		*ft_extract_wds(char const *s, int start, char c)
 
 	i = 0;
 	end = ft_strchr_pos_with_start(s, start, c) - 1;
-	if ((wd = (char*)malloc(sizeof(char) * (end - start + 1))) == NULL)
+	if ((wd = (char*)malloc(sizeof(char) * (end - start + 1 + 1))) == NULL)
 		return (NULL);
 	while (s[i] != '\0' && start <= end)
 	{
@@ -71,7 +71,6 @@ char			**ft_strsplit(char const *s, char c)
 	char	**tab;
 	int		i;
 	int		j;
-	int		len;
 
 	if (s == NULL)
 		return (NULL);
@@ -83,14 +82,27 @@ char			**ft_strsplit(char const *s, char c)
 	{
 		while (s[j] && s[j] == c)
 			j++;
-		len = ft_strlen(ft_extract_wds(s, j, c));
-		if ((tab[i] = (char*)malloc(sizeof(char) * len + 1)) == NULL)
-			return (NULL);
 		tab[i] = ft_extract_wds(s, j, c);
-		tab[i][len] = '\0';
 		j = ft_strchr_pos_with_start(s, j, c);
 		i++;
 	}
 	tab[i] = 0;
 	return (tab);
+}
+
+void			ft_freetab_strsplit(char **tab)
+{
+	int		i;
+
+	i = 0;
+	while (tab && tab[i])
+	{
+		ft_memdel((void**)&tab[i]);
+		i++;
+	}
+	if (tab)
+	{
+		free(tab);
+		tab = NULL;
+	}
 }
