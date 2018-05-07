@@ -102,6 +102,12 @@ ft_lstappend | `void	ft_lstappend(t_list *new0, t_list *first_link);` | Ajoute l
 ft_lstiter | `void	ft_lstiter(t_list *lst, void (*f)(t_list *elem));` | Parcourt la liste lst en appliquant a chaque maillon la fonction f.
 ft_lstmap | `t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));` | Parcourt la liste lst en appliquant à chaque maillon la fonction f et cree une nouvelle liste “fraiche” avec malloc(3) resultant des applications successives. Si une allocation echoue, la fonction renvoie NULL.
 
+## Fonctions d'ouverture, fermeture, suppression... de File Descriptor 
+Fonctions | Prototype | Description
+--- | ---- | ---------------------
+ft_open_fd | `int	ft_open_fd(char *path, int oflag, int perm);` | Ouvre un fichier et attribue un file descriptor. Renvoie 1 en cas de succès, sinon -1 en cas d'erreur.
+ft_close_fd | `int	ft_close_fd(int fd);` | Ferme un fd déjà ouvert. Renvoie 1 en cas de succès, sinon -1 en cas d'erreur.
+ft_remove | `int	ft_remove(char *path);` | Supprime un fichier. Renvoie 1 en cas de succès, sinon -1 en cas d'erreur. 
 
 ## Fonctions d'affichage, lecture, écriture
 Fonctions | Prototype | Description
@@ -114,3 +120,4 @@ ft_putendl | `void	ft_putendl(char const *s);` | Affiche la chaine s sur la sort
 ft_putendl_fd | `void	ft_putendl_fd(char const *s, int fd);` | Ecrit la chaine s sur le descripteur de fichier fd suivi d'un '\n'.
 ft_putnbr | `void	ft_putnbr(int n);` | Affiche l'entier n sur la sortie standard.
 ft_putnbr_fd | `void	ft_putnbr_fd(int n, int fd);` | Ecrit l'entier n sur le descripteur de fichier fd.
+

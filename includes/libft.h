@@ -6,7 +6,7 @@
 /*   By: ade-verd <ade-verd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 13:44:39 by ade-verd          #+#    #+#             */
-/*   Updated: 2018/04/19 19:01:37 by ade-verd         ###   ########.fr       */
+/*   Updated: 2018/05/07 16:53:41 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 # include <stdint.h>
 # include <string.h>
 # include <stdlib.h>
+# include <fcntl.h>
+# include <stdio.h>
 # include "get_next_line.h"
 
 typedef struct		s_list
@@ -108,5 +110,9 @@ void				ft_lstadd(t_list **alst, t_list *new0);
 void				ft_lstappend(t_list *new0, t_list *first_link);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+
+int					ft_open_fd(char *path, int oflag, int perm);
+int					ft_close_fd(int fd);
+int					ft_remove(char *path);
 
 #endif

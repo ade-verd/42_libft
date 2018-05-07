@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: aurelien <aurelien@student.42.fr>          +#+  +:+       +#+         #
+#    By: ade-verd <ade-verd@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 16:30:07 by ade-verd          #+#    #+#              #
-#    Updated: 2018/03/30 17:38:19 by aurelien         ###   ########.fr        #
+#    Updated: 2018/05/07 16:53:32 by ade-verd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,7 +52,11 @@ FT_DISPLAY = \
 			 ft_putchar.c ft_putstr.c ft_putendl.c ft_putnbr.c\
 			 ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
-SRC = $(FT_MEM) $(FT_STR) $(FT_CHAR) $(FT_NUM) $(FT_LST) $(FT_DISPLAY)
+FT_FD =	\
+		ft_open_fd.c ft_close_fd.c ft_remove.c
+
+SRC = $(FT_MEM) $(FT_STR) $(FT_CHAR) $(FT_NUM) $(FT_LST) $(FT_DISPLAY)\
+	  $(FT_FD)
 
 OBJ_PATH = obj/
 OBJ_NAME = $(SRC:.c=.o)
