@@ -6,88 +6,73 @@
 /*   By: ade-verd <ade-verd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/23 09:13:43 by ade-verd          #+#    #+#             */
-/*   Updated: 2018/05/11 16:24:04 by ade-verd         ###   ########.fr       */
+/*   Updated: 2018/05/11 18:04:23 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-static int		ft_strchr_pos_with_start(const char *s, int start, char c)
+static	int		ft_count_words(const char *str, char c)
 {
 	int		i;
+	int		word;
 
 	i = 0;
-	while (s[start + i] != '\0')
+	word = 0;
+	if (!str)
+		return (0);
+	while (str[i])
 	{
-		if (s[start + i] == c)
-			return (start + i);
+		if (str[i] == c && str[i + 1] != c)
+			word++;
 		i++;
 	}
-	return (start + i);
+	if (str[0] != '\0')
+		word++;
+	return (word);
 }
 
-static int		ft_count_wds(char const *s, char c)
+static	char	*ft_extract_word(const char *str, char c, int *i)
 {
-	int		i;
-	int		count;
-
-	i = 0;
-	count = 0;
-	while (s[i] != '\0')
-	{
-		while (s[i] == c)
-			i++;
-		if (s[i] != '\0')
-			count++;
-		while (s[i] != '\0' && s[i] != c)
-			i++;
-	}
-	return (count);
-}
-
-static char		*ft_extract_wds(char const *s, int start, char c)
-{
-	int		i;
-	int		end;
-	char	*wd;
-
-	i = 0;
-	end = ft_strchr_pos_with_start(s, start, c) - 1;
-	if ((wd = (char*)malloc(sizeof(char) * (end - start + 1 + 1))) == NULL)
-		return (NULL);
-	while (s[i] != '\0' && start <= end)
-	{
-		wd[i] = s[start];
-		start++;
-		i++;
-	}
-	wd[i] = '\0';
-	printf("malloc: |%s|\n", wd);
-	return (wd);
-}
-
-char			**ft_strsplit(char const *s, char c)
-{
-	char	**tab;
-	int		i;
+	char	*word;
 	int		j;
 
-	if (s == NULL)
+	if (!(word = (char*)malloc(sizeof(word) * (ft_strlen(str)))))
 		return (NULL);
-	i = 0;
 	j = 0;
-	if ((tab = (char**)malloc(sizeof(char*) * ft_count_wds(s, c))) == NULL)
-		return (NULL);
-	while (i < ft_count_wds(s, c))
+	while (str[*i] != c && str[*i])
 	{
-		while (s[j] && s[j] == c)
-			j++;
-		tab[i] = ft_extract_wds(s, j, c);
-		j = ft_strchr_pos_with_start(s, j, c);
-		i++;
+		word[j] = str[*i];
+		j++;
+		*i += 1;
 	}
-	tab[i] = 0;
+	word[j] = '\0';
+	while (str[*i] == c && str[*i])
+		*i += 1;
+	return (word);
+}
+
+char			**ft_strsplit(const char *str, char c)
+{
+	int		i;
+	int		i_tab;
+	int		word;
+	char	**tab;
+
+	i = 0;
+	i_tab = 0;
+	word = ft_count_words(str, c);
+	if (!(tab = (char**)malloc(sizeof(tab) * (ft_count_words(str, c) + 2))))
+		return (NULL);
+	while (str[i] == c && str[i])
+		i++;
+	while (i_tab < word && str[i])
+	{
+		tab[i_tab] = ft_extract_word(str, c, &i);
+		i_tab++;
+	}
+	tab[i_tab] = NULL;
 	return (tab);
 }
 
@@ -98,18 +83,12 @@ void			ft_freetab_strsplit(char **tab)
 	i = 0;
 	while (tab && tab[i])
 	{
-		printf("%s\t", tab[i]);
 		ft_memdel((void**)&tab[i]);
-	//	free(tab[i]);
-	//	tab[i] = NULL;
-		printf("del tab[%d]\n", i);
 		i++;
 	}
 	if (tab)
 	{
-		//ft_memdel((void**)tab);
 		free(tab);
 		tab = NULL;
-		printf("del TAB\n");
 	}
 }
