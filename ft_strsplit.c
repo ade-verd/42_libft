@@ -6,7 +6,7 @@
 /*   By: ade-verd <ade-verd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/23 09:13:43 by ade-verd          #+#    #+#             */
-/*   Updated: 2018/05/11 14:57:58 by ade-verd         ###   ########.fr       */
+/*   Updated: 2018/05/11 15:19:31 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ static int		ft_count_wds(char const *s, char c)
 		while (s[i] != '\0' && s[i] != c)
 			i++;
 	}
+	printf("count: %d\n, count");
 	return (count);
 }
 
