@@ -6,7 +6,7 @@
 /*   By: ade-verd <ade-verd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/23 09:13:43 by ade-verd          #+#    #+#             */
-/*   Updated: 2018/05/11 15:21:32 by ade-verd         ###   ########.fr       */
+/*   Updated: 2018/05/11 15:23:07 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ static int		ft_count_wds(char const *s, char c)
 		while (s[i] != '\0' && s[i] != c)
 			i++;
 	}
-	printf("count: %d\t|%s|\n", count, s);
 	return (count);
 }
 
@@ -87,6 +86,7 @@ char			**ft_strsplit(char const *s, char c)
 		j = ft_strchr_pos_with_start(s, j, c);
 		i++;
 	}
+	printf("i: %d\n", i);
 	tab[i] = 0;
 	return (tab);
 }
