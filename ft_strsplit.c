@@ -6,7 +6,7 @@
 /*   By: ade-verd <ade-verd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/23 09:13:43 by ade-verd          #+#    #+#             */
-/*   Updated: 2018/05/11 15:23:07 by ade-verd         ###   ########.fr       */
+/*   Updated: 2018/05/11 15:28:46 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ static char		*ft_extract_wds(char const *s, int start, char c)
 		i++;
 	}
 	wd[i] = '\0';
+	printf("malloc: |%s|\n", wd);
 	return (wd);
 }
 
@@ -86,8 +87,7 @@ char			**ft_strsplit(char const *s, char c)
 		j = ft_strchr_pos_with_start(s, j, c);
 		i++;
 	}
-	printf("i: %d\n", i);
-	tab[i] = 0;
+	tab[i] = '\0';
 	return (tab);
 }
 
@@ -96,13 +96,11 @@ void			ft_freetab_strsplit(char **tab)
 	int		i;
 
 	i = 0;
-	if (!*tab)
-		return ;
-	while (tab[i])
+	while (tab && tab[i])
 	{
-	//	printf("%s\t", tab[i]);
+		printf("%s\t", tab[i]);
 		ft_memdel((void**)&tab[i]);
-		//printf("del tab[%d]\n", i);
+		printf("del tab[%d]\n", i);
 		//free(tab[i]);
 		//tab[i] = NULL;
 		i++;
@@ -112,6 +110,6 @@ void			ft_freetab_strsplit(char **tab)
 		//ft_memdel((void**)tab);
 		free(tab);
 		tab = NULL;
-		//printf("del TAB\n");
+		printf("del TAB\n");
 	}
 }
