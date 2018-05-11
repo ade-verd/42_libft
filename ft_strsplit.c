@@ -6,7 +6,7 @@
 /*   By: ade-verd <ade-verd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/23 09:13:43 by ade-verd          #+#    #+#             */
-/*   Updated: 2018/05/11 16:22:08 by ade-verd         ###   ########.fr       */
+/*   Updated: 2018/05/11 16:24:04 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ char			**ft_strsplit(char const *s, char c)
 		return (NULL);
 	i = 0;
 	j = 0;
-	if ((tab = (char**)malloc(sizeof(char*) * ft_count_wds(s, c) + 1)) == NULL)
+	if ((tab = (char**)malloc(sizeof(char*) * ft_count_wds(s, c))) == NULL)
 		return (NULL);
 	while (i < ft_count_wds(s, c))
 	{
