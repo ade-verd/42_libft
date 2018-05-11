@@ -6,7 +6,7 @@
 /*   By: ade-verd <ade-verd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/23 09:13:43 by ade-verd          #+#    #+#             */
-/*   Updated: 2018/05/11 11:48:47 by ade-verd         ###   ########.fr       */
+/*   Updated: 2018/05/11 11:49:36 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,14 +98,12 @@ void			ft_freetab_strsplit(char **tab)
 		return ;
 	while (tab[i])
 	{
-		printf("del tab[%d]\t%s\n", i, tab[i]);
 		free(tab[i]);
 		tab[i] = NULL;
 		i++;
 	}
 	if (tab)
 	{
-		printf("del TAB\n");
 		free(tab);
 		tab = NULL;
 	}
