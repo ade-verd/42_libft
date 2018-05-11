@@ -6,7 +6,7 @@
 /*   By: ade-verd <ade-verd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/23 09:13:43 by ade-verd          #+#    #+#             */
-/*   Updated: 2018/05/11 16:17:33 by ade-verd         ###   ########.fr       */
+/*   Updated: 2018/05/11 16:22:08 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ static char		*ft_extract_wds(char const *s, int start, char c)
 		i++;
 	}
 	wd[i] = '\0';
-	//printf("malloc: |%s|\n", wd);
+	printf("malloc: |%s|\n", wd);
 	return (wd);
 }
 
@@ -98,19 +98,18 @@ void			ft_freetab_strsplit(char **tab)
 	i = 0;
 	while (tab && tab[i])
 	{
-		//printf("%s\t", tab[i]);
+		printf("%s\t", tab[i]);
 		ft_memdel((void**)&tab[i]);
 	//	free(tab[i]);
 	//	tab[i] = NULL;
-	//	printf("del tab[%d]\n", i);
+		printf("del tab[%d]\n", i);
 		i++;
 	}
-	ft_memdel((void**)&tab[i]);
 	if (tab)
 	{
 		//ft_memdel((void**)tab);
 		free(tab);
 		tab = NULL;
-		//printf("del TAB\n");
+		printf("del TAB\n");
 	}
 }
