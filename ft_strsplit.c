@@ -6,7 +6,7 @@
 /*   By: ade-verd <ade-verd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/23 09:13:43 by ade-verd          #+#    #+#             */
-/*   Updated: 2018/05/11 11:43:43 by ade-verd         ###   ########.fr       */
+/*   Updated: 2018/05/11 11:48:47 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,7 @@ void			ft_freetab_strsplit(char **tab)
 	if (tab)
 	{
 		printf("del TAB\n");
-		free(*tab);
+		free(tab);
 		tab = NULL;
 	}
 }
