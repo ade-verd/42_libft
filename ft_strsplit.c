@@ -6,7 +6,7 @@
 /*   By: ade-verd <ade-verd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/23 09:13:43 by ade-verd          #+#    #+#             */
-/*   Updated: 2018/05/11 10:02:11 by ade-verd         ###   ########.fr       */
+/*   Updated: 2018/05/11 10:18:00 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,6 @@ char			**ft_strsplit(char const *s, char c)
 		j = ft_strchr_pos_with_start(s, j, c);
 		i++;
 	}
-	//tab[i] = 0;
 	return (tab);
 }
 
