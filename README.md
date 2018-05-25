@@ -1,4 +1,4 @@
-#libft
+# libft
 Premier projet de l'ecole 42 : coder une librairie libft.a.
 Lors du projet de nombreuses fonctions présentes dans la libc ont été recodées.
 Avec le temps, quelques fonctions additionnelles personnelles sont venues se greffer.
