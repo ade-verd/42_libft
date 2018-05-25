@@ -1,3 +1,4 @@
+#libft
 Premier projet de l'ecole 42 : coder une librairie libft.a.
 Lors du projet de nombreuses fonctions présentes dans la libc ont été recodées.
 Avec le temps, quelques fonctions additionnelles personnelles sont venues se greffer.
@@ -10,7 +11,7 @@ Avec le temps, quelques fonctions additionnelles personnelles sont venues se gre
 - [Fonctions d'ouverture, fermeture, suppression... de File Descriptor](#fonctions-douverture-fermeture-suppression-de-file-descriptor)
 - [Fonctions d'affichage, lecture, écriture](#fonctions-daffichage-lecture-%C3%A9criture)
 
-# Fonctions mémoire
+## Fonctions mémoire
 Fonctions | Prototype | Description
 --- | ---- | ---------------------
 [ft_memset](ft_memset.c) | `void	*ft_memset(void *b, int c, size_t len);` | (cf. man) Remplit les n premiers octets de la zone mémoire pointée par s avec l'octet c. Renvoie un pointeur sur la zone mémoire s.
@@ -28,7 +29,7 @@ Fonctions | Prototype | Description
 *"* | *"* | Elle a un comportement similaire à ft_memccpy(), qui elle, renvoie un pointeur sur la caractère immédiatement après c dans la zone DEST ou NULL si c n'a pas été trouvé.
 
 
-# Fonctions chaînes de caractères
+## Fonctions chaînes de caractères
 Fonctions | Prototype | Description
 --- | ---- | ---------------------
 [ft_strlen](ft_strlen.c) | `size_t	ft_strlen(const char *str);` | (cf. man) Calcule la longueur de la chaîne de caractères s, sans compter l'octet nul « \0 » final.
@@ -70,7 +71,7 @@ Fonctions | Prototype | Description
 *"* | *"* | La fonction retourne 1 lorsqu'une ligne est lue ; 0 lorsque la lecture est terminée ; et -1 en cas d'erreur.
 
 
-# Fonctions caractères
+## Fonctions caractères
 Fonctions | Prototype | Description
 --- | -------- | ------------------
 [ft_isalpha](ft_isalpha.c) | `int	ft_isalpha(int c);` | (cf. man) Prend un char en paramètre et renvoie 1 s'il s'agit d'un caractère alphabétique. Sinon 0.
@@ -84,7 +85,7 @@ Fonctions | Prototype | Description
 [ft_strlower](ft_tolower.c) | `char	*ft_strlower(char *str);` | Passe une chaîne de caractères en minuscules en utilisant la fonction ft_tolower.
 
 
-# Fonctions nombres et calculs
+## Fonctions nombres et calculs
 Fonctions | Prototype | Description
 --- | -------- | ------------------
 [ft_atoi](ft_atoi.c) | `int	ft_atoi(const char *str)` | (cf. man) Convertit une chaîne en entier.
@@ -100,7 +101,7 @@ Fonctions | Prototype | Description
 [ft_bitlen](ft_bitlen.c) | `int	ft_bitlen(unsigned int n);` | Compte le nombre de bits d'un nombre entier.
 
 
-# Fonctions listes chaînées
+## Fonctions listes chaînées
 Fonctions | Prototype | Description
 --- | ---- | ---------------------
 [ft_lstnew](ft_lstnew.c) | `t_list	*ft_lstnew(void const *content, size_t content_size);` | Alloue avec malloc(3) et retourne un maillon “frais”. Les champs content et content_size du nouveau maillon sont initialises par copie des parametres de la fonction. Si le parametre content est nul, le champs content est initialise a NULL et le champs content_size est initialise a 0 quelque soit la valeur du parametre content_size. Le champ next est initialise a NULL. Si l’allocation echoue, la fonction renvoie NULL.
@@ -111,14 +112,16 @@ Fonctions | Prototype | Description
 [ft_lstiter](ft_lstiter.c) | `void	ft_lstiter(t_list *lst, void (*f)(t_list *elem));` | Parcourt la liste lst en appliquant a chaque maillon la fonction f.
 [ft_lstmap](ft_lstmap.c) | `t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));` | Parcourt la liste lst en appliquant à chaque maillon la fonction f et cree une nouvelle liste “fraiche” avec malloc(3) resultant des applications successives. Si une allocation echoue, la fonction renvoie NULL.
 
-# Fonctions d'ouverture, fermeture, suppression... de File Descriptor 
+
+## Fonctions d'ouverture, fermeture, suppression... de File Descriptor 
 Fonctions | Prototype | Description
 --- | ---- | ---------------------
 [ft_open_fd](ft_open_fd.c) | `int	ft_open_fd(char *path, int oflag, int perm);` | Ouvre un fichier et attribue un file descriptor. Renvoie 1 en cas de succès, sinon -1 en cas d'erreur.
 [ft_close_fd](ft_close_fd.c) | `int	ft_close_fd(int fd);` | Ferme un fd déjà ouvert. Renvoie 1 en cas de succès, sinon -1 en cas d'erreur.
 [ft_remove](ft_remove.c) | `int	ft_remove(char *path);` | Supprime un fichier. Renvoie 1 en cas de succès, sinon -1 en cas d'erreur. 
 
-# Fonctions d'affichage, lecture, écriture
+
+## Fonctions d'affichage, lecture, écriture
 Fonctions | Prototype | Description
 --- | ---- | ---------------------
 [ft_putchar](ft_putchar.c) | `void	ft_putchar(char c);` | Affiche le caractere c sur la sortie standard.
