@@ -73,9 +73,9 @@ Fonctions | Prototype | Description
 [ft_isascii](ft_isascii.c) | `int	ft_isascii(int c);` | (cf. man) Prend un char en paramètre et renvoie 1 s'il s'agit d'un caractère ASCII. Sinon 0.
 [ft_isprint](ft_isprint.c) | `int	ft_isprint(int c);` | (cf. man) Prend un char en paramètre et renvoie 1 s'il s'agit d'un caractère imprimable. Sinon 0.
 [ft_toupper](ft_toupper.c) | `int	ft_toupper(int c);` | (cf. man) Prend un char en paramètre et s'il s'agit d'une lettre minuscule, renvoie le char en majuscule. Sinon la fonction renvoie le char passé en paramètre.
-[ft_strupper](ft_strupper.c) | `char	*ft_strupper(char *str);` | Passe une chaîne de caractères en majuscules en utilisant la fonction ft_toupper.
+[ft_strupper](ft_toupper.c) | `char	*ft_strupper(char *str);` | Passe une chaîne de caractères en majuscules en utilisant la fonction ft_toupper.
 [ft_tolower](ft_tolower.c) | `int	ft_tolower(int c);` | (cf. man) Prend un char en paramètre et s'il s'agit d'une lettre majuscule, renvoie le char en minuscule. Sinon la fonction renvoie le char passé en paramètre.
-[ft_strlower](ft_strlower.c) | `char	*ft_strlower(char *str);` | Passe une chaîne de caractères en minuscules en utilisant la fonction ft_tolower.
+[ft_strlower](ft_tolower.c) | `char	*ft_strlower(char *str);` | Passe une chaîne de caractères en minuscules en utilisant la fonction ft_tolower.
 
 
 ## Fonctions Nombres et Calculs
