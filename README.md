@@ -3,14 +3,13 @@ Premier projet de l'ecole 42 : coder une librairie libft.a.
 Lors du projet de nombreuses fonctions présentes dans la libc ont été recodées.
 Avec le temps, quelques fonctions additionnelles personnelles sont venues se greffer.
 
-- [libft](#libft)
-	- [Fonctions Mémoire](#fonctions-m%C3%A9moire)
-	- [Fonctions Chaînes de caractères](#fonctions-cha%C3%AEnes-de-caract%C3%A8res)
-	- [Fonctions Caractères](#fonctions-caract%C3%A8res)
-	- [Fonctions Nombres et Calculs](#fonctions-nombres-et-calculs)
-	- [Fonctions listes chaînées](#fonctions-listes-cha%C3%AEn%C3%A9es)
-	- [Fonctions d'ouverture, fermeture, suppression... de File Descriptor](#fonctions-douverture-fermeture-suppression-de-file-descriptor)
-	- [Fonctions d'affichage, lecture, écriture](#fonctions-daffichage-lecture-%C3%A9criture)
+- [Fonctions Mémoire](#fonctions-m%C3%A9moire)
+- [Fonctions Chaînes de caractères](#fonctions-cha%C3%AEnes-de-caract%C3%A8res)
+- [Fonctions Caractères](#fonctions-caract%C3%A8res)
+- [Fonctions Nombres et Calculs](#fonctions-nombres-et-calculs)
+- [Fonctions listes chaînées](#fonctions-listes-cha%C3%AEn%C3%A9es)
+- [Fonctions d'ouverture, fermeture, suppression... de File Descriptor](#fonctions-douverture-fermeture-suppression-de-file-descriptor)
+- [Fonctions d'affichage, lecture, écriture](#fonctions-daffichage-lecture-%C3%A9criture)
 
 ## Fonctions Mémoire
 Fonctions | Prototype | Description
