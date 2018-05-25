@@ -6,7 +6,7 @@
 /*   By: ade-verd <ade-verd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 13:44:39 by ade-verd          #+#    #+#             */
-/*   Updated: 2018/05/07 16:53:41 by ade-verd         ###   ########.fr       */
+/*   Updated: 2018/05/25 14:20:53 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ void				ft_bzero(void *s, size_t len);
 
 size_t				ft_strlen(const char *str);
 char				*ft_strdup(const char *s1);
+char				*ft_strndup(const char *s, size_t n);
 char				*ft_strcpy(char *dest, const char *src);
 char				*ft_strncpy(char *dest, const char *src, size_t len);
 char				*ft_strcat(char *s1, const char *s2);
@@ -63,6 +64,9 @@ int					ft_strequ(char const *s1, char const *s2);
 int					ft_strnequ(char const *s1, char const *s2, size_t n);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
+char				*ft_strnjoin(char const *s1, char const *s2, size_t len);
+char				*ft_strnjoinfree(char const *s1, char const *s2, size_t len,
+										int pick);
 char				*ft_strtrim(char const *s);
 char				*ft_stroffset(char *str, unsigned int offset);
 char				**ft_strsplit(char const *s, char c);

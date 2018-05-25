@@ -6,7 +6,7 @@
 #    By: ade-verd <ade-verd@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 16:30:07 by ade-verd          #+#    #+#              #
-#    Updated: 2018/05/07 16:53:32 by ade-verd         ###   ########.fr        #
+#    Updated: 2018/05/25 14:17:20 by ade-verd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,13 +26,13 @@ FT_MEM = \
 		 ft_swap.c
 
 FT_STR = \
-		ft_strlen.c ft_strdup.c ft_strcpy.c ft_strncpy.c ft_strcat.c\
-		ft_strncat.c ft_strlcat.c ft_strchr.c ft_strrchr.c ft_strchr_pos.c\
-		ft_strrchr_pos.c ft_strstr.c ft_strnstr.c ft_strcmp.c ft_strncmp.c\
-		ft_strnew.c ft_strdel.c ft_strclr.c ft_striter.c ft_striteri.c\
-		ft_strmap.c ft_strmapi.c ft_strequ.c ft_strnequ.c ft_strsub.c\
-		ft_strjoin.c ft_strtrim.c ft_strsplit.c ft_countwords.c get_next_line.c\
-		ft_stroffset.c
+		 ft_strlen.c ft_strdup.c ft_strndup.c ft_strcpy.c ft_strncpy.c\
+		 ft_strcat.c ft_strncat.c ft_strlcat.c ft_strchr.c ft_strrchr.c\
+		 ft_strchr_pos.c ft_strrchr_pos.c ft_strstr.c ft_strnstr.c ft_strcmp.c\
+		 ft_strncmp.c ft_strnew.c ft_strdel.c ft_strclr.c ft_striter.c\
+		 ft_striteri.c ft_strmap.c ft_strmapi.c ft_strequ.c ft_strnequ.c\
+		 ft_strsub.c ft_strjoin.c ft_strnjoin.c ft_strnjoinfree.c ft_strtrim.c\
+		 ft_strsplit.c ft_countwords.c get_next_line.c ft_stroffset.c\
 
 FT_CHAR = \
 		  ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c\

@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_strnjoin.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-verd <ade-verd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/05 16:15:05 by ade-verd          #+#    #+#             */
-/*   Updated: 2018/05/25 13:21:26 by ade-verd         ###   ########.fr       */
+/*   Created: 2017/11/22 17:14:29 by ade-verd          #+#    #+#             */
+/*   Updated: 2018/05/25 14:11:14 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-# include "libft.h"
+char	*ft_strnjoin(char const *s1, char const *s2, size_t len)
+{
+	char	*s;
+	char	*join;
 
-# define BUFF_SIZE 42
-# define MALLCHECK(x) if (!x) return (-1);
-
-int				get_next_line(const int fd, char **line);
-
-#endif
+	if (!s1 || !s2)
+		return (NULL);
+	s = ft_strnew(ft_strlen(s1) + len + 1);
+	join = s;
+	while (*s1)
+		*s++ = *s1++;
+	while (*s2 && len--)
+		*s++ = *s2++;
+	return (join);
+}
