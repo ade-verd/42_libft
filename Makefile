@@ -6,7 +6,7 @@
 #    By: ade-verd <ade-verd@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 16:30:07 by ade-verd          #+#    #+#              #
-#    Updated: 2018/06/29 17:59:35 by ade-verd         ###   ########.fr        #
+#    Updated: 2018/06/29 18:00:29 by ade-verd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -83,8 +83,6 @@ endif
 
 # Variables
 COUNTER=0
-
-MAKE = make | perl -ne '$|=1; print unless /nothing to be done|up to date/i'
 
 # **************************************************************************** #
 # SPECIALS CHARS                                                               #
