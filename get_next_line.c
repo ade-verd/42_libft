@@ -6,7 +6,7 @@
 /*   By: ade-verd <ade-verd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/05 16:13:45 by ade-verd          #+#    #+#             */
-/*   Updated: 2018/05/25 14:02:18 by ade-verd         ###   ########.fr       */
+/*   Updated: 2018/07/23 08:56:43 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ int				get_next_line(int const fd, char **line)
 		return (-1);
 	begin = f;
 	f = ft_check_fd(&begin, fd);
+	ft_bzero(buf, BUFF_SIZE + 1);
 	while (!ft_memchr(f->content, '\n', ft_strlen(f->content) + 1)
 			&& (ret = read(fd, buf, BUFF_SIZE)))
 		MALLCHECK((f->content = ft_strnjoinfree(f->content, buf, ret, 0)));
