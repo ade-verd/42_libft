@@ -6,7 +6,7 @@
 #    By: ade-verd <ade-verd@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 16:30:07 by ade-verd          #+#    #+#              #
-#    Updated: 2018/06/29 18:00:29 by ade-verd         ###   ########.fr        #
+#    Updated: 2018/07/25 12:26:42 by ade-verd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,7 +53,7 @@ FT_DISPLAY = \
 			 ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
 FT_FD =	\
-		ft_open_fd.c ft_close_fd.c ft_remove.c
+		ft_open_fd.c ft_close_fd.c ft_remove.c ft_file_exists.c
 
 SRC = $(FT_MEM) $(FT_STR) $(FT_CHAR) $(FT_NUM) $(FT_LST) $(FT_DISPLAY)\
 	  $(FT_FD)
