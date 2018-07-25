@@ -6,7 +6,7 @@
 /*   By: ade-verd <ade-verd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 13:44:39 by ade-verd          #+#    #+#             */
-/*   Updated: 2018/05/25 14:20:53 by ade-verd         ###   ########.fr       */
+/*   Updated: 2018/07/25 12:27:45 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,5 +118,6 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int					ft_open_fd(char *path, int oflag, int perm);
 int					ft_close_fd(int fd);
 int					ft_remove(char *path);
+int					ft_file_exists(char *path);
 
 #endif

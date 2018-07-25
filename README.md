@@ -119,6 +119,7 @@ Fonctions | Prototype | Description
 [ft_open_fd](ft_open_fd.c) | `int	ft_open_fd(char *path, int oflag, int perm);` | Ouvre un fichier et attribue un file descriptor. Renvoie 1 en cas de succès, sinon -1 en cas d'erreur.
 [ft_close_fd](ft_close_fd.c) | `int	ft_close_fd(int fd);` | Ferme un fd déjà ouvert. Renvoie 1 en cas de succès, sinon -1 en cas d'erreur.
 [ft_remove](ft_remove.c) | `int	ft_remove(char *path);` | Supprime un fichier. Renvoie 1 en cas de succès, sinon -1 en cas d'erreur. 
+[ft_file_exists](ft_file_exists.c) | `int	ft_file_exists(char *path);` | Vérifie si un fichier existe en essayant de l'ouvrir en lecture seule. Renvoie 1 s'il existe, puis le ferme. Sinon 0 s'il n'existe pas. 
 
 
 ## Fonctions d'affichage, lecture, écriture
