@@ -6,7 +6,7 @@
 /*   By: ade-verd <ade-verd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 13:44:39 by ade-verd          #+#    #+#             */
-/*   Updated: 2018/07/25 12:27:45 by ade-verd         ###   ########.fr       */
+/*   Updated: 2018/11/05 19:19:29 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,8 @@ int					ft_strchr_pos(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
 int					ft_strrchr_pos(const char *s, int c);
 char				*ft_strstr(const char *haystack, const char *needle);
+int					ft_strleft(const char *str, const char *left);
+int					ft_strright(const char *str, const char *right);
 char				*ft_strnstr(const char *hstack, const char *ndle, size_t n);
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);

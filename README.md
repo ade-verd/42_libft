@@ -3,13 +3,14 @@ Premier projet de l'ecole 42 : coder une librairie libft.a.
 Lors du projet de nombreuses fonctions présentes dans la libc ont été recodées.
 Avec le temps, quelques fonctions additionnelles personnelles sont venues se greffer.
 
-- [Fonctions mémoire](#fonctions-m%C3%A9moire)
-- [Fonctions chaînes de caractères](#fonctions-cha%C3%AEnes-de-caract%C3%A8res)
-- [Fonctions caractères](#fonctions-caract%C3%A8res)
-- [Fonctions nombres et calculs](#fonctions-nombres-et-calculs)
-- [Fonctions listes chaînées](#fonctions-listes-cha%C3%AEn%C3%A9es)
-- [Fonctions d'ouverture, fermeture, suppression... de File Descriptor](#fonctions-douverture-fermeture-suppression-de-file-descriptor)
-- [Fonctions d'affichage, lecture, écriture](#fonctions-daffichage-lecture-%C3%A9criture)
+- [libft](#libft)
+	- [Fonctions mémoire](#fonctions-m%C3%A9moire)
+	- [Fonctions chaînes de caractères](#fonctions-cha%C3%AEnes-de-caract%C3%A8res)
+	- [Fonctions caractères](#fonctions-caract%C3%A8res)
+	- [Fonctions nombres et calculs](#fonctions-nombres-et-calculs)
+	- [Fonctions listes chaînées](#fonctions-listes-cha%C3%AEn%C3%A9es)
+	- [Fonctions d'ouverture, fermeture, suppression... de File Descriptor](#fonctions-douverture-fermeture-suppression-de-file-descriptor)
+	- [Fonctions d'affichage, lecture, écriture](#fonctions-daffichage-lecture-%C3%A9criture)
 
 ## Fonctions mémoire
 Fonctions | Prototype | Description
@@ -17,7 +18,7 @@ Fonctions | Prototype | Description
 [ft_memset](ft_memset.c) | `void	*ft_memset(void *b, int c, size_t len);` | (cf. man) Remplit les n premiers octets de la zone mémoire pointée par s avec l'octet c. Renvoie un pointeur sur la zone mémoire s.
 [ft_bzero](ft_bzero.c)  | `void	ft_bzero(void *s, size_t len);` | (cf. man) Met à 0 (octets contenant « \0 ») les n premiers octets du bloc pointé par s.
 [ft_memcpy](ft_memcpy.c) | `void	*ft_memcpy(void *dst, const void *src, size_t n);` | (cf. man) Copie n octets depuis la zone mémoire src vers la zone mémoire dest. Les deux zones ne doivent pas se chevaucher (overlap). Si c'est le cas, utiliser plutôt ft_memmove. Renvoie un pointeur sur dest.
-[ft_memccpy](ft_memccpy.c) | `void	*ft_memccpy(void *dst, const void *src, int c, size_t n);` | (cf. man) Copie au plus n octets de la zone mémoire src vers la zone mémoire dest, s'arrêtant dès qu'elle rencontre le caractère c. Renvoie un pointeur sur le caractère immédiatement après c dans la zone dest, ou NULL si c n'a pas été trouvé. 
+[ft_memccpy](ft_memccpy.c) | `void	*ft_memccpy(void *dst, const void *src, int c, size_t n);` | (cf. man) Copie au plus n octets de la zone mémoire src vers la zone mémoire dest, s'arrêtant dès qu'elle rencontre le caractère c. Renvoie un pointeur sur le caractère immédiatement après c dans la zone dest, ou NULL si c n'a pas été trouvé.
 [ft_memmove](ft_memmove.c) | `void	*ft_memmove(void *dst, const void *src, size_t n);` | (cf. man) Copie n octets depuis la zone mémoire src vers la zone mémoire dest. Les deux zones peuvent se chevaucher (overlap).
 [ft_memchr](ft_memchr.c) | `void	*ft_memchr(const void *s, int c, size_t n);` | (cf. man) Cherche c parmi les n premiers octets de la zone mémoire pointée par s. Renvoie un pointeur sur le premier octet correspondant, ou NULL si le caractère n'est pas présent.
 [ft_memcmp](ft_memcmp.c) | `int		ft_memcmp(const void *s1, const void *s2, size_t n);` | (cf. man) Compare les n premiers octets des zones mémoire s1 et s2. Renvoie un entier négatif, nul ou positif si les n premiers octets de s1 sont respectivement inférieurs, égaux ou supérieurs aux n premiers octets de s2.
@@ -46,6 +47,8 @@ Fonctions | Prototype | Description
 [ft_strrchr_pos](ft_strrchr_pos.c) | `int	ft_strrchr(const crar *s, int c);` | Renvoie la position de la dernière occurrence du caractère c dans la chaîne s (ou -1 si non trouvé).
 [ft_strstr](ft_strstr.c) | `char	*ft_strstr(const char *haystack, const char *needle)` | (cf. man) Cherche la première occurrence de la sous-chaîne needle au sein de la chaîne haystack.
 [ft_strnstr](ft_strnstr.c) | `char	*ft_strnstr(const char *hstack, const char *ndle, size_t n);` | (cf. man) Cherche la première occurrence de la sous-chaîne needle au sein des n premiers caractères de la chaîne haystack.
+[ft_strleft](ft_strleft.c) | `int ft_strleft(const char *str, const char *left);` | Renvoie 1 si la chaîne *str commence par la chaîne *left. Renvoie 0 dans le cas contraire.
+[ft_strright](ft_strright.c) | `int ft_strright(const char *str, const char *right);` | Renvoie 1 si la chaîne *str se finie par la chaîne *right. Renvoie 0 dans le cas contraire.
 [ft_strcmp](ft_strcmp.c) | `int	ft_strcmp(const char *s1, const char *s2); ` | (cf. man) Compare les deux chaînes s1 et s2. Renvoie un entier négatif, nul, ou positif, si s1 est respectivement inférieure, égale ou supérieure à s2.
 [ft_strncmp](ft_strncmp.c) | `int	ft_strncmp(const char *s1, const char *s2, size_t n);`| (cf. man) Identique à strcmp en ne comparant que les n (au plus) premiers caractères de s1 et s2.
 [ft_strnew](ft_strnew.c) | `char	*ft_strnew(size_t size);` | Alloue avec malloc(3) et retourne une chaine de caractere “fraiche” terminee par un ’\0’. Chaque caractere de la chaine est initialise a ’\0’. Si l’allocation echoue, la fonction renvoie NULL.
@@ -60,7 +63,7 @@ Fonctions | Prototype | Description
 [ft_strsub](ft_strsub.c) | `char	*ft_strsub(char const *s, unsigned int start, size_t len);` | Alloue avec malloc(3) et retourne la copie "fraiche" d'un troncon de la chaine de caracteres passee en parametre. Le troncon commence a l'index start et a pour longueur len. Si start et len ne designent pas un troncon de chaine valide, le comportement est indetermine. Si l'allocation echoue, la fonction renvoie NULL.
 [ft_strjoin](ft_strjoin.c) | `char	*ft_strjoin(char const *s1, char const *s2);` | Alloue avec malloc(3) et retourne une chaine de caracteres "fraiche" terminee pas un '\0' resultant de la concatenation de s1 de s2. Si l'allocation echoue, la fonction renvoie NULL.
 [ft_strnjoin](ft_strnjoin.c) | `char	*ft_strnjoin(char const *s1, char const *s2, size_t len);` | Alloue avec malloc(3) et retourne une chaine de caracteres "fraiche" terminee pas un '\0' resultant de la concatenation de s1 et des n premiers caractères de s2. Si l'allocation echoue, la fonction renvoie NULL.
-[ft_strnjoinfree](ft_strnjoinfree.c) | `char	*ft_strnjoinfree(char const *s1, char const *s2, size_t len, int pick);` | Alloue avec malloc(3) et retourne une chaine de caracteres "fraiche" terminee pas un '\0' resultant de la concatenation de s1 et des n premiers caractères de s2. Si l'allocation echoue, la fonction renvoie NULL. Contrairement à ft_strnjoin, ft_strnjoinfree permet de libérer la mémoire allouée à s1, s2 ou les deux. 
+[ft_strnjoinfree](ft_strnjoinfree.c) | `char	*ft_strnjoinfree(char const *s1, char const *s2, size_t len, int pick);` | Alloue avec malloc(3) et retourne une chaine de caracteres "fraiche" terminee pas un '\0' resultant de la concatenation de s1 et des n premiers caractères de s2. Si l'allocation echoue, la fonction renvoie NULL. Contrairement à ft_strnjoin, ft_strnjoinfree permet de libérer la mémoire allouée à s1, s2 ou les deux.
 [ft_strtrim](ft_strtrim.c) | `char	*ft_strtrim(char const *s);` | Alloue avec malloc(3) et retourne une copie de la chaine passee en parametre sans les espaces blancs au debut et a la fin de cette chaine. On considere comme des espaces blancs les caracteres ' ', '\n' et '\t'. Si s ne contient pas d'espaces blancs au debut ou a la fin, la fonction renvoie une copie de s. Si l'allocation echoue, la fonction renvoie NULL.
 [ft_stroffset](ft_stroffset.c) | `char	*ft_stroffset(char *str, unsigned int offset);` | Décale les caractères de 'offset' positions. (Exemple ft_stroff("Exemple", 2) renvoie "emple"). Renvoie NULL si offset est plus grand que la taille de la chaîne. Cette fonction permet notamment d'effectuer un décalage du type str++, tout en conservant l'adresse initiale de str.
 [ft_strsplit](ft_strsplit.c) | `char	**ft_strsplit(char const *s, char c);` | Alloue avec malloc(3) et retourne un tableau de chaînes de caracteres "fraiches", résultant de la découpe de "s" selon le caractère 'c'. Le tableau et toutes les chaînes sont terminées par '\0'. Si l'allocation échoue, la fonction retourne NULL.
@@ -113,13 +116,13 @@ Fonctions | Prototype | Description
 [ft_lstmap](ft_lstmap.c) | `t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));` | Parcourt la liste lst en appliquant à chaque maillon la fonction f et cree une nouvelle liste “fraiche” avec malloc(3) resultant des applications successives. Si une allocation echoue, la fonction renvoie NULL.
 
 
-## Fonctions d'ouverture, fermeture, suppression... de File Descriptor 
+## Fonctions d'ouverture, fermeture, suppression... de File Descriptor
 Fonctions | Prototype | Description
 --- | ---- | ---------------------
 [ft_open_fd](ft_open_fd.c) | `int	ft_open_fd(char *path, int oflag, int perm);` | Ouvre un fichier et attribue un file descriptor. Renvoie 1 en cas de succès, sinon -1 en cas d'erreur.
 [ft_close_fd](ft_close_fd.c) | `int	ft_close_fd(int fd);` | Ferme un fd déjà ouvert. Renvoie 1 en cas de succès, sinon -1 en cas d'erreur.
-[ft_remove](ft_remove.c) | `int	ft_remove(char *path);` | Supprime un fichier. Renvoie 1 en cas de succès, sinon -1 en cas d'erreur. 
-[ft_file_exists](ft_file_exists.c) | `int	ft_file_exists(char *path);` | Vérifie si un fichier existe en essayant de l'ouvrir en lecture seule. Renvoie 1 s'il existe, puis le ferme. Sinon 0 s'il n'existe pas. 
+[ft_remove](ft_remove.c) | `int	ft_remove(char *path);` | Supprime un fichier. Renvoie 1 en cas de succès, sinon -1 en cas d'erreur.
+[ft_file_exists](ft_file_exists.c) | `int	ft_file_exists(char *path);` | Vérifie si un fichier existe en essayant de l'ouvrir en lecture seule. Renvoie 1 s'il existe, puis le ferme. Sinon 0 s'il n'existe pas.
 
 
 ## Fonctions d'affichage, lecture, écriture
