@@ -6,7 +6,7 @@
 /*   By: ade-verd <ade-verd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 13:44:39 by ade-verd          #+#    #+#             */
-/*   Updated: 2018/11/05 19:19:29 by ade-verd         ###   ########.fr       */
+/*   Updated: 2018/11/07 16:58:48 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,7 @@ char				*ft_strnjoinfree(char const *s1, char const *s2, size_t len,
 char				*ft_strtrim(char const *s);
 char				*ft_stroffset(char *str, unsigned int offset);
 char				**ft_strsplit(char const *s, char c);
+char				**ft_strmsplit(const char *str, char *chars);
 void				ft_freetab_strsplit(char **tab);
 int					ft_countwords(char const *s, char c);
 

@@ -6,7 +6,7 @@
 #    By: ade-verd <ade-verd@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 16:30:07 by ade-verd          #+#    #+#              #
-#    Updated: 2018/11/05 19:12:31 by ade-verd         ###   ########.fr        #
+#    Updated: 2018/11/07 16:51:35 by ade-verd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ FT_STR = \
 		 ft_strdel.c ft_strclr.c ft_striter.c ft_striteri.c ft_strmap.c\
 		 ft_strmapi.c ft_strequ.c ft_strnequ.c ft_strsub.c ft_strjoin.c\
 		 ft_strnjoin.c ft_strnjoinfree.c ft_strtrim.c ft_strsplit.c\
-		 ft_countwords.c get_next_line.c ft_stroffset.c
+		 ft_strmsplit.c ft_countwords.c get_next_line.c ft_stroffset.c
 
 FT_CHAR = \
 		  ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c\
