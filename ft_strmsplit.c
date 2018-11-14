@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsplit_mult.c                                 :+:      :+:    :+:   */
+/*   ft_strmsplit.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-verd <ade-verd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/23 09:13:43 by ade-verd          #+#    #+#             */
-/*   Updated: 2018/11/07 16:49:03 by ade-verd         ###   ########.fr       */
+/*   Updated: 2018/11/14 11:06:10 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,20 @@
 static	int		ft_count_words(const char *str, char *chars)
 {
 	int		i;
-	int		word;
+	int		wds;
 
 	i = 0;
-	word = 0;
-	if (!str)
-		return (0);
-	while (str[i])
+	wds = 0;
+	while (str && str[i])
 	{
-		if (ft_strchr(chars, str[i]) && ft_strchr(chars, str[i + 1]))
-			word++;
-		i++;
+		while (str[i] && ft_strchr(chars, str[i]))
+			i++;
+		if (str[i])
+			wds++;
+		while (str[i] && !ft_strchr(chars, str[i]))
+			i++;
 	}
-	if (str[0] != '\0')
-		word++;
-	return (word);
+	return (wds);
 }
 
 static	char	*ft_extract_word(const char *str, char *chars, int *i)
