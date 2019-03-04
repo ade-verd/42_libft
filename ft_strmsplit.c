@@ -6,7 +6,7 @@
 /*   By: ade-verd <ade-verd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/23 09:13:43 by ade-verd          #+#    #+#             */
-/*   Updated: 2018/11/14 11:06:10 by ade-verd         ###   ########.fr       */
+/*   Updated: 2019/03/04 19:11:53 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static	char	*ft_extract_word(const char *str, char *chars, int *i)
 	char	*word;
 	int		j;
 
-	if (!(word = (char*)malloc(sizeof(word) * (ft_strlen(str)))))
+	if (!(word = (char*)malloc(sizeof(char) * (ft_strlen(str) + 1))))
 		return (NULL);
 	j = 0;
 	while (str[*i] && !ft_strchr(chars, str[*i]))
@@ -62,7 +62,7 @@ char			**ft_strmsplit(const char *str, char *chars)
 	i = 0;
 	i_tab = 0;
 	word = ft_count_words(str, chars);
-	if (!(tab = (char**)malloc(sizeof(tab) * (ft_count_words(str, chars) + 2))))
+	if (!(tab = (char**)malloc(sizeof(char*) * (word + 2))))
 		return (NULL);
 	while (str[i] && ft_strchr(chars, str[i]))
 		i++;
