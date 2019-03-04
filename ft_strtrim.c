@@ -6,7 +6,7 @@
 /*   By: ade-verd <ade-verd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/22 17:46:00 by ade-verd          #+#    #+#             */
-/*   Updated: 2019/03/04 14:42:59 by ade-verd         ###   ########.fr       */
+/*   Updated: 2019/03/04 15:16:45 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ char			*ft_strtrim(char const *s)
 	end = ft_strlen(s) - 1;
 	while (s[end] && (s[end] == ' ' || s[end] == '\t' || s[end] == '\n'))
 		end--;
-	diff = (end < a ? 1 : end - a + 1);
-	if ((trim = (char*)malloc(sizeof(char) * (diff + 1))) == NULL)
+	diff = end - a + 1;
+	if (!diff || (trim = (char*)malloc(sizeof(char) * (diff + 1))) == NULL)
 		return (NULL);
 	while (a <= end)
 	{
