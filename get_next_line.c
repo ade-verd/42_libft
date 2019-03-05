@@ -6,7 +6,7 @@
 /*   By: ade-verd <ade-verd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/05 16:13:45 by ade-verd          #+#    #+#             */
-/*   Updated: 2019/03/04 18:38:24 by ade-verd         ###   ########.fr       */
+/*   Updated: 2019/03/05 13:54:23 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,33 +49,6 @@ static int		new_content(t_list *f, int ret)
 	return (1);
 }
 
-static void		del_fd(t_list *f, int fd, int ret)
-{
-	t_list	*cur;
-	t_list	*last;
-
-	cur = f;
-	last = NULL;
-	if (ret)
-		return ;
-	while (cur)
-	{
-		if (fd == (int)cur->content_size)
-		{
-			if (last)
-				last->next = cur->next;
-			else
-				f = cur->next;
-			if (cur->content)
-				ft_memdel((void**)&cur->content);
-			ft_memdel((void**)&cur);
-			return ;
-		}
-		last = cur;
-		cur = cur->next;
-	}
-}
-
 int				get_next_line(int const fd, char **line)
 {
 	static t_list	*f;
@@ -101,6 +74,5 @@ int				get_next_line(int const fd, char **line)
 	if (!(new_content(f, ret)))
 		return (-1);
 	f = begin;
-	del_fd(f, fd, ret);
 	return (ret ? 1 : 0);
 }
