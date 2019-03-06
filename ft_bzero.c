@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ade-verd <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ade-verd <ade-verd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/20 17:47:48 by ade-verd          #+#    #+#             */
-/*   Updated: 2017/11/20 18:23:48 by ade-verd         ###   ########.fr       */
+/*   Updated: 2019/03/06 17:40:33 by ade-verd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,10 @@
 void	ft_bzero(void *s, size_t len)
 {
 	char	*str;
+	int		i;
 
 	str = s;
+	i = 0;
 	while (len--)
-		*str++ = 0;
+		str[i++] = 0;
 }
